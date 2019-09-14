@@ -1,0 +1,119 @@
+{
+    "intro": {
+        "card": {
+            "name": "Sanny Sherief",
+            "headshot": "me.png",
+            "title": "Full-Stack Web Developer",
+            "email": "sannysherief@gmail.com",
+            "description": "I am a software developer who works with a variety of different languages and technologies.",
+            "social": [
+                {
+                    "icon": "fab fa-github",
+                    "url": "https://github.com/sanny-io"
+                },
+                {
+                    "icon": "fab fa-linkedin",
+                    "url": "https://www.linkedin.com/in/sanny-sherief-85aa90120/"
+                }
+            ]
+        },
+        "heading": "About me",
+        "contents": [
+            "Born and raised in the city of Los Angeles, California, I have worked for several years developing software as both a hobbyist and as a professional. Leveraging the best-in-class frameworks and technology stacks, I'm able to take your product from idea to reality in record time.",
+            "I am currently attending Lambda School - an online course with a focus on computer science. Here, I study full-stack web development and hone my skills designing and creating brilliant web applications.",
+            "In my free time, I love to play video games on my computer, stay up late working on my personal projects, or just go out with friends."
+        ]
+    },
+    "technologies": {
+        "heading": "Technologies I work with",
+        "contents": [
+            {
+                "name": "HTML",
+                "icon": "fab fa-html5",
+                "duration": "3 years",
+                "description": "General website development laying the foundation for extension via other technologies. Liberal usage of semantic elements to assist in SEO and accessibility."
+            },
+            {
+                "name": "CSS",
+                "icon": "fab fa-css3-alt",
+                "duration": "3 years",
+                "description": "Designing website layouts, styling components, and ensuring visual consistency on all viewport sizes. Bootstrap, Semantic UI, and Tailwind CSS."
+            },
+            {
+                "name": "JavaScript",
+                "icon": "fab fa-js",
+                "duration": "3 years",
+                "description": "Breathing life into websites through providing dynamic interactions. Experience with jQuery, but comfortable with vanilla JS as well."
+            },
+            {
+                "name": "React",
+                "icon": "fab fa-react",
+                "duration": "2 months",
+                "description": "Single page applications, functional components, class components, hooks, fetching data, and state management."
+            },
+            {
+                "name": "Lua",
+                "icon": "fas fa-file",
+                "duration": "9 years",
+                "description": "Video game engine scripting and task automation. My personal favorite language to use, and the very first I've ever learned."
+            },
+            {
+                "name": "SQL",
+                "icon": "fas fa-database",
+                "duration": "2 years",
+                "description": "CRUD operations, mass migrations, APIs, and ORM frameworks. Experience includes SQLite and MySQL/MariaDB."
+            }
+        ]
+    },
+    "projects": {
+        "heading": "My projects",
+        "contents": [
+            {
+                "name": "My Portfolio",
+                "url": "/",
+                "sourceUrl": "https://github.com/sanny-io/sanny-io",
+                "image": "https://i.imgur.com/OxOVTvO.png",
+                "description": "The page you're viewing right now! I made it myself.",
+                "tags": [
+                    "React",
+                    "HTML",
+                    "Tailwind CSS",
+                    "Express"
+                ]
+            }
+        ]
+    },
+    "experiences": {
+        "heading": "My experience",
+        "contents": [
+            {
+                "name": "Cloud Sixteen",
+                "title": "Developer",
+                "url": "https://cloudsixteen.com/",
+                "image": "cloud-sixteen.png",
+                "startDate": "June 2015",
+                "descriptions": [
+                    "I am a developer and maintainer for the company's flagship product.",
+                    "I've designed and developed numereous of the features it provides, investigated problems in relation to updates, as well as provided customer support."
+                ]
+            },
+            {
+                "name": "Thriving Ventures",
+                "title": "Developer",
+                "url": "https://thrivingventures.com",
+                "image": "thriving-ventures.png",
+                "startDate": "November 2015",
+                "endDate": "April 2018",
+                "descriptions": [
+                    "I've worked on some of the company's largest products used by thousands of customers, and was the principal developer for implementing many parts of the user interface.",
+                    "My responsibilities included maintaining the codebase, expanding it with new features, responding to customer inquiries, and deploying builds."
+                ]
+            }
+        ]
+    },
+    "contact": {
+        "heading": "Contact me",
+        "email": "sannysherief@gmail.com",
+        "endpoint": "http://sanny.io/api/contact"
+    }
+}

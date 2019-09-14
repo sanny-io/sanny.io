@@ -1,0 +1,15 @@
+.App {
+  height: 100%;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.Main {
+  left: 25%;
+  position: relative;
+}
+
+@media (max-width: 1024px) {
+  .Main {
+    position: static;
+  }
+}

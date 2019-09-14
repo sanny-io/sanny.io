@@ -1,0 +1,47 @@
+{
+  "name": "sanny.io",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.21",
+    "@fortawesome/free-brands-svg-icons": "^5.10.1",
+    "@fortawesome/free-solid-svg-icons": "^5.10.1",
+    "@fortawesome/react-fontawesome": "^0.1.4",
+    "axios": "^0.19.0",
+    "fomantic-ui-css": "^2.7.7",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
+    "react-scripts": "3.1.1",
+    "scroll-into-view": "^1.9.7",
+    "semantic-ui-react": "^0.87.3",
+    "tailwindcss": "^1.1.2"
+  },
+  "scripts": {
+    "start": "yarn build:styles && react-scripts start",
+    "build": "react-scripts build",
+    "build:styles": "tailwind build src/index.css -o src/tailwind.css -c ./tailwind.config.js",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@fullhuman/postcss-purgecss": "^1.2.0",
+    "autoprefixer": "^9.6.1",
+    "postcss-cli": "^6.1.3",
+    "stylelint-config-recommended": "^2.2.0"
+  }
+}
