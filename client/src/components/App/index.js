@@ -12,10 +12,10 @@ import './../../index.css';
 
 function App() {
   const links = [
-    ['About me', 'Intro'],
     ['Technologies', 'Technologies'],
     ['Projects', 'Projects'],
     ['Experience', 'Experiences'],
+    ['About me', 'Intro'],
     ['Contact Me', 'Contact'],
   ];
 
@@ -26,10 +26,10 @@ function App() {
       </aside>
       <main className={`${styles.Main} lg:w-3/4 w-full h-full`}>
         <NavBar links={links} />
-        <Intro {...data.intro} />
         <Technologies {...data.technologies} />
         <Projects {...data.projects} />
         <Experiences {...data.experiences} />
+        <Intro {...data.intro} />
         <Contact {...data.contact} />
       </main>
     </div>
