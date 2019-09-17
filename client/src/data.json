@@ -114,6 +114,6 @@
     "contact": {
         "heading": "Contact me",
         "email": "sannysherief@gmail.com",
-        "endpoint": "http://sanny.io/api/contact"
+        "endpoint": "https://sanny.io/api/contact"
     }
 }
