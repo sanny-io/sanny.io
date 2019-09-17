@@ -14,6 +14,10 @@
                 {
                     "icon": "fab fa-linkedin",
                     "url": "https://www.linkedin.com/in/sanny-sherief-85aa90120/"
+                },
+                {
+                    "icon": "fas fa-envelope",
+                    "url": "mailto:sannysherief@gmail.com"
                 }
             ]
         },
