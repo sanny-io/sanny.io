@@ -6,8 +6,9 @@
 
 @tailwind utilities;
 
-*:focus {
-  outline: none;
+*:focus,
+*:active {
+  outline: none !important;
 }
 
 @media (max-width: 640px) {

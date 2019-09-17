@@ -11393,8 +11393,9 @@ video {
   z-index: auto;
 }
 
-*:focus {
-  outline: none;
+*:focus,
+*:active {
+  outline: none !important;
 }
 
 @media (max-width: 640px) {
