@@ -8,7 +8,7 @@ const Project = ({ name, url, sourceUrl, image, tags, description }) => {
         <img className="w-full" src={image} alt={name} />
       </a>
       <div className="flex flex-col p-4 h-full border-l border-r border-b rounded-b border-gray-700">
-        <a href={url} className="text-lg font-bold mr-2" rel="noreferrer noopener">
+        <a href={url} className="text-lg font-bold mr-2" target="_blank" rel="noreferrer noopener">
           {name}
         </a>
         {
