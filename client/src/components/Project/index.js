@@ -3,11 +3,11 @@ import Tag from '../Tag';
 
 const Project = ({ name, url, sourceUrl, image, tags, description }) => {
   return (
-    <div className="flex flex-col w-full lg:w-3/4 text-gray-200">
+    <div className="flex flex-col w-full h-full lg:w-3/4 text-gray-200">
       <a href={url} target="_blank" rel="noreferrer noopener">
         <img className="w-full" src={image} alt={name} />
       </a>
-      <div className="p-4 border-l border-r border-b rounded-b border-gray-700">
+      <div className="flex flex-col p-4 h-full border-l border-r border-b rounded-b border-gray-700">
         <a href={url} className="text-lg font-bold mr-2" rel="noreferrer noopener">
           {name}
         </a>
@@ -22,7 +22,7 @@ const Project = ({ name, url, sourceUrl, image, tags, description }) => {
           </a>)
         }
         <p className="mb-4">{description}</p>
-        <ul className="flex flex-wrap text-xs -my-3">
+        <ul className="flex flex-wrap mt-auto text-xs -my-3">
           {tags.map((tag, index) => {
             return (
               <li className="mr-2 py-3" key={index}>

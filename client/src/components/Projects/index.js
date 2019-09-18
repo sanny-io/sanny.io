@@ -8,7 +8,7 @@ const Projects = ({ heading, contents }) => {
       <div className="flex flex-wrap justify-center -mx-2 overflow-hidden">
         {contents.map((project, index) => {
           return (
-            <div className="my-4 px-2 w-full md:w-1/2 flex justify-center overflow-hidden" key={index}>
+            <div className="my-4 px-2 items-stretch md:w-1/2 flex justify-center overflow-hidden" key={index}>
               <Project {...project} />
             </div>
           );

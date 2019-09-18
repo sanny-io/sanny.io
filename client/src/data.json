@@ -84,6 +84,18 @@
                     "Tailwind CSS",
                     "Express"
                 ]
+            },
+            {
+                "name": "GameVisor",
+                "url": "https://gamevisor.sanny.now.sh/",
+                "sourceUrl": "https://github.com/sanny-io/gamevisor",
+                "image": "https://i.imgur.com/gBV7d0P.png",
+                "description": "The website for a tool that manages game servers.",
+                "tags": [
+                    "React",
+                    "HTML",
+                    "Semantic UI"
+                ]
             }
         ]
     },
