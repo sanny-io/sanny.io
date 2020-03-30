@@ -1,0 +1,3 @@
+This project is the site you are currently viewing. It is, of course, meant to demonstrate my proficiency with web development. It is designed and developed by myself.
+
+I chose Tailwind CSS because of its simplicity. It allows developers to rapidly create a front end without having to worry about conflicts, naming conventions, etc. When I first saw Tailwind CSS, I thought "why would I ever want to use something like this?", but after trying it for myself, I fell in love with it, and use it for many of the new projects I start.
