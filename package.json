@@ -2,7 +2,7 @@
   "name": "sanny.io",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://sanny-io.github.io/sanny-io",
+  "homepage": "https://sanny.io",
   "dependencies": {
     "@material-ui/styles": "^4.9.6",
     "@testing-library/jest-dom": "^4.2.4",
