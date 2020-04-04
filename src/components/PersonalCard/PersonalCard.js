@@ -12,7 +12,7 @@ export default function PersonalCard({ name, headshot, title, description, class
           {links.map((link, index) => {
             return (
               <li key={index} className="mx-1 text-white">
-                <a href={link.url}>
+                <a href={link.url} target="_blank" rel="noopener noreferrer">
                   <Image src={link.icon} alt={link.icon} />
                 </a>
               </li>
