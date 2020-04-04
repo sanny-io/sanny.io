@@ -2,7 +2,7 @@ import React from 'react';
 import Image from '../App/Image';
 import { TagContainer } from './Tag';
 import { Link } from 'react-router-dom';
-import ProjectLink from './Link';
+import {LinkContainer as ProjectLinkContainer } from './Link';
 
 export default function Project({ name, id, url, sourceUrl, image, tags, description }) {
   return (
@@ -14,10 +14,7 @@ export default function Project({ name, id, url, sourceUrl, image, tags, descrip
         <Link to={`/projects/${id}`} className="text-lg font-bold mr-2 hover:underline">
           {name}
         </Link>
-        {
-          sourceUrl && (
-            <ProjectLink url={sourceUrl}>View Source</ProjectLink>
-          )}
+        <ProjectLinkContainer links={[["View Project", url], ["View Source", sourceUrl]]} />
         <p className="mb-4">{description}</p>
         <TagContainer tags={tags} />
       </div>
