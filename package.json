@@ -17,6 +17,7 @@
     "react-redux": "^7.2.0",
     "react-responsive": "^8.0.3",
     "react-router-dom": "^5.1.2",
+    "react-router-scroll-memory": "^2.0.5",
     "react-scripts": "^3.4.0",
     "react-spinner": "^0.2.7",
     "redux": "^4.0.5",
