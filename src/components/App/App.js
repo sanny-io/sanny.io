@@ -18,7 +18,7 @@ export default function App({ classes }) {
   return (
     <Router>
       <ScrollMemory />
-      <div className="flex flex-col h-full lg:flex-row">
+      <div className="flex flex-col h-screen lg:flex-row">
         <aside className="lg:w-1/4 w-full lg:fixed">
           <PersonalCard />
         </aside>
