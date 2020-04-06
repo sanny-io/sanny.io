@@ -5,7 +5,13 @@ import scrollToElement from 'scroll-to-element';
 function navigateToHeaderByText(text) {
   for (const header of document.querySelectorAll('h2')) {
     if (header.textContent.toLowerCase().includes(text.toLowerCase())) {
-      scrollToElement(header, { offset: -100});
+      let target = header.parentElement;
+
+      while (target.tagName !== "SECTION") {
+        target = target.parentElement;
+      }
+
+      scrollToElement(target, { offset: -57 }); // about the height of the navbar.
       return;
     }
   }
