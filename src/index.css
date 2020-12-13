@@ -711,7 +711,7 @@ video {
 .projects .listing {
   display: grid;
   gap: 1.5rem;
-  grid-template-columns: repeat(1, minmax(0, 1fr))
+  grid-template-columns: repeat(1, minmax(0, 1fr));
 }
 
 @media (min-width: 640px) {
