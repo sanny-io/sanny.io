@@ -1,4 +1,3 @@
-import React from 'react';
 import { Image as CloudinaryImage } from 'cloudinary-react';
 
 export default function Image({ src, alt, ...rest }) {

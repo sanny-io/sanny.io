@@ -1,4 +1,3 @@
-import React from 'react';
 import Technologies from './Technologies';
 import { technologies as technologiesData } from '../../data';
 

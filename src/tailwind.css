@@ -1,47 +1,169 @@
-/* purgecss start ignore */
 @tailwind base;
-
-body, html, #root, #root > div {
-  height: 100vh;
-}
-
-button:focus {
-  outline: none;
-}
-
-h1 {
-  @apply text-6xl;
-}
-
-h2 {
-  @apply text-5xl;
-}
-
-h3 {
-  @apply text-4xl;
-}
-
-h4 {
-  @apply text-3xl;
-}
-
-h5 {
-  @apply text-2xl;
-}
-
-h6 {
-  @apply text-xl;
-}
-
-p {
-  @apply mb-3;
-}
-
-hr {
-  @apply my-4;
-}
-
 @tailwind components;
-/* purgecss end ignore */
-
 @tailwind utilities;
+
+@layer components {
+    .technologies {
+        @apply flex flex-col justify-center;
+        @apply min-h-screen w-full p-4 md:p-12;
+        @apply bg-cool-800;
+    }
+
+    .technologies > .heading {
+        @apply text-white text-center text-4xl md:text-5xl capitalize mb-10;
+    }
+
+    .technologies .listing {
+        @apply grid gap-4 grid-cols-1 sm:grid-cols-2;
+    }
+
+    .technologies .technology {
+        @apply flex;
+        @apply h-full w-full p-3 text-white;
+        @apply border-gray-600 rounded border;
+    }
+
+    .technologies .technology .icon-container {
+        @apply flex items-center mr-3;
+    }
+
+    .technologies .technology .icon {
+        @apply w-16 h-16;
+    }
+
+    .technologies .technology .info-container {
+        @apply flex flex-col text-gray-600;
+    }
+
+    .technologies .technology .info-container .heading {
+        @apply text-gray-200 text-2xl font-bold;
+    }
+
+    .technologies .technology .info-container .description {
+        @apply text-gray-200;
+    }
+
+    .projects {
+        @apply px-4 py-10 md:p-12 bg-gray-800;
+    }
+
+    .projects > .heading {
+        @apply text-white text-center text-4xl md:text-5xl capitalize mb-10;
+    }
+
+    .projects .listing {
+        @apply grid grid-cols-1 sm:grid-cols-2 gap-6
+    }
+
+    .projects .project {
+        @apply flex flex-col;
+        @apply w-full h-full;
+        @apply text-gray-200;
+    }
+
+    .projects .project .box {
+        @apply flex flex-col;
+        @apply p-4 pb-1 h-full;
+        @apply border border-gray-700 rounded-b;
+    }
+
+    .projects .project .image-link {
+        @apply -m-4 mb-4;
+    }
+
+    .projects .project .image {
+        @apply w-full object-cover;
+    }
+
+    .projects .project .name {
+        @apply text-lg font-bold mr-2 hover:underline;
+    }
+
+    .projects .project .link-container {
+        @apply flex mb-2;
+    }
+
+    .projects .project .link-item {
+        @apply mr-3;
+    }
+
+    .projects .project .link {
+        @apply text-gray-400 text-sm font-semibold;
+        @apply hover:text-gray-300 hover:underline;
+    }
+
+    .projects .project .description {
+        @apply mb-8;
+    }
+
+    .projects .project .tag-container {
+        @apply mt-auto;
+    }
+
+    .projects .project .tag-container .tag-item {
+        @apply inline-block mr-3 py-3;
+    }
+
+    .experiences {
+        @apply bg-gray-100;
+        @apply px-4 py-10 md:p-12;
+    }
+
+    .experiences > .heading {
+        @apply mb-10 text-center text-4xl md:text-5xl capitalize;
+    }
+
+    .experiences .listing {
+        @apply flex flex-wrap justify-center;
+    }
+
+    .experiences .experience {
+        @apply flex w-full my-6 border border-gray-300;
+    }
+
+    .experiences .experience.reverse {
+        @apply flex-row-reverse;
+    }
+
+    .experiences .experience .image {
+        @apply hidden xl:block w-full h-full object-cover;
+    }
+
+    .experiences .experience .link {
+        @apply hidden xl:block w-1/2;
+    }
+
+    .experiences .experience .info {
+        @apply w-full xl:w-1/2 py-4 px-5 font-light;
+    }
+
+    .experiences .experience.reverse .info {
+        @apply text-right;
+    }
+
+    .experiences .experience .name {
+        @apply text-4xl md:text-5xl hover:text-gray-500;
+    }
+
+    .experiences .experience .title {
+        @apply mb-1 md:text-xl uppercase;
+    }
+
+    .experiences .experience .dates {
+        @apply mb-4 text-gray-800;
+    }
+
+    .introduction {
+        @apply flex flex-col justify-center;
+        @apply px-4 py-10 md:p-12;
+        @apply text-white bg-cool-800;
+    }
+
+    .introduction .heading {
+        @apply mb-8 text-5xl capitalize font-bold;
+    }
+
+    .introduction .contents {
+        @apply space-y-4 leading-loose text-left;
+    }
+}

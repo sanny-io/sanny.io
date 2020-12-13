@@ -7,15 +7,15 @@
         "description": "I am a Los Angeles-based software developer who works with a variety of different languages and technologies.",
         "links": [
             {
-                "icon": "github",
+                "iconType": "github",
                 "url": "https://github.com/sanny-io"
             },
             {
-                "icon": "linkedin",
+                "iconType": "linkedin",
                 "url": "https://www.linkedin.com/in/sanny-sherief/"
             },
             {
-                "icon": "email",
+                "iconType": "email",
                 "url": "mailto:sannysherief@gmail.com"
             }
         ]
@@ -23,8 +23,8 @@
     "introduction": {
         "heading": "About me",
         "contents": [
-            "Born and raised in the city of Los Angeles, California, I have worked for several years developing software as both a hobbyist and as a professional. Leveraging the best-in-class frameworks and technology stacks, I'm able to take your product from idea to reality in record time.",
-            "I am currently attending Lambda School - an online course with a focus on computer science. Here, I study full-stack web development and hone my skills designing and creating brilliant web applications.",
+            "Born and raised in the city of Los Angeles, California, I have worked for several years developing software as both a hobbyist and as a professional. Leveraging the latest and greatest technologies, I'm able to take your product from idea to reality in record time.",
+            "Beginning with scripting for video games I played, I have transitioned to web development after attending Lambda School: an online course dedicated for web development. There, I honed my skills designing and creating web applications.",
             "In my free time, I love to play video games on my computer, stay up late working on my personal projects, or just go out with friends."
         ],
         "backgroundUrl": "los_angeles"
@@ -33,6 +33,17 @@
         "heading": "My experience",
         "contents": [
             {
+                "name": "Freelance",
+                "title": "Web Developer",
+                "url": "/",
+                "image": "freelance.png",
+                "startDate": "July 2019",
+                "descriptions": [
+                    "While attending Lambda School, I started working as a freelance web developer.",
+                    "I had previous experience freelancing during my time spent working on video game scripting, which helped me find my way around the freelance web development industry."
+                ]
+            },
+            {
                 "name": "Cloud Sixteen",
                 "title": "Developer",
                 "url": "https://cloudsixteen.com/",
@@ -40,8 +51,8 @@
                 "startDate": "June 2015",
                 "endDate": "December 2019",
                 "descriptions": [
-                    "I am a developer and maintainer for the company's flagship product.",
-                    "I've designed and developed numereous of the features it provides, investigated problems in relation to updates, as well as provided customer support."
+                    "I served as a developer and maintainer for the company's flagship roleplaying video gamemode product.",
+                    "The design and development of numerous features provided in the product were contributed by me. Additionally, I investigated problems in relation to updates, as well as provided customer support through an online ticketing system."
                 ]
             },
             {
@@ -52,8 +63,8 @@
                 "startDate": "November 2015",
                 "endDate": "April 2018",
                 "descriptions": [
-                    "I've worked on some of the company's largest products used by thousands of customers, and was the principal developer for implementing many parts of the user interface.",
-                    "My responsibilities included maintaining the codebase, expanding it with new features, responding to customer inquiries, and deploying builds."
+                    "I worked on some of the company's largest server administration products used by thousands of customers, and was the principal developer for implementing many parts of the user interface.",
+                    "My responsibilities included maintaining the codebase written by previous developers, expanding it with new features, responding to customer inquiries, and deploying builds."
                 ]
             }
         ]
@@ -77,16 +88,42 @@
                 ]
             },
             {
-                "name": "GameVisor",
-                "id": "gamevisor",
-                "url": "https://gamevisor.sanny.now.sh/",
-                "sourceUrl": "https://github.com/sanny-io/gamevisor",
-                "image": "gamevisor",
-                "description": "The website for a tool that manages game servers.",
+                "name": "GMod",
+                "id": "gmod",
+                "url": "https://gmod.sanny.io",
+                "sourceUrl": "https://github.com/sanny-io/gmod",
+                "image": "gmod",
+                "description": "My website for showcasing my projects related to Garry's Mod.",
                 "tags": [
                     "React",
                     "HTML",
-                    "Semantic UI"
+                    "Tailwind CSS"
+                ]
+            },
+            {
+                "name": "Mobile Template",
+                "id": "mobile",
+                "url": "https://mobile.sanny.io",
+                "sourceUrl": "https://github.com/sanny-io/mobile",
+                "image": "mobile",
+                "description": "A template for mobile developers to showcase their work.",
+                "tags": [
+                    "React",
+                    "HTML",
+                    "Tailwind CSS"
+                ]
+            },
+            {
+                "name": "Soul Starter",
+                "id": "soulstarter",
+                "url": "https://soulstarter.sanny.io",
+                "sourceUrl": "https://github.com/sanny-io/soulstarter",
+                "image": "soulstarter",
+                "description": "This simple site finds your best starting class in Dark Souls 3.",
+                "tags": [
+                    "React",
+                    "HTML",
+                    "Bootstrap"
                 ]
             }
         ]
@@ -96,32 +133,32 @@
         "contents": [
             {
                 "name": "HTML",
-                "icon": "fab fa-html5",
-                "description": "General website development laying the foundation for extension via other technologies. Liberal usage of semantic elements to assist in SEO and accessibility."
+                "iconType": "html",
+                "description": "General website structure development, laying the foundation for improvement via other technologies."
             },
             {
                 "name": "CSS",
-                "icon": "fab fa-css3-alt",
-                "description": "Designing website layouts, styling components, and ensuring visual consistency on all viewport sizes. Bootstrap, Semantic UI, and Tailwind CSS."
+                "iconType": "css",
+                "description": "Designing website layouts, styling components, and ensuring visual consistency on all viewport sizes. Plain CSS, Bootstrap, Semantic UI, and Tailwind CSS."
             },
             {
                 "name": "JavaScript",
-                "icon": "fab fa-js",
-                "description": "Breathing life into websites through providing dynamic interactions. Experience with jQuery, but comfortable with vanilla JS as well."
+                "iconType": "javascript",
+                "description": "Breathing life into websites through dynamic interactions on pages."
             },
             {
                 "name": "React",
-                "icon": "fab fa-react",
+                "iconType": "react",
                 "description": "Single page applications, functional components, class components, hooks, fetching data, and state management."
             },
             {
                 "name": "SQL",
-                "icon": "fas fa-database",
+                "iconType": "database",
                 "description": "CRUD operations, mass migrations, APIs, and ORM frameworks. Experience includes SQLite and MySQL/MariaDB."
             },
             {
                 "name": "Lua",
-                "icon": "fas fa-file",
+                "iconType": "file",
                 "description": "Video game engine scripting and task automation. My personal favorite language to use, and the very first I've ever learned."
             }
         ]
@@ -130,7 +167,5 @@
         "heading": "Contact me",
         "email": "sannysherief@gmail.com"
     },
-    "navbar": {
-
-    }
+    "navbar": {}
 }

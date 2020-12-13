@@ -1,4 +1,3 @@
-import React from 'react';
 import NavBar from './NavBar';
 import scrollToElement from 'scroll-to-element';
 
@@ -11,7 +10,7 @@ function navigateToHeaderByText(text) {
         target = target.parentElement;
       }
 
-      scrollToElement(target, { offset: -57 }); // about the height of the navbar.
+      scrollToElement(target, { offset: -57 }); // about the size of the navbar
       return;
     }
   }

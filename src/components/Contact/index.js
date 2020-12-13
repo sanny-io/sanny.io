@@ -1,4 +1,3 @@
-import React from 'react';
 import Contact from './Contact';
 import { connect } from 'react-redux';
 import { sendMessage } from '../../actions/contact';

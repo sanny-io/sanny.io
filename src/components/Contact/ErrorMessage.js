@@ -1,4 +1,3 @@
-import React from 'react';
 import { ErrorMessage as FormikErrorMessage } from 'formik';
 
 export default function ErrorMessage({ name, children }) {

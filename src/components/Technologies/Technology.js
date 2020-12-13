@@ -1,11 +1,16 @@
-import React from 'react';
+import Icon from '../App/Icon';
 
-export default function Technology({ name, description }) {
+export default function Technology({ name, description, iconType }) {
   return (
-    <div className="flex p-3 h-full w-full rounded border border-gray-800">
-      <div className="flex flex-col text-gray-600">
-        <h4 className="text-2xl font-bold text-gray-200">{name}</h4>
-        <p className="text-gray-200">{description}</p>
+    <div className="technology">
+      {
+        iconType ? <div className="icon-container">
+          <Icon type={iconType} className="icon" />
+        </div> : null
+      }
+      <div className="info-container">
+        <h4 className="heading">{name}</h4>
+        <p className="description">{description}</p>
       </div>
     </div>
   );

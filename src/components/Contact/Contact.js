@@ -1,4 +1,3 @@
-import React from 'react';
 import { Form, Field } from 'formik';
 import ErrorMessage from './ErrorMessage';
 
@@ -12,7 +11,7 @@ export default function Contact(
     data: response,
   }) {
   return (
-    <section className="capitalize px-4 py-5 md:p-6 bg-gray-900">
+    <section className="capitalize px-4 py-5 md:p-6 bg-gradient-to-bl bg-gray-800">
       <h2 className="text-4xl md:text-5xl text-center text-gray-300 mb-12">{heading}</h2>
       <Form className="flex flex-col uppercase font-semibold">
         <div className="flex flex-wrap justify-between -mx-2 mb-4">
@@ -73,13 +72,13 @@ export default function Contact(
           <p className={
             `${awaitingResponse ? 'text-gray-300' :
               submissionError ? 'text-red-500' :
-              response ? 'text-green-600' : ''}
+                response ? 'text-green-600' : ''}
               normal-case lg:ml-4 mb-2 lg:mb-0 ${!awaitingResponse && !submissionError && !response && 'hidden'}`}
           >
             {
               awaitingResponse ? 'Sending...' :
-              response ? 'Message received! Thanks.' :
-              submissionError && `Something went wrong. You can contact me directly at ${email}.`
+                response ? 'Message received! Thanks.' :
+                  submissionError && `Something went wrong. You can contact me directly at ${email}.`
             }
           </p>
         </div>
