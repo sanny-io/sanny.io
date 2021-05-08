@@ -7,7 +7,7 @@ import myPictureUrl from '../../../assets/images/me.jpg';
 export default function Hero() {
   return (
     <React.Fragment>
-      <section className="flex flex-col-reverse items-center justify-center px-6 pt-8 mb-16 space-y-6 space-y-reverse md:space-y-0 md:space-x-16 md:pt-16 md:flex-row">
+      <section className="flex flex-col-reverse items-center justify-center px-6 pt-8 mb-8 space-y-6 space-y-reverse md:mb-16 md:space-y-0 md:space-x-16 md:pt-16 md:flex-row">
         <div className="text-center md:text-right">
           <h1 className="mb-4 text-5xl font-bold text-white md:text-7xl">{info.name}</h1>
           <h2 className="mb-4 text-3xl font-light tracking-wide text-blue-400">{info.title}</h2>

@@ -12,7 +12,7 @@ export default function Projects() {
         <div className="flex flex-col space-y-8">
           {
             // @ts-ignore
-            projects.map((project, key) => <Item key={key} {...project} />)
+            projects.map((project, key) => <Item key={key} {...project} reverse={key % 2 !== 0} />)
           }
         </div>
       </div>

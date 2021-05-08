@@ -1,30 +1,41 @@
 ---
 -   name: sanny.io
     url: /
+    sourceUrl: https://github.com/sanny-io/sanny.io
     description: |
-                Mollit nostrud ipsum ipsum cupidatat sit amet eu nostrud eu deserunt exercitation. Nisi eiusmod eiusmod cillum ex do ea cillum deserunt.
-
-                Aliqua consequat amet proident elit ex aliquip aliqua. Amet ullamco commodo ipsum ea. Veniam irure Lorem veniam esse eu ex. Enim laborum velit laboris cillum veniam.
+                The site you're viewing right now! I made it myself.
     details: |
-            Qui cillum est quis dolore Lorem. Deserunt ad exercitation laborum velit fugiat aliquip incididunt nostrud ea veniam aliqua sunt deserunt. Proident sunt pariatur consequat laboris deserunt et elit commodo. Amet reprehenderit aliquip est aliqua aliqua. Ipsum occaecat irure consectetur eu reprehenderit ex aliquip labore enim dolor id pariatur et. Ut non laboris pariatur duis cillum veniam excepteur aute nostrud. Ut magna mollit occaecat adipisicing ea aute ut pariatur incididunt.
+            This website was both designed and developed myself. Normally, I'd make sites like these in plain JavaScript and CSS, but I specifically wanted to show my experience with the toolsets I'm most familiar with. This was actually my first site made using TypeScript. I have some experience with C#, so I appreciate the many similarities between the two -- and the safety, of course. 😅
 
-            Irure veniam nulla dolore cillum in duis fugiat culpa incididunt velit laborum cillum eiusmod. Esse anim sunt sunt anim est anim cupidatat Lorem culpa. Irure dolore non velit magna sit deserunt non eiusmod ipsum qui ea commodo sit. Consectetur officia aliqua enim mollit eu aute ad occaecat quis enim cupidatat magna. Culpa nulla sit laboris voluptate.
+            I've gone through many iterations of this site, but it feels like no matter what I do, I keep coming back and trying to make it better. I guess it's because my name is literally attached to it, so I'm compelled to scrutinize every little thing. What it allows me to do, though, is experiment with new things I find and see how I like it.
+
+            Tailwind was one of those things. Now I use it in every new project I make.
     image: http://placekitten.com/1100/600
     tags:
         - React
+        - TypeScript
+        - Tailwind CSS
         - HTML
--   name: sanny.io2
-    url: https://sanny.io
+        - Firebase
+-   name: Summon Sign
+    url: https://summonsign.net
+    sourceUrl: https://github.com/sanny-io/summonsign
     description: |
-                Sit eiusmod proident irure qui sint ipsum. Laborum esse nostrud culpa officia in consectetur sint nisi proident ad enim qui. Aute cillum voluptate qui incididunt. Exercitation reprehenderit mollit cillum velit Lorem esse adipisicing. Quis elit magna aliqua ex non.
-
-                Fugiat est aute nisi in laboris est. Ex incididunt magna esse est sunt eu elit ea consequat est eu qui. Commodo irure ad nulla esse aliquip cupidatat dolor ipsum veniam labore ea laboris.
+                This web application assists Dark Souls players in locating others who need help.
     details: |
-            Qui cillum est quis dolore Lorem. Deserunt ad exercitation laborum velit fugiat aliquip incididunt nostrud ea veniam aliqua sunt deserunt. Proident sunt pariatur consequat laboris deserunt et elit commodo. Amet reprehenderit aliquip est aliqua aliqua. Ipsum occaecat irure consectetur eu reprehenderit ex aliquip labore enim dolor id pariatur et. Ut non laboris pariatur duis cillum veniam excepteur aute nostrud. Ut magna mollit occaecat adipisicing ea aute ut pariatur incididunt.
+            Dark Souls is a video game series notorious for how difficult it can be. Fortunately, it includes multiplayer mechanics that allows players to "summon" each other. Through this, players can enter the game of another player, and assist them in defeating a boss or progressing through an area.
 
-            Irure veniam nulla dolore cillum in duis fugiat culpa incididunt velit laborum cillum eiusmod. Esse anim sunt sunt anim est anim cupidatat Lorem culpa. Irure dolore non velit magna sit deserunt non eiusmod ipsum qui ea commodo sit. Consectetur officia aliqua enim mollit eu aute ad occaecat quis enim cupidatat magna. Culpa nulla sit laboris voluptate.
+            However, these helpers (called phantoms) must place a physical sign in the game world. These summon signs can be easily missed by other players due to the size of the game world and some rules that stipulate whether the sign appears at all for others. Unfortunately, this often means that players who require assistance may find it rather difficult to acquire any.
+
+            There is a reddit community dedicated to connecting phantoms with these players. This web application polls the /r/summonsign subreddit and allows phantoms to specify which game, platform, and boss they are available to help with.
+
+            Additionally, this application highlights pertinent information that helps phantoms connect with the player in-game, and can even notify phantoms when a player is in need of one.
     image: http://placekitten.com/1100/600
     tags:
         - React
+        - JavaScript
+        - Tailwind CSS
+        - Ant Design
         - HTML
+        - Firebase
 ---

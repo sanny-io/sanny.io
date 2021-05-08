@@ -26,7 +26,7 @@ export default function App() {
       setActiveProjectVisible,
     }}>
       <main className="min-h-screen overflow-y-hidden min-w-screen">
-        <div className={`absolute w-full ${activeProject && 'overflow-hidden'}`}>
+        <div className={`absolute w-full`}>
           <Hero />
           <About />
           <Tech />

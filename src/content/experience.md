@@ -7,10 +7,10 @@
     description: Designing pages, styling components, and ensuring visual consistency on all viewport sizes. Plain CSS, Bootstrap, Semantic UI, and Tailwind CSS.
 -   name: JavaScript / TypeScript
     icon: javascript
-    description: Lorem minim nisi dolore ipsum id cupidatat. Cillum dolore nulla in culpa consectetur laboris dolor.
+    description: Front-end web application development and back-end Node.js server development.
 -   name: React
     icon: react
-    description: Single page applications, functional components, class components, hooks, fetching data, and state management.
+    description: Single page applications, functional components, class components, hooks, data fetching, and state management.
 -   name: SQL
     icon: database
     description: CRUD operations, mass migrations, APIs, and ORM frameworks. Experience includes SQLite and MySQL/MariaDB.
