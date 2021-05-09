@@ -43,7 +43,7 @@ export default function Contact() {
             <div className="space-x-4">
               <button
                 disabled={submitDisabled}
-                className="primary button disabled:cursor-not-allowed disabled:!bg-blue-500 disabled:bg-none"
+                className="primary button"
                 type="submit"
               >
                 Submit

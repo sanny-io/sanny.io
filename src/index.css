@@ -22,5 +22,8 @@ body,
 }
 
 .button.primary {
-    @apply bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 active:from-blue-800 active:to-blue-900;
+    @apply bg-gradient-to-r from-blue-600 to-blue-700;
+    @apply hover:from-blue-700 hover:to-blue-800;
+    @apply active:from-blue-800 active:to-blue-900;
+    @apply disabled:cursor-not-allowed disabled:bg-blue-500 disabled:bg-none;
 }
