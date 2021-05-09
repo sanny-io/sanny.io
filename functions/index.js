@@ -25,7 +25,7 @@ exports.sendMessage = functions.https.onRequest((request, response) => {
         response.status(500).send({ 'data': { 'error': 'Server error.' } });
       }
       else {
-        response.status(204).send({ 'data': { 'message': 'Message received! Thanks.' } });
+        response.status(200).send({ 'data': { 'message': 'Message received! Thanks.' } });
       }
     });
   })

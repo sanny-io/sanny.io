@@ -13,6 +13,12 @@ firebase.initializeApp({
   measurementId: "G-WWT0JREYKV",
 });
 
-firebase.analytics();
+if (import.meta.env.DEV) {
+  firebase.functions().useEmulator('localhost', 5001);
+}
+
+if (navigator.doNotTrack !== '1' || import.meta.env.DEV) {
+  firebase.analytics();
+}
 
 export default firebase;
