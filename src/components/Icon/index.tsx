@@ -10,11 +10,15 @@ import { ReactComponent as LinkedInIcon } from '../../../assets/icons/linkedin.s
 import { ReactComponent as EmailIcon } from '../../../assets/icons/email.svg';
 import { ReactComponent as GitIcon } from '../../../assets/icons/git.svg';
 import { ReactComponent as CodeIcon } from '../../../assets/icons/code.svg';
+import { ReactComponent as ProfileIcon } from '../../../assets/icons/profile.svg';
+import { ReactComponent as SuitcaseIcon } from '../../../assets/icons/suitcase.svg';
+import { ReactComponent as ProjectIcon } from '../../../assets/icons/project.svg';
+import { ReactComponent as TechnologyIcon } from '../../../assets/icons/experience.svg';
 
-export type IconType = 'email' | 'github' | 'linkedin';
+export type IconType = 'email' | 'github' | 'linkedin' | 'profile' | 'suitcase' | 'project' | 'technology';
 export type IconProps = {
   type: IconType,
-  href?: string,
+  link?: string,
   description?: string,
   className?: string,
 }
@@ -31,15 +35,24 @@ const icons = {
   email: EmailIcon,
   git: GitIcon,
   code: CodeIcon,
+  profile: ProfileIcon,
+  suitcase: SuitcaseIcon,
+  project: ProjectIcon,
+  technology: TechnologyIcon,
 }
 
-export default function Icon({ type, className, href, description }: IconProps) {
+export default function Icon({ type, className, link, description }: IconProps) {
   const SvgComponent = icons[type];
   const renderedIcon = <SvgComponent className={`${className}`} aria-label={description} />
 
-  if (href)
+  if (link)
     return (
-      <a className="hover:text-blue-500" href={href} target="_blank" title={description} rel="noopener noreferrer" >
+      <a
+        className="hover:text-blue-500"
+        href={link}
+        target={!link?.startsWith('#') ? '_blank' : ''}
+        title={description}
+        rel="noopener noreferrer">
         {renderedIcon}
       </a>
     )

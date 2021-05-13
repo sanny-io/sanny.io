@@ -5,6 +5,7 @@ import Agile from '../Agile';
 import Tech from '../Experience';
 import Design from '../Design';
 import Projects from '../Projects';
+import NavBar from '../NavBar';
 import { Details as ProjectDetails } from '../Projects/Item';
 import History from '../History';
 import Contact from '../Contact';
@@ -26,6 +27,8 @@ export default function App() {
       setActiveProjectVisible,
     }}>
       <main className="min-h-screen overflow-y-hidden min-w-screen">
+        <NavBar />
+
         <div className={`absolute w-full`}>
           <Hero />
           <About />

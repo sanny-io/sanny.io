@@ -5,7 +5,7 @@ import { attributes as items } from '../../content/experience.md';
 
 export default function Experience() {
   return (
-    <section className="text-white bg-gray-800">
+    <section id="experience" className="text-white bg-gray-800">
       <div className="container px-8 py-16 mx-auto">
         <h2 className="mb-16 text-5xl tracking-widest text-center uppercase md:text-6xl">My experience</h2>
         <div className="p-2 bg-gray-900 border-l-2 border-blue-600 rounded md:p-8">

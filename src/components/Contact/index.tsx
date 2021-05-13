@@ -25,9 +25,10 @@ export default function Contact() {
   }
 
   return (
-    <section className="px-8 pt-16 text-white bg-gray-800">
-      <h2 className="mb-4 text-5xl tracking-widest text-center !text-blue-400 uppercase md:text-6xl font-thin">Contact me</h2>
+    <section id="contact" className="px-8 pt-16 text-white bg-gray-800">
+      <h2 className="mb-4 text-5xl tracking-widest text-center !text-blue-400 uppercase md:text-6xl font-light">Contact me</h2>
       <h4 className="text-2xl font-light text-center text-gray-400">Let's get this bread.</h4>
+
       <Formik
         initialValues={{ name: '', email: '', message: '' }}
         onSubmit={handleSubmit}
@@ -43,7 +44,7 @@ export default function Contact() {
             <div className="space-x-4">
               <button
                 disabled={submitDisabled}
-                className="primary button"
+                className="w-full primary button md:w-max"
                 type="submit"
               >
                 Submit
