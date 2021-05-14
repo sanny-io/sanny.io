@@ -9,16 +9,16 @@ definedScreens['*'] = '5000px';
 export type ResponsiveImageProps = {
   images: Record<string, any>,
   screens: Record<string, string>,
-  className?: string,
-}
+} & React.ImgHTMLAttributes<HTMLImageElement>;
 
-export default function ResponsiveImage({ images, screens, className }: ResponsiveImageProps) {
+export default function ResponsiveImage({ images, screens, className, src }: ResponsiveImageProps) {
   return (
     <img
+      src={src}
       className={className}
       // @ts-ignore
       srcSet={Object.keys(images).map(image => `${image} ${image.match(/w_(\d+)/)[1]}w`).join(', ')}
-      sizes={`${Object.keys(screens).map(screen => `(min-width: ${definedScreens[screen]})`).join(', ')}, ${screens['*']}`}
+      sizes={`${Object.keys(screens).map(screen => `(max-width: ${definedScreens[screen]}) ${screens[screen]}`).join(', ')}, ${screens['*']}`}
     />
   )
 }

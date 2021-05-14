@@ -2,7 +2,8 @@ import React from 'react';
 import Social from '../Social';
 // @ts-ignore
 import { attributes as info } from '../../content/info.md';
-import myPictureUrl from '../../../assets/images/me.jpg';
+import myPicture from '../../../assets/images/me.png';
+import ResponsiveImage from '../ResponsiveImage';
 
 export default function Hero() {
   return (
@@ -14,7 +15,15 @@ export default function Hero() {
           <Social />
         </div>
         <div className="pb-8 border-b-4 border-blue-600 md:border-l-4 md:border-b-0 md:pl-8 md:pb-0">
-          <img className="rounded-full" src={myPictureUrl} width="250px" alt="Sanny Sherief" />
+          {
+            <ResponsiveImage
+              className="rounded-full"
+              src={myPicture}
+              alt="Sanny Sherief"
+              screens={{ md: '45vw', '*': '270px' }}
+              images={import.meta.globEager('/assets/images/me/*')}
+            />
+          }
         </div>
       </section>
       <span aria-hidden="true" className="block mx-auto mb-8 text-6xl text-center text-blue-600 md:hidden motion-safe:animate-bounce">&darr;</span>
