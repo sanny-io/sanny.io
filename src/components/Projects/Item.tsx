@@ -140,7 +140,7 @@ export default function Item({ name, url, sourceUrl, description, image, tags, d
           </button>
           <a
             href={sourceUrl}
-            className="inline-flex items-center button link"
+            className="inline-flex items-center text-left button link"
             target="__blank"
             rel="noopener noreferrer"
           >
