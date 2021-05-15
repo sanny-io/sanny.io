@@ -19,7 +19,7 @@ export default function ResponsiveImage({ images, screens, className, src }: Res
       src={src}
       className={className}
       // @ts-ignore
-      srcSet={Object.values(images).map(({ default: image }) => `${image} ${image.match(/w_(\d+)/)[1]}w`).join(', ')}
+      srcSet={Object.entries(images).map(([originalImage, { default: image }]) => `${image} ${originalImage.match(/w_(\d+)/)[1]}w`).join(', ')}
       // @ts-ignore
       sizes={`${Object.keys(screens).map(screen => `(max-width: ${definedScreens[screen]}) ${screens[screen]}`).join(', ')}, ${screens['*']}`}
     />
