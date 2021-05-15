@@ -53,9 +53,9 @@ export function Details({ name, url, sourceUrl, details, image, tags }: ItemProp
                 <a href={url} target="_blank">{name}</a>
               </Dialog.Title>
 
-              <ul className="flex flex-wrap gap-2">
+              <ul className="flex flex-wrap -m-1">
                 {
-                  tags?.map((tag, key) => <li key={key}><Tag>{tag}</Tag></li>)
+                  tags?.map((tag, key) => <li className="m-1" key={key}><Tag>{tag}</Tag></li>)
                 }
               </ul>
 
@@ -128,13 +128,13 @@ export default function Item({ name, url, sourceUrl, description, image, tags, d
 
         <Markdown className="mb-4 space-y-4">{description}</Markdown>
 
-        <ul className={`flex flex-wrap gap-2 mb-4 ${reverse && 'justify-end'}`}>
+        <ul className={`flex flex-wrap -m-1 mb-4 ${reverse && 'justify-end'}`}>
           {
-            tags?.map((tag, key) => <li key={key}><Tag>{tag}</Tag></li>)
+            tags?.map((tag, key) => <li className="m-1" key={key}><Tag>{tag}</Tag></li>)
           }
         </ul>
 
-        <div className="flex gap-3 mt-auto text-sm">
+        <div className="flex mt-auto space-x-3 text-sm">
           <button className="capitalize primary button" onClick={() => setActiveProject({ name, url, description, image, tags, details, sourceUrl })}>
             View more details
           </button>
