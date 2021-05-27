@@ -14,10 +14,6 @@ export default defineConfig({
   ],
 
   build: {
-    rollupOptions: {
-      plugins: [
-
-      ]
-    }
+    assetsInlineLimit: 0,
   }
 })

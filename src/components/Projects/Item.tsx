@@ -4,6 +4,7 @@ import Markdown from 'react-markdown';
 import AppContext from '../../state';
 import Icon from '../Icon';
 import { Dialog, Transition } from '@headlessui/react';
+import ResponsiveImage from '../ResponsiveImage';
 
 export type ItemProps = {
   name: string,
@@ -110,13 +111,20 @@ export default function Item({ name, url, sourceUrl, description, image, tags, d
   const { setActiveProject } = useContext(AppContext);
 
   return (
-    <div className={`flex border border-gray-800 shadow-xl ${reverse && 'text-right flex-row-reverse'}`}>
+    <div className={`flex ${reverse && 'text-right flex-row-reverse'}`}>
       <a
         className="hidden w-3/5 lg:flex lg:flex-col lg:justify-center"
         href={url}
         target="__blank"
-        rel="noopener noreferrer">
-        <img className="object-cover w-full" src={image} alt={`Preview of ${name}`} />
+        rel="noopener noreferrer"
+      >
+        <ResponsiveImage
+          className="object-cover w-full filter drop-shadow-2xl"
+          src={image}
+          images={import.meta.globEager('/assets/images/sannyio/*')}
+          screens={{ md: '40vw', '*': '80vw' }}
+          alt={`Preview of ${name}`}
+        />
       </a>
 
       <div className={`flex flex-col w-full px-4 py-2 md:py-4 md:px-8 lg:w-2/5 ${reverse ? 'items-end' : 'items-start'}`}>
