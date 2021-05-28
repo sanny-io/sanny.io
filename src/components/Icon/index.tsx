@@ -52,7 +52,9 @@ export default function Icon({ type, className, link, description }: IconProps) 
         href={link}
         target={!link?.startsWith('#') ? '_blank' : ''}
         title={description}
-        rel="noopener noreferrer">
+        rel="noopener noreferrer"
+        aria-label={description}
+      >
         {renderedIcon}
       </a>
     )

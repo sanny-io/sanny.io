@@ -16,11 +16,12 @@ export default function Item({ description, icon, link }: any) {
 
   return (
     <div ref={setTriggerRef}>
-      <Icon className="w-5" type={icon} link={link} />
+      <Icon className="w-5" type={icon} link={link} description={description} />
 
       {visible && (
         <div
           ref={setTooltipRef}
+
           {...getTooltipProps({ className: 'tooltip-container w-max capitalize' })}
         >
           <div {...getArrowProps({

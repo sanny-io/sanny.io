@@ -111,7 +111,7 @@ export default function Item({ name, url, sourceUrl, description, image, tags, d
   const { setActiveProject } = useContext(AppContext);
 
   return (
-    <div className={`flex ${reverse && 'text-right flex-row-reverse'}`}>
+    <div className={`flex border border-gray-800 py-4 shadow-xl ${reverse ? 'text-right flex-row-reverse' : ''}`}>
       <a
         className="hidden w-3/5 lg:flex lg:flex-col lg:justify-center"
         href={url}

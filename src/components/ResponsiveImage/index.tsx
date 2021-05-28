@@ -13,7 +13,7 @@ export type ResponsiveImageProps = {
   screens: Record<string, string>,
 } & React.ImgHTMLAttributes<HTMLImageElement>;
 
-export default function ResponsiveImage({ images, screens, className, src }: ResponsiveImageProps) {
+export default function ResponsiveImage({ images, screens, className, src, ...rest }: ResponsiveImageProps) {
   return (
     <img
       src={src}
@@ -22,6 +22,7 @@ export default function ResponsiveImage({ images, screens, className, src }: Res
       srcSet={Object.entries(images).map(([originalImage, { default: image }]) => `${image} ${originalImage.match(/w_(\d+)/)[1]}w`).join(', ')}
       // @ts-ignore
       sizes={`${Object.keys(screens).map(screen => `(max-width: ${definedScreens[screen]}) ${screens[screen]}`).join(', ')}, ${screens['*']}`}
+      {...rest}
     />
   )
 }
