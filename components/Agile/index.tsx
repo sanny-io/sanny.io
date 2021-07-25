@@ -15,6 +15,7 @@ export default function Agile({ children }: AgileProps) {
           <h2 className="mr-32 text-6xl font-black uppercase md:text-7xl lg:text-8xl">
             Did <br />someone <br />say <br /><span className="text-primary">agile</span>?
           </h2>
+
           <div className="pb-8 space-y-8 text-xl border-primary border-b-[3px] self-start">
             <Markdown className="space-y-8">
               {children}

@@ -12,6 +12,8 @@ export type ProjectItemProps = {
   description: string,
   details: string,
   image: string,
+  imageWidth: number,
+  imageHeight: number,
   tags?: string[],
   reverse?: boolean,
 }
@@ -23,6 +25,8 @@ export default function ProjectItem(props: ProjectItemProps) {
     sourceUrl,
     description,
     image,
+    imageWidth,
+    imageHeight,
     tags,
     details,
     reverse = false
@@ -38,9 +42,12 @@ export default function ProjectItem(props: ProjectItemProps) {
         target="__blank"
         rel="noopener noreferrer"
       >
-        <img
+        <Image
           src={image}
+          width={imageWidth}
+          height={imageHeight}
           className="object-cover w-full filter drop-shadow-2xl"
+          layout="responsive"
           alt={`Preview of ${name}`}
         />
       </a>

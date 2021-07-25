@@ -4,6 +4,7 @@ import { Dialog } from '@headlessui/react'
 import Tag from './Tag'
 import Markdown from '../Markdown'
 import Icon from '../Icon'
+import Image from 'next/image'
 
 export type ProjectsProps = {
   children: ProjectItemProps[],
@@ -80,7 +81,13 @@ export default function Projects({ children }: ProjectsProps) {
                   </Markdown>
 
                   <a href={activeProject.url} target="__blank" rel="noopener noreferrer">
-                    <img className="object-cover w-full" src={activeProject.image} alt={`Preview of ${activeProject.name}`} />
+                    <Image
+                      src={activeProject.image}
+                      width={activeProject.imageWidth}
+                      height={activeProject.imageHeight}
+                      layout="responsive"
+                      className="object-cover w-full"
+                      alt={`Preview of ${activeProject.name}`} />
                   </a>
                 </div>
               </div>

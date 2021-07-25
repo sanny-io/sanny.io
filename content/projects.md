@@ -11,6 +11,8 @@
 
             Tailwind was one of those things. Now I use it in every new project I make.
     image: /assets/images/sannyio.png
+    imageWidth: 1518
+    imageHeight: 801
     tags:
         - React
         - TypeScript
@@ -30,6 +32,8 @@
 
             Additionally, this application highlights pertinent information that helps phantoms connect with the player in-game, and can even notify phantoms when a player is in need of one.
     image: /assets/images/sannyio.png
+    imageWidth: 1518
+    imageHeight: 801
     tags:
         - React
         - JavaScript
