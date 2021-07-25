@@ -16,7 +16,15 @@ module.exports = {
       red: colors.rose,
       yellow: colors.yellow,
       orange: colors.orange,
-    }
+    },
+    extend: {
+      backgroundImage: () => ({
+        track: 'url(\'./public/assets/images/track.jpg\')',
+      }),
+      transitionProperty: {
+        width: 'width',
+      }
+    },
   },
   variants: {
     extend: {},

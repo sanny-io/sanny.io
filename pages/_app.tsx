@@ -7,10 +7,9 @@ export default function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
-        <title></title>
-        <base href="/" target="_blank"></base>
-        <meta name="description" content="" />
-        <meta name="theme-color" content="" />
+        <title>Sanny Sherief</title>
+        <meta name="description" content="Sanny Sherief's portfolio website." />
+        <meta name="theme-color" content="#171717" />
       </Head>
 
       <Component {...pageProps} />
