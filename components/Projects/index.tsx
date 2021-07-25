@@ -72,7 +72,7 @@ export default function Projects({ children }: ProjectsProps) {
                   </a>
                 </div>
 
-                <hr className="my-4 border-t-2 border-blue-600" />
+                <hr className="my-4 border-t-2 border-primary" />
 
                 <div className="grid grid-cols-1 gap-x-8 gap-y-4 lg:grid-cols-2">
                   <Markdown className="row-start-2 mb-4 space-y-4 lg:row-start-auto">

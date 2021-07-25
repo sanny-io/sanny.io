@@ -22,7 +22,7 @@ export default function Contact({ email }: ContactProps) {
 
   return (
     <section id="contact" className="px-8 pt-16 text-white bg-gray-800">
-      <h2 className="mb-4 text-5xl tracking-widest text-center !text-blue-400 uppercase md:text-6xl font-light">Contact me</h2>
+      <h2 className="mb-4 text-5xl tracking-widest text-center !text-secondary uppercase md:text-6xl font-light">Contact me</h2>
       <p className="text-2xl font-light text-center text-gray-400">Let's get this bread.</p>
 
       <Formik

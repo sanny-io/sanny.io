@@ -18,7 +18,7 @@ export default function HistoryItem({ name, title, description, startDate, endDa
       </h4>
       <p className="mb-1 text-xl font-light uppercase text">{title}</p>
       <p className="mb-4">{`${startDate} - ${endDate ? endDate : 'Present'}`}</p>
-      <hr className="w-64 mb-4 border-t-2 border-blue-600" />
+      <hr className="w-64 mb-4 border-t-2 border-primary" />
 
       <Markdown className="space-y-4">
         {description}

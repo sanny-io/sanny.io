@@ -10,7 +10,7 @@ export default function About({ children }: AboutProps) {
     <section>
       <div className="text-white">
         <div className="container relative max-w-lg px-4 mx-auto">
-          <h2 className="mb-16 text-5xl font-light tracking-widest text-center text-blue-400 uppercase md:text-6xl">About Me</h2>
+          <h2 className="mb-16 text-5xl font-light tracking-widest text-center uppercase text-secondary md:text-6xl">About Me</h2>
 
           <article className="mb-16">
             <Markdown className="space-y-8">

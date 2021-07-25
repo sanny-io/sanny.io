@@ -4,12 +4,17 @@ module.exports = {
   mode: 'jit',
   purge: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
   theme: {
+    fontFamily: {
+      'sans': ['Inter', 'sans-serif'],
+    },
     colors: {
       transparent: 'transparent',
       current: 'currentColor',
       black: colors.black,
       white: colors.white,
       gray: colors.trueGray,
+      primary: colors.blue[600],
+      secondary: colors.blue[400],
       green: colors.green,
       blue: colors.blue,
       indigo: colors.indigo,

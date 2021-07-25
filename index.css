@@ -2,12 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;600;700;900&display=swap');
+
 @layer base {
   html,
   body,
   #__next {
     @apply h-full;
     @apply bg-gray-900;
+    @apply font-sans;
   }
 
   #__next {

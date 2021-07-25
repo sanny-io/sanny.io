@@ -1,18 +1,21 @@
 import React from 'react'
 import grayMatter from 'gray-matter'
+import { GetStaticProps } from 'next'
+
 import NavBar from '../components/NavBar'
 import Hero, { HeroProps } from '../components/Hero'
 import About from '../components/About'
 import Experience from '../components/Experience'
 import Agile from '../components/Agile'
 import Design from '../components/Design'
-import { GetStaticProps } from 'next'
+import Projects from '../components/Projects'
+import History from '../components/History'
+import Contact, { ContactProps } from '../components/Contact'
+
 import { NavBarItemProps } from '../components/NavBar/NavBarItem'
 import { ExperienceItemProps } from '../components/Experience/ExperienceItem'
 import { ProjectItemProps } from '../components/Projects/ProjectItem'
 import { HistoryItemProps } from '../components/History/HistoryItem'
-import Projects from '../components/Projects'
-import Contact, { ContactProps } from '../components/Contact'
 
 import navBarMd from '../content/navbar.md'
 import infoMd from '../content/info.md'
@@ -22,7 +25,6 @@ import agileMd from '../content/agile.md'
 import designMd from '../content/design.md'
 import projectsMd from '../content/projects.md'
 import historyMd from '../content/history.md'
-import History from '../components/History'
 
 export type HomeProps = {
   navBar: NavBarItemProps[],

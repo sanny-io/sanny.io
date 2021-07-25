@@ -6,6 +6,6 @@ export type TagProps = {
 
 export default function Tag({ children }: TagProps) {
   return (
-    <span className="px-2 py-1 text-sm bg-blue-600">{children}</span>
+    <span className="px-2 py-1 text-sm bg-primary">{children}</span>
   )
 }

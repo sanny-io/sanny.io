@@ -9,7 +9,7 @@ export type DesignProps = {
 
 export default function Design({ children }: DesignProps) {
   return (
-    <section className="pb-8 text-white bg-blue-600 md:pb-32">
+    <section className="pb-8 text-white bg-primary md:pb-32">
       {/* <div className="container flex flex-col px-4 mx-auto lg:flex-row lg:space-x-14"> */}
       <div className="container flex flex-col px-4 mx-auto lg:flex-row lg:space-x-14">
         <div className="self-center w-full mb-8 lg:w-1/2 md:mb-16">
