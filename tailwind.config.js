@@ -24,7 +24,11 @@ module.exports = {
     },
     extend: {
       backgroundImage: () => ({
-        track: 'url(\'./public/assets/images/track.jpg\')',
+        'track': 'url(\'./public/assets/images/track.jpg\')',
+        'track-md': 'url(\'./public/assets/images/track-md.jpg\')',
+        'track-lg': 'url(\'./public/assets/images/track-lg.jpg\')',
+        'track-xl': 'url(\'./public/assets/images/track-xl.jpg\')',
+        'track-2xl': 'url(\'./public/assets/images/track-2xl.jpg\')',
       }),
       transitionProperty: {
         width: 'width',

@@ -7,7 +7,7 @@ export type AgileProps = {
 
 export default function Agile({ children }: AgileProps) {
   return (
-    <section className="bg-fixed bg-cover bg-track">
+    <section className="bg-fixed bg-cover bg-track md:bg-track-md lg:bg-track-lg xl:bg-track-xl 2xl:bg-track-2xl">
       <div className="bg-black/80">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#262626" d="M0,288L1440,0L1440,0L0,0Z"></path></svg>
 

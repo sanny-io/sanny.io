@@ -36,7 +36,7 @@
     imageHeight: 801
     tags:
         - React
-        - JavaScript
+        - TypeScript
         - Tailwind CSS
         - HTML
         - Firebase
