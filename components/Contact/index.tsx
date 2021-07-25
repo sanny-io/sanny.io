@@ -52,7 +52,7 @@ export default function Contact({ email }: ContactProps) {
                 }>
                 {
                   hasError
-                    ? <>Error. Contact me directly at <a href={`mailto:${email}`}>{email}</a></>
+                    ? <>Error. Contact me directly at <a href={`mailto:${email}`} className="font-bold">{email}</a></>
                     : <>Message received! Thanks.</>
                 }
               </span>
