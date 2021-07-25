@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 import Tag from './Tag'
-import Markdown from 'react-markdown'
+import Markdown from '../Markdown'
 import Icon from '../Icon'
 import Image from 'next/image'
 import { ProjectsContext } from '.'

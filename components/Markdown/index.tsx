@@ -3,10 +3,8 @@ import ReactMarkdown, { ReactMarkdownOptions } from 'react-markdown'
 
 export default function Markdown(options: ReactMarkdownOptions): React.ReactElement {
   return (
-    <div className={`markdown ${options.className || ''}`}>
-      <ReactMarkdown>
-        {options.children}
-      </ReactMarkdown>
-    </div>
+    <ReactMarkdown className={`markdown ${options.className || ''}`}>
+      {options.children}
+    </ReactMarkdown>
   )
 }

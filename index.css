@@ -57,6 +57,10 @@
     @apply mb-3;
   }
 
+  .markdown a {
+    @apply text-secondary;
+  }
+
   .markdown blockquote {
     @apply pl-3;
     @apply border-l-4 border-gray-700;
