@@ -37,23 +37,23 @@ export default function Contact({ email }: ContactProps) {
               <Field required as="textarea" name="message" rows={5} placeholder="Message" className="md:col-span-2" />
             </div>
 
-            <div className="space-x-4">
+            <div>
               <button
                 type="submit"
                 disabled={hasError === false}
-                className="w-full primary button md:w-max"
+                className="block w-full mb-4 primary button md:inline-block md:w-max"
               >
                 Submit
               </button>
 
               <span
                 className={
-                  `font-semibold tracking-wide ${hasError === null && 'hidden'} ${hasError ? 'text-red-500' : 'text-green-500'}`
+                  `md:ml-4 inline-block font-semibold tracking-wide ${hasError === null && 'hidden'} ${hasError ? 'text-red-500' : 'text-green-500'}`
                 }>
                 {
                   hasError
-                    ? `Something went wrong. You can contact me directly at ${email}`
-                    : 'Message received! Thanks.'
+                    ? <>Error. Contact me directly at <a href={`mailto:${email}`}>{email}</a></>
+                    : <>Message received! Thanks.</>
                 }
               </span>
             </div>
