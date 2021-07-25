@@ -50,7 +50,11 @@ export default function Contact({ email }: ContactProps) {
                 className={
                   `font-semibold tracking-wide ${hasError === null && 'hidden'} ${hasError ? 'text-red-500' : 'text-green-500'}`
                 }>
-                Message received! Thanks.
+                {
+                  hasError
+                    ? `Something went wrong. You can contact me directly at ${email}`
+                    : 'Message received! Thanks.'
+                }
               </span>
             </div>
           </Form>
