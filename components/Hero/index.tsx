@@ -1,7 +1,7 @@
 import React from 'react'
 import Social from '../Social'
 import Image from 'next/image'
-import me from '../../public/assets/images/me.png'
+import me from '../../public/assets/images/me.jpg'
 
 export type HeroProps = {
   name: string,
