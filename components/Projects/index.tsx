@@ -38,11 +38,11 @@ export default function Projects({ children }: ProjectsProps) {
           onClose={closeDialog}
           className="fixed inset-0 w-screen h-screen text-white"
         >
-          <Dialog.Overlay className="fixed w-screen h-screen bg-black/80" />
+          <Dialog.Overlay className="fixed w-screen h-screen bg-black/50" />
 
           <div className="flex flex-col justify-center w-full h-full">
             <div className="z-50 p-4 overflow-y-auto" onClick={e => e.target === e.currentTarget && closeDialog()}>
-              <div className="container relative p-4 mx-auto bg-gray-800">
+              <div className="container relative p-4 mx-auto bg-gray-900 border-l-4 border-primary">
                 <button
                   className="absolute text-3xl text-gray-300 right-3 top-1 hover:text-gray-500"
                   onClick={closeDialog}
