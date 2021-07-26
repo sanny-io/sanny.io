@@ -86,8 +86,8 @@
             Cheers for hopefully nobody ever going through this madness again 🥳
 
     image: /assets/images/steam.jpg
-    imageWidth: 1920
-    imageHeight: 1080
+    imageWidth: 1200
+    imageHeight: 675
     tags:
         - TypeScript
         - npm
