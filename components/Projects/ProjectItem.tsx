@@ -46,7 +46,7 @@ export default function ProjectItem(props: ProjectItemProps) {
           src={image}
           width={imageWidth}
           height={imageHeight}
-          className="object-cover w-full duration-700 filter drop-shadow-2xl hover:scale-105"
+          className="object-cover w-full duration-[2000ms] filter drop-shadow-2xl hover:scale-105"
           layout="responsive"
           alt={`Preview of ${name}`}
         />
