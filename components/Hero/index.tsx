@@ -23,6 +23,7 @@ export default function Hero({ name, title }: HeroProps) {
           <Image
             priority
             src={me}
+            alt="Headshot of Sanny Sherief"
             className="rounded-full"
             layout="responsive"
             quality={100} />
