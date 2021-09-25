@@ -15,7 +15,9 @@ export default function Design({ children }: DesignProps) {
         <div className="self-center w-full mb-8 lg:w-1/2 md:mb-16">
           <Image
             src={mock}
+            placeholder="blur"
             layout="responsive"
+            className="duration-200"
             alt="Sample site as viewed on various devices"
           />
         </div>

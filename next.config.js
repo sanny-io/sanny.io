@@ -1,4 +1,6 @@
-module.exports = {
+const { withPlaiceholder } = require('@plaiceholder/next')
+
+module.exports = withPlaiceholder({
   webpack(config) {
     config.module.rules.push({
       test: /\.svg$/,
@@ -16,4 +18,4 @@ module.exports = {
   images: {
     deviceSizes: [640, 768, 1024, 1280, 1536],
   },
-}
+})

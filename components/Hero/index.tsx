@@ -22,6 +22,7 @@ export default function Hero({ name, title }: HeroProps) {
         <div className="w-48 pb-8 border-b-4 border-primary md:w-72 md:border-l-4 md:border-b-0 md:pl-8 md:pb-0">
           <Image
             priority
+            placeholder="blur"
             src={me}
             alt="Headshot of Sanny Sherief"
             className="rounded-full"

@@ -1,6 +1,7 @@
 import React from 'react'
 import grayMatter from 'gray-matter'
 import { GetStaticProps } from 'next'
+import { getPlaiceholder } from 'plaiceholder'
 
 import NavBar from '../components/NavBar'
 import Hero, { HeroProps } from '../components/Hero'
@@ -74,6 +75,16 @@ export const getStaticProps: GetStaticProps<HomeProps> = async (context) => {
   const { content: design } = grayMatter(designMd)
   const { data: projects } = grayMatter(projectsMd)
   const { data: history } = grayMatter(historyMd)
+
+  const plaiceholders = await Promise.all(projects.map((project: ProjectItemProps) => {
+    return getPlaiceholder(project.image)
+  }))
+
+  // @ts-ignore
+  plaiceholders.forEach((plaiceholder, index) => {
+    // @ts-ignore
+    projects[index].plaiceholder = plaiceholder.base64
+  })
 
   return {
     props: {

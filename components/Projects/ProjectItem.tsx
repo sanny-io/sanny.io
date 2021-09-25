@@ -14,6 +14,7 @@ export type ProjectItemProps = {
   image: string,
   imageWidth: number,
   imageHeight: number,
+  plaiceholder: string,
   tags?: string[],
   reverse?: boolean,
 }
@@ -29,6 +30,7 @@ export default function ProjectItem(props: ProjectItemProps) {
     imageHeight,
     tags,
     details,
+    plaiceholder,
     reverse = false
   } = props
 
@@ -46,8 +48,10 @@ export default function ProjectItem(props: ProjectItemProps) {
           src={image}
           width={imageWidth}
           height={imageHeight}
-          className="object-cover w-full duration-[2000ms] filter drop-shadow-2xl hover:scale-105"
+          className="object-cover w-full duration-200 filter drop-shadow-2xl"
           layout="responsive"
+          placeholder="blur"
+          blurDataURL={plaiceholder}
           alt={`Preview of ${name}`}
         />
       </a>
