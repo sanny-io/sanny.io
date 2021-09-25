@@ -1,6 +1,5 @@
 import React from 'react'
 import Icon from '../Icon'
-import HtmlIcon from '../../public/assets/icons/html.svg'
 
 export default function Social() {
   return (

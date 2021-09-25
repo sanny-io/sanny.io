@@ -56,7 +56,7 @@ export default function Icon({ type, className, link, description }: IconProps) 
   if (link)
     return (
       <a
-        className="hover:text-blue-500"
+        className="hover:text-blue-500 focus:!ring-0 focus:text-blue-500"
         href={link}
         target={!link?.startsWith('#') ? '_blank' : ''}
         title={description}
