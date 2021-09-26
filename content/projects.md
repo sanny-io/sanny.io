@@ -35,7 +35,7 @@
             There is a reddit community dedicated to connecting phantoms with these players. This web application polls the /r/summonsign subreddit and allows phantoms to specify which game, platform, and boss they are available to help with.
 
             Additionally, this application highlights pertinent information that helps phantoms connect with the player in-game, and can even notify phantoms when a player is in need of one.
-    image: /assets/images/sannyio.png
+    image: /assets/images/summonsign.png
     imageWidth: 1518
     imageHeight: 801
     tags:
@@ -53,6 +53,10 @@
                 This site provides easy to consume information regarding the various software licenses used in the open source community.
     details: |
             This site provides easy to consume information regarding the various software licenses used in the open source community.
+
+            This was my first project made using Next.js, and I must say, it's absolutely incredible. With every new project, the first
+            thing I look forward to is using Next.js and having the development and deployment processes flow so much smoother than
+            if I had worked with Create React App.
     image: /assets/images/licensewiki.png
     imageWidth: 1518
     imageHeight: 801
