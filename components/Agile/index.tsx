@@ -1,13 +1,19 @@
 import React from 'react'
 import Markdown from '../Markdown'
+import { useInView } from 'react-intersection-observer'
 
 export type AgileProps = {
   children: string,
 }
 
 export default function Agile({ children }: AgileProps) {
+  const { ref: inViewRef, inView } = useInView({ triggerOnce: true })
+
   return (
-    <section className="bg-fixed bg-cover bg-track md:bg-track-md lg:bg-track-lg xl:bg-track-xl 2xl:bg-track-2xl">
+    <section
+      className={`bg-fixed bg-cover ${inView ? 'bg-track md:bg-track-md lg:bg-track-lg xl:bg-track-xl 2xl:bg-track-2xl' : ''}`}
+      style={!inView ? { backgroundImage: 'url(\'/assets/images/agile.svg\')' } : {}}
+      ref={inViewRef}>
       <div className="bg-black/80">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#262626" d="M0,288L1440,0L1440,0L0,0Z"></path></svg>
 

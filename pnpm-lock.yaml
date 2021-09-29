@@ -19,6 +19,7 @@ specifiers:
   raw-loader: ^4.0.2
   react: ^17.0.2
   react-dom: ^17.0.2
+  react-intersection-observer: ^8.32.1
   react-markdown: ^6.0.3
   react-popper-tooltip: ^4.3.0
   sharp: ^0.29.1
@@ -41,6 +42,7 @@ dependencies:
   raw-loader: 4.0.2
   react: 17.0.2
   react-dom: 17.0.2_react@17.0.2
+  react-intersection-observer: 8.32.1_react@17.0.2
   react-markdown: 6.0.3_9b26932173ac5a93c18fc8634be19f05
   react-popper-tooltip: 4.3.0_react-dom@17.0.2+react@17.0.2
   sharp: 0.29.1
@@ -4748,6 +4750,14 @@ packages:
 
   /react-fast-compare/3.2.0:
     resolution: {integrity: sha512-rtGImPZ0YyLrscKI9xTpV8psd6I8VAtjKCzQDlzyDvqJA8XOW78TXYQwNRNd8g8JZnDu8q9Fu/1v4HPAVwVdHA==}
+    dev: false
+
+  /react-intersection-observer/8.32.1_react@17.0.2:
+    resolution: {integrity: sha512-FOmMkMw7MeJ8FkuADpU8TRcvGuTvPB+DRkaikS1QXcWArYLCWC3mjRorq2XeRGBuqmaueOBd27PUazTu9AgInw==}
+    peerDependencies:
+      react: ^15.0.0 || ^16.0.0 || ^17.0.0|| ^18.0.0
+    dependencies:
+      react: 17.0.2
     dev: false
 
   /react-is/16.13.1:
