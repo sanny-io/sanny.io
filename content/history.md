@@ -13,7 +13,6 @@
                 I served as a developer and maintainer for the company's flagship roleplaying game.
 
                 The design and development of numerous features provided were contributed by me, including an easy-to-use configuration interface for customers to manage their servers. Additionally, I investigated problems in relation to game updates, and provided customer/technical support through an online ticketing system.
-    url: https://cloudsixteen.com
     startDate: June 2015
     endDate: December 2019
 -   name: Thriving Ventures
