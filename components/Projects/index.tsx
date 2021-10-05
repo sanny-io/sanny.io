@@ -51,7 +51,7 @@ export default function Projects({ children }: ProjectsProps) {
                   &times;
                 </button>
 
-                <Dialog.Title as="h3" className="inline-block mb-4 text-6xl hover:text-blue-500">
+                <Dialog.Title as="h3" className="inline-block mb-4 text-6xl font-semibold hover:text-blue-500">
                   <a href={activeProject.url} target="_blank">{activeProject.name}</a>
                 </Dialog.Title>
 
