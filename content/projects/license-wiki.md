@@ -2,9 +2,9 @@
 name: license.wiki
 url: https://license.wiki
 sourceUrl: https://github.com/sanny-io/licensewiki
-description: This site provides easy to consume information regarding the
+blurb: This site provides easy to consume information regarding the
   various software licenses used in the open source community.
-details: >-
+description: >-
   This site provides easy to consume information regarding the various software
   licenses used in the open source community.
 

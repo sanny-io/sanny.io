@@ -77,7 +77,7 @@ export default function Projects({ children }: ProjectsProps) {
 
                 <div className="grid grid-cols-1 gap-x-8 gap-y-4 lg:grid-cols-2">
                   <Markdown className="row-start-2 mb-4 space-y-5 lg:row-start-auto">
-                    {activeProject.details}
+                    {activeProject.description}
                   </Markdown>
 
                   <a href={activeProject.url} target="__blank" rel="noopener noreferrer">

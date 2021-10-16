@@ -2,8 +2,8 @@
 name: sanny.io
 url: /
 sourceUrl: https://github.com/sanny-io/sanny.io
-description: The site you're viewing right now! I designed and developed it myself.
-details: >-
+blurb: The site you're viewing right now! I designed and developed it myself.
+description: >-
   This website was both designed and developed myself. This was actually my
   first project using TypeScript instead of JavaScript. I have some experience
   with C#, so I appreciate the many similarities between the two -- and the

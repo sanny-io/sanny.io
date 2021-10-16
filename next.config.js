@@ -18,4 +18,13 @@ module.exports = withPlaiceholder({
   images: {
     deviceSizes: [640, 768, 1024, 1280, 1536],
   },
+
+  async rewrites() {
+    return [
+      {
+        source: '/admin',
+        destination: '/admin.html',
+      },
+    ]
+  },
 })

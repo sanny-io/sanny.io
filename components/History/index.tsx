@@ -12,7 +12,7 @@ export default function History({ children }: HistoryProps) {
       <h2 className="mb-16 text-5xl tracking-widest text-center uppercase lg:text-left lg:mb-24 md:text-6xl">My history</h2>
       <ul className="flex flex-col space-y-6">
         {
-          children.map((item, key) => <li key={key}><HistoryItem {...item} /></li>)
+          children.sort((a, b) => +b.startDate - +a.startDate).map((item, key) => <li key={key}><HistoryItem {...item} /></li>)
         }
       </ul>
     </section>

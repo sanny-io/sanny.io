@@ -2,13 +2,13 @@
 name: steamlogin
 url: https://www.npmjs.com/package/@sanny-io/steamlogin
 sourceUrl: https://github.com/sanny-io/steamlogin
-description: >-
+blurb: >-
   This library makes logging in through \[Steam](https://steamcommunity.com) a
   breeze, and works in just about any project.
 
 
   No knowledge of OpenID 2.0 required.
-details: >-
+description: >-
   Steam is the most popular platform for PC gaming. Despite this, it's unusually
   difficult to find information regarding how to authenticate users with it.
 

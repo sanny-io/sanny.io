@@ -1,0 +1,64 @@
+backend:
+  name: git-gateway
+  branch: main
+media_folder: public/assets/uploads
+public_folder: /assets/uploads
+site_url: https://sanny.io
+collections:
+  - name: "sections"
+    label: "Sections"
+    files:
+      - name: "info"
+        label: "Info"
+        file: "content/info.md"
+        fields:
+          - {label: "Name", name: "name", widget: "string"}
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Email", name: "email", widget: "string"}
+
+      - name: "about"
+        label: "About"
+        file: "content/about.md"
+        fields:
+          - {label: "Content", name: "body", widget: "markdown"}
+
+      - name: "agile"
+        label: "Agile"
+        file: "content/agile.md"
+        fields:
+          - {label: "Content", name: "body", widget: "markdown"}
+
+      - name: "design"
+        label: "Design"
+        file: "content/design.md"
+        fields:
+          - {label: "Content", name: "body", widget: "markdown"}
+
+  - name: "projects"
+    label: "Projects"
+    folder: "content/projects"
+    identifier_field: "name"
+    create: true
+    fields:
+      - {label: "Name", name: "name", widget: "string"}
+      - {label: "URL", name: "url", widget: "string"}
+      - {label: "Source URL", name: "sourceUrl", widget: "string", required: false}
+      - {label: "Blurb", name: "blurb", widget: "markdown"}
+      - {label: "Description", name: "description", widget: "markdown"}
+      - {label: "Tags", name: "tags", widget: "list"}
+      - {label: "Image", name: "image", widget: "image"}
+      - {label: "Image Width", name: "imageWidth", widget: "number"}
+      - {label: "Image Height", name: "imageHeight", widget: "number"}
+
+  - name: "history"
+    label: "History"
+    folder: "content/history"
+    identifier_field: "name"
+    create: true
+    fields:
+      - {label: "Name", name: "name", widget: "string"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Description", name: "description", widget: "markdown"}
+      - {label: "URL", name: "url", widget: "string"}
+      - {label: "Start Date", name: "startDate", widget: "datetime", date_format: "MMMM YYYY", time_format: ""}
+      - {label: "End Date", name: "endDate", widget: "datetime", date_format: "MMMM YYYY", time_format: "", required: false}

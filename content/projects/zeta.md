@@ -2,8 +2,8 @@
 name: zeta
 url: https://github.com/sanny-io/zeta
 sourceUrl: https://github.com/sanny-io/zeta
-description: A comprehensive framework for developing Garry's Mod addons.
-details: >-
+blurb: A comprehensive framework for developing Garry's Mod addons.
+description: >-
   An object-oriented framework, \*\*zeta\*\* lets you quickly bootstrap new
   addons. It includes multiple database driver implementations, an Active Record
   style ORM, a network message chunking system, helper functions to layout user

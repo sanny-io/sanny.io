@@ -9,8 +9,8 @@ export type ProjectItemProps = {
   name: string,
   url: string,
   sourceUrl?: string,
+  blurb: string,
   description: string,
-  details: string,
   image: string,
   imageWidth: number,
   imageHeight: number,
@@ -24,12 +24,12 @@ export default function ProjectItem(props: ProjectItemProps) {
     name,
     url,
     sourceUrl,
-    description,
+    blurb,
     image,
     imageWidth,
     imageHeight,
     tags,
-    details,
+    description,
     plaiceholder,
     reverse = false
   } = props
@@ -63,7 +63,7 @@ export default function ProjectItem(props: ProjectItemProps) {
           </a>
         </h3>
 
-        <Markdown className="mb-4 space-y-4">{description}</Markdown>
+        <Markdown className="mb-4 space-y-4">{blurb}</Markdown>
 
         <ul className={`flex flex-wrap -m-1 mb-4 ${reverse && 'justify-end'}`}>
           {

@@ -2,13 +2,13 @@
 name: Summon Sign
 url: https://summonsign.net
 sourceUrl: https://github.com/sanny-io/summonsign
-description: >-
+blurb: >-
   This web application assists Dark Souls players in locating others who need
   help.
 
 
   \*"If you require help on your travels, I offer you my sign. Blessing of the moon upon your journey."\*
-details: >-
+description: >-
   Dark Souls is a video game series notorious for how difficult it can be.
   Fortunately, it includes multiplayer mechanics that allows players to "summon"
   each other. Through this, players can enter the game of another player, and

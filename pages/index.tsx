@@ -1,5 +1,4 @@
 import React from 'react'
-import grayMatter from 'gray-matter'
 import { GetStaticProps } from 'next'
 import { getPlaiceholder } from 'plaiceholder'
 
@@ -18,14 +17,7 @@ import { ExperienceItemProps } from '../components/Experience/ExperienceItem'
 import { ProjectItemProps } from '../components/Projects/ProjectItem'
 import { HistoryItemProps } from '../components/History/HistoryItem'
 
-import navBarMd from '../content/navbar.md'
-import infoMd from '../content/info.md'
-import aboutMd from '../content/about.md'
-import experienceMd from '../content/experience.md'
-import agileMd from '../content/agile.md'
-import designMd from '../content/design.md'
-import projectsMd from '../content/projects.md'
-import historyMd from '../content/history.md'
+import { readContent, readContentDirectoryAsData } from '../util'
 
 export type HomeProps = {
   navBar: NavBarItemProps[],
@@ -66,17 +58,18 @@ export default function Home({
   )
 }
 
-export const getStaticProps: GetStaticProps<HomeProps> = async (context) => {
-  const { data: info } = grayMatter(infoMd)
-  const { data: navBar } = grayMatter(navBarMd)
-  const { content: about } = grayMatter(aboutMd)
-  const { data: experience } = grayMatter(experienceMd)
-  const { content: agile } = grayMatter(agileMd)
-  const { content: design } = grayMatter(designMd)
-  const { data: projects } = grayMatter(projectsMd)
-  const { data: history } = grayMatter(historyMd)
+export const getStaticProps: GetStaticProps<HomeProps> = async context => {
+  const { data: info } = readContent('info')
+  const { data: navBar } = readContent('navbar')
+  const { content: about } = readContent('about')
+  const { data: experience } = readContent('experience')
+  const { content: agile } = readContent('agile')
+  const { content: design } = readContent('design')
+  const projects = readContentDirectoryAsData('projects')
+  const history = readContentDirectoryAsData('history')
 
-  const plaiceholders = await Promise.all(projects.map((project: ProjectItemProps) => {
+  // @ts-ignore
+  const plaiceholders = await Promise.all(Object.values(projects).map((project: ProjectItemProps) => {
     return getPlaiceholder(project.image)
   }))
 
