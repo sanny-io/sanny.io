@@ -10,11 +10,13 @@ details: >-
 
 
   This was my first project made using Next.js, and I must say, it's absolutely incredible. With every new project, the first thing I look forward to is using Next.js and having the development and deployment processes flow so much smoother than if I had worked with Create React App.
-image: /assets/uploads/licensewiki.png
 tags:
   - React
   - JavaScript
   - Next.js
   - Tailwind
   - HTML
+image: /assets/uploads/licensewiki.png
+imageWidth: 1518
+imageHeight: 801
 ---
