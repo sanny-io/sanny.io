@@ -14,10 +14,12 @@ details: >-
 
 
   This is my most complex personal project to date.
-image: /assets/uploads/zeta.png
 tags:
   - Lua
   - MySQL
   - SQLite
   - ORM
+image: /assets/uploads/zeta.png
+imageWidth: 1200
+imageHeight: 675
 ---
