@@ -20,7 +20,7 @@ details: >-
 
 
   Cheers for hopefully nobody ever going through this madness again 🥳
-image: /public/assets/uploads/steam.jpg
+image: /assets/uploads/steam.jpg
 tags:
   - TypeScript
   - npm
