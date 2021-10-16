@@ -10,7 +10,6 @@ details: >-
   safety, of course. 😅
 
    I've gone through many iterations of this site, but it feels like no matter what I do, I keep coming back and trying to make it better. I guess it's because my name is literally attached to it, so I'm compelled to scrutinize every little thing. What it allows me to do, though, is experiment with new things I find and see how I like it.
-image: /assets/uploads/sannyio.png
 tags:
   - React
   - TypeScript
@@ -18,4 +17,7 @@ tags:
   - Tailwind
   - HTML
   - CMS
+image: /assets/uploads/sannyio.png
+imageWidth: 1518
+imageHeight: 801
 ---
