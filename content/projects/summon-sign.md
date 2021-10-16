@@ -22,7 +22,6 @@ details: >-
 
 
   Additionally, this application highlights pertinent information that helps phantoms connect with the player in-game, and can even notify phantoms when a player is in need of one.
-image: /assets/uploads/summonsign.png
 tags:
   - React
   - TypeScript
@@ -30,4 +29,7 @@ tags:
   - Firebase
   - Tailwind
   - HTML
+image: /assets/uploads/summonsign.png
+imageWidth: 1518
+imageHeight: 801
 ---
