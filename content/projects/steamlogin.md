@@ -20,8 +20,10 @@ details: >-
 
 
   Cheers for hopefully nobody ever going through this madness again 🥳
-image: /assets/uploads/steam.jpg
 tags:
   - TypeScript
   - npm
+image: /assets/uploads/steam.jpg
+imageWidth: 1200
+imageHeight: 675
 ---
