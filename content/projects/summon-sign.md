@@ -7,7 +7,7 @@ blurb: >-
   help.
 
 
-  \*"If you require help on your travels, I offer you my sign. Blessing of the moon upon your journey."\*
+  *"If you require help on your travels, I offer you my sign. Blessing of the moon upon your journey."*
 description: >-
   Dark Souls is a video game series notorious for how difficult it can be.
   Fortunately, it includes multiplayer mechanics that allows players to "summon"
