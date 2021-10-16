@@ -14,7 +14,7 @@ details: >-
 
 
   This is my most complex personal project to date.
-image: /public/assets/uploads/zeta.png
+image: /assets/uploads/zeta.png
 tags:
   - Lua
   - MySQL
