@@ -3,7 +3,7 @@ name: steamlogin
 url: https://www.npmjs.com/package/@sanny-io/steamlogin
 sourceUrl: https://github.com/sanny-io/steamlogin
 blurb: >-
-  This library makes logging in through \[Steam](https://steamcommunity.com) a
+  This library makes logging in through [Steam](https://steamcommunity.com) a
   breeze, and works in just about any project.
 
 
