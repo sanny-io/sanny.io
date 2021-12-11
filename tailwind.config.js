@@ -1,26 +1,18 @@
 const colors = require('tailwindcss/colors')
 
 module.exports = {
-  mode: 'jit',
-  purge: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
+  content: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
   theme: {
     fontFamily: {
-      'sans': ['Inter', 'sans-serif'],
+      'sans': ['sans-serif'],
     },
     colors: {
+      ...colors,
       transparent: 'transparent',
       current: 'currentColor',
       primary: colors.blue[600],
       secondary: colors.blue[400],
-      black: colors.black,
-      white: colors.white,
       gray: colors.trueGray,
-      green: colors.green,
-      blue: colors.blue,
-      indigo: colors.indigo,
-      red: colors.rose,
-      yellow: colors.yellow,
-      orange: colors.orange,
     },
     extend: {
       backgroundImage: () => ({
