@@ -19,11 +19,12 @@ module.exports = withPlaiceholder({
     deviceSizes: [640, 768, 1024, 1280, 1536],
   },
 
-  async rewrites() {
+  async redirects() {
     return [
       {
-        source: '/admin',
-        destination: '/admin.html',
+        source: '/dashboard',
+        destination: 'https://admin.sanny.io/dashboard',
+        permanent: false,
       },
     ]
   },
