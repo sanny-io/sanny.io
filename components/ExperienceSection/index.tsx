@@ -5,7 +5,7 @@ export type ExperienceProps = {
   children: ExperienceItemProps[],
 }
 
-export default function Experience({ children }: ExperienceProps) {
+export default function ExperienceSection({ children }: ExperienceProps) {
   return (
     <section id="experience" className="text-white bg-gray-800">
       <div className="container px-2 py-16 mx-auto">

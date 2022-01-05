@@ -1,0 +1,58 @@
+{
+  info {
+    name
+    title
+    headshot {
+      url
+      width
+      height
+      blur: responsiveImage {
+        url: base64
+      }
+    }
+    github
+    linkedin
+    email
+    about
+  }
+  navigation: allNavigations {
+    description
+    icon
+    link
+  }
+  experience: allExperiences {
+    name
+    description
+    icon
+  }
+  agile {
+    content
+  }
+  design {
+    content
+  }
+  projects: allProjects {
+    name
+    url
+    sourceUrl
+    blurb
+    description
+    tags
+    image {
+      url
+      width
+      height
+      blur: responsiveImage {
+        url: base64
+      }
+    }
+  }
+  history: allHistories {
+    name
+    title
+    description
+    url
+    startDate
+    endDate
+  }
+}

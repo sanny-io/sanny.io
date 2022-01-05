@@ -1,11 +1,11 @@
 import React from 'react'
 import Markdown from '../Markdown'
 
-export type AboutProps = {
+type Props = {
   children: string,
 }
 
-export default function About({ children }: AboutProps) {
+export default function AboutSection({ children }: Props) {
   return (
     <section>
       <div className="text-white">
@@ -19,12 +19,6 @@ export default function About({ children }: AboutProps) {
           </article>
         </div>
       </div>
-
-      {/* <div className="bg-gray-800">
-        <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 63">
-          <path fill="#171717" d="M390,0H0V63C132.73,38.18,256.36,25.76,390,25.76S667.27,38.18,800,63V0Z" />
-        </svg>
-      </div> */}
     </section>
   )
 }

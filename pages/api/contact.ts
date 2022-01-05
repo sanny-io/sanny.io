@@ -1,6 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
 import mailgun from 'mailgun-js'
-import { ContactFields } from '../../components/Contact'
+import type { ContactFields } from '../../types'
 
 if (!process.env.MAILGUN_KEY || !process.env.MAILGUN_DOMAIN) {
   throw new Error('Missing environment variables.')

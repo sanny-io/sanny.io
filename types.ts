@@ -68,3 +68,9 @@ export type Navigation = {
   icon: Icon,
   link: string,
 }
+
+export type ContactFields = {
+  name: string,
+  email: string,
+  message: string,
+}

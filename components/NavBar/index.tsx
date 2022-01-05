@@ -1,8 +1,9 @@
 import React from 'react'
-import NavBarItem, { NavBarItemProps } from './NavBarItem'
+import { Navigation } from '../../types'
+import NavBarItem from './NavBarItem'
 
 export type NavBarProps = {
-  children: NavBarItemProps[],
+  children: Navigation[],
 }
 
 export default function NavBar({ children }: NavBarProps) {

@@ -5,7 +5,7 @@ export type HistoryProps = {
   children: HistoryItemProps[],
 }
 
-export default function History({ children }: HistoryProps) {
+export default function HistorySection({ children }: HistoryProps) {
   return (
     <section id="history" className="container px-4 py-16 mx-auto text-white md:px-32">
       <hr className="mb-16 border-t-2 border-primary" />

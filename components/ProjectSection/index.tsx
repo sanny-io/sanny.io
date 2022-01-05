@@ -17,7 +17,7 @@ export type IProjectsContextProvider = {
 
 export const ProjectsContext = createContext<IProjectsContextProvider>({ setActiveProject: undefined })
 
-export default function Projects({ children }: Props) {
+export default function ProjectSection({ children }: Props) {
   const [activeProject, setActiveProject] = useState<Project>()
   const closeDialog = () => setActiveProject(undefined)
 

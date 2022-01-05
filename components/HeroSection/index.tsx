@@ -5,7 +5,7 @@ import { Info } from '../../types'
 
 type Props = Info
 
-export default function Hero({ name, title, headshot }: Props) {
+export default function HeroSection({ name, title, headshot }: Props) {
   return (
     <>
       <section id="about" className="flex flex-col-reverse items-center justify-center px-6 pt-8 mb-8 space-y-6 space-y-reverse md:mb-16 md:space-y-0 md:space-x-16 md:pt-16 md:flex-row">

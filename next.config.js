@@ -8,7 +8,7 @@ module.exports = withPlaiceholder({
     })
 
     config.module.rules.push({
-      test: /\.md$/,
+      test: /\.md|graphql$/,
       use: 'raw-loader',
     })
 

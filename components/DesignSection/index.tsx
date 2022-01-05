@@ -7,7 +7,7 @@ type Props = Section & {
   image: Image,
 }
 
-export default function Design({ children, image }: Props) {
+export default function DesignSection({ children, image }: Props) {
   return (
     <section className="pb-2 text-white bg-primary">
       {/* <div className="container flex flex-col px-4 mx-auto lg:flex-row lg:space-x-14"> */}

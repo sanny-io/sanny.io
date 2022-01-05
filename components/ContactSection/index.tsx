@@ -1,18 +1,13 @@
 import React, { useState } from 'react'
 import { Formik, Form } from 'formik'
 import Field from './Field'
+import type { ContactFields } from '../../types'
 
-export type ContactFields = {
-  name: string,
-  email: string,
-  message: string,
-}
-
-export type ContactProps = {
+type Props = {
   email: string,
 }
 
-export default function Contact({ email }: ContactProps) {
+export default function ContactSection({ email }: Props) {
   const [hasError, setHasError] = useState<boolean | null>(null)
   const handleSubmit = async (fields: ContactFields) => {
     const response = await fetch('/api/contact', { method: 'POST', body: JSON.stringify(fields) })

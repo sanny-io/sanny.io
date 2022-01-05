@@ -6,7 +6,7 @@ export type AgileProps = {
   children: string,
 }
 
-export default function Agile({ children }: AgileProps) {
+export default function AgileSection({ children }: AgileProps) {
   const { ref: inViewRef, inView } = useInView({ triggerOnce: true })
 
   return (
