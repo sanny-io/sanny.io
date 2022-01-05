@@ -42,11 +42,6 @@ export default function Home({
 
   return (
     <main>
-      {/* <NavBar>{navBar}</NavBar>
-      <Experience>{experience}</Experience>
-      <Design>{design}</Design>
-      <Projects>{projects}</Projects>
-      <History>{history}</History>*/}
       <NavBar>{navigation}</NavBar>
       <HeroSection {...hero} />
       <AboutSection>{about}</AboutSection>
@@ -61,9 +56,9 @@ export default function Home({
 }
 
 export const getStaticProps: GetStaticProps<Props> = async context => {
-  const graphql = new GraphQLClient(process.env.NEXT_PUBLIC_DATOCMS_URL as string, {
+  const graphql = new GraphQLClient(process.env.DATOCMS_URL as string, {
     headers: {
-      authorization: `Bearer ${process.env.NEXT_PUBLIC_DATOCMS_KEY}`
+      authorization: `Bearer ${process.env.DATOCMS_KEY}`
     }
   })
 
