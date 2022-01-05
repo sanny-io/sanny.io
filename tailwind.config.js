@@ -7,12 +7,14 @@ module.exports = {
       'sans': ['sans-serif'],
     },
     colors: {
-      ...colors,
       transparent: 'transparent',
       current: 'currentColor',
       primary: colors.blue[600],
       secondary: colors.blue[400],
-      gray: colors.trueGray,
+      white: colors.white,
+      black: colors.black,
+      blue: colors.blue,
+      gray: colors.neutral,
     },
     extend: {
       backgroundImage: () => ({
