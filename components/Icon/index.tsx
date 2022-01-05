@@ -15,16 +15,9 @@ import SuitcaseIcon from '../../public/assets/icons/suitcase.svg'
 import ProjectIcon from '../../public/assets/icons/project.svg'
 import TechnologyIcon from '../../public/assets/icons/experience.svg'
 
-export type IconType =
-  'email'
-  | 'github'
-  | 'linkedin'
-  | 'profile'
-  | 'suitcase'
-  | 'project'
-  | 'technology'
+import { Icon as IconType } from '../../types'
 
-export type IconProps = {
+type Props = {
   type: IconType,
   link?: string,
   description?: string,
@@ -49,7 +42,7 @@ const icons = {
   technology: TechnologyIcon,
 }
 
-export default function Icon({ type, className, link, description }: IconProps) {
+export default function Icon({ type, className, link, description }: Props) {
   const SvgComponent = icons[type]
   const renderedIcon = <SvgComponent className={`${className}`} aria-label={description} />
 

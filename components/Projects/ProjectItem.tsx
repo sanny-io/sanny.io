@@ -4,33 +4,20 @@ import Markdown from '../Markdown'
 import Icon from '../Icon'
 import Image from 'next/image'
 import { ProjectsContext } from '.'
+import { Project } from '../../types'
 
-export type ProjectItemProps = {
-  name: string,
-  url: string,
-  sourceUrl?: string,
-  blurb: string,
-  description: string,
-  image: string,
-  imageWidth: number,
-  imageHeight: number,
-  plaiceholder: string,
-  tags?: string[],
-  reverse?: boolean,
+type Props = Project & {
+  reverse: boolean,
 }
 
-export default function ProjectItem(props: ProjectItemProps) {
+export default function ProjectItem(props: Props) {
   const {
     name,
     url,
     sourceUrl,
     blurb,
     image,
-    imageWidth,
-    imageHeight,
     tags,
-    description,
-    plaiceholder,
     reverse = false
   } = props
 
@@ -45,13 +32,13 @@ export default function ProjectItem(props: ProjectItemProps) {
         rel="noopener noreferrer"
       >
         <Image
-          src={image}
-          width={imageWidth}
-          height={imageHeight}
+          src={image.url}
+          width={image.width}
+          height={image.height}
           className="object-cover w-full duration-200 filter drop-shadow-2xl"
           layout="responsive"
           placeholder="blur"
-          blurDataURL={plaiceholder}
+          blurDataURL={image.blur.url}
           alt={`Preview of ${name}`}
         />
       </a>

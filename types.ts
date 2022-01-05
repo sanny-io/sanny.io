@@ -2,6 +2,9 @@ export type Image = {
   url: string,
   width: number,
   height: number,
+  blur: {
+    url: string,
+  }
 }
 
 export type Info = {
@@ -44,10 +47,24 @@ export type Project = {
   blurb: string,
   description: string,
   image: Image,
-  plaiceholder: string,
   tags: string[],
 }
 
 export type Section = {
-  content: string,
+  children: string,
+}
+
+export type History = {
+  name: string,
+  title: string,
+  url: string,
+  description: string,
+  startDate: string,
+  endDate?: string,
+}
+
+export type Navigation = {
+  description: string,
+  icon: Icon,
+  link: string,
 }

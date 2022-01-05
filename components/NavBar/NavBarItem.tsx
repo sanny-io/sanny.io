@@ -1,14 +1,11 @@
 import React from 'react'
-import Icon, { IconType } from '../Icon'
+import Icon from '../Icon'
 import { usePopperTooltip } from 'react-popper-tooltip'
+import { Navigation } from '../../types'
 
-export type NavBarItemProps = {
-  description: string,
-  icon: IconType,
-  link: string,
-}
+type Props = Navigation
 
-export default function NavBarItem({ description, icon, link }: NavBarItemProps) {
+export default function NavBarItem({ description, icon, link }: Props) {
   const {
     getArrowProps,
     getTooltipProps,

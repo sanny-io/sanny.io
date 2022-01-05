@@ -1,23 +1,24 @@
 import React, { useState, createContext } from 'react'
-import ProjectItem, { ProjectItemProps } from './ProjectItem'
+import ProjectItem from './ProjectItem'
 import { Dialog } from '@headlessui/react'
 import Tag from './Tag'
 import Markdown from '../Markdown'
 import Icon from '../Icon'
 import Image from 'next/image'
+import { Project } from '../../types'
 
-export type ProjectsProps = {
-  children: ProjectItemProps[],
+type Props = {
+  children: Project[],
 }
 
 export type IProjectsContextProvider = {
-  setActiveProject?: React.Dispatch<ProjectItemProps>,
+  setActiveProject?: React.Dispatch<Project>,
 }
 
 export const ProjectsContext = createContext<IProjectsContextProvider>({ setActiveProject: undefined })
 
-export default function Projects({ children }: ProjectsProps) {
-  const [activeProject, setActiveProject] = useState<ProjectItemProps>()
+export default function Projects({ children }: Props) {
+  const [activeProject, setActiveProject] = useState<Project>()
   const closeDialog = () => setActiveProject(undefined)
 
   return (
@@ -82,9 +83,11 @@ export default function Projects({ children }: ProjectsProps) {
 
                   <a href={activeProject.url} target="__blank" rel="noopener noreferrer">
                     <Image
-                      src={activeProject.image}
-                      width={activeProject.imageWidth}
-                      height={activeProject.imageHeight}
+                      src={activeProject.image.url}
+                      width={activeProject.image.width}
+                      height={activeProject.image.height}
+                      placeholder="blur"
+                      blurDataURL={activeProject.image.blur.url}
                       layout="responsive"
                       className="object-cover w-full"
                       alt={`Preview of ${activeProject.name}`} />

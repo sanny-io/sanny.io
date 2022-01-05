@@ -17,7 +17,9 @@ module.exports = withPlaiceholder({
 
   images: {
     deviceSizes: [640, 768, 1024, 1280, 1536],
+    domains: ['www.datocms-assets.com'],
   },
+
 
   async redirects() {
     return [

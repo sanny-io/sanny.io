@@ -1,20 +1,23 @@
 import React from 'react'
-import Image from 'next/image'
-import mock from '../../public/assets/images/mock.png'
+import NextImage from 'next/image'
 import Markdown from '../Markdown'
+import { Image, Section } from '../../types'
 
-export type DesignProps = {
-  children: string,
+type Props = Section & {
+  image: Image,
 }
 
-export default function Design({ children }: DesignProps) {
+export default function Design({ children, image }: Props) {
   return (
     <section className="pb-2 text-white bg-primary">
       {/* <div className="container flex flex-col px-4 mx-auto lg:flex-row lg:space-x-14"> */}
       <div className="container flex flex-col px-4 mx-auto lg:flex-row lg:space-x-14">
         <div className="self-center w-1/2 mb-8 lg:w-1/3 md:mb-16">
-          <Image
-            src={mock}
+          <NextImage
+            src={image.url}
+            width={image.width}
+            height={image.height}
+            blurDataURL={image.blur.url}
             placeholder="blur"
             layout="responsive"
             className="duration-200"

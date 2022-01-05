@@ -4,22 +4,17 @@ import { getPlaiceholder } from 'plaiceholder'
 import { request } from '../datocms'
 
 import NavBar from '../components/NavBar'
-import Hero, { HeroProps } from '../components/Hero'
+import Hero from '../components/Hero'
 import About from '../components/About'
-import Experience from '../components/Experience'
+// import Experience from '../components/Experience'
 import Agile from '../components/Agile'
 import Design from '../components/Design'
 import Projects from '../components/Projects'
-import History from '../components/History'
-import Contact, { ContactProps } from '../components/Contact'
-
-import { NavBarItemProps } from '../components/NavBar/NavBarItem'
-import { ExperienceItemProps } from '../components/Experience/ExperienceItem'
-import { ProjectItemProps } from '../components/Projects/ProjectItem'
-import { HistoryItemProps } from '../components/History/HistoryItem'
+// import History from '../components/History'
+import Contact from '../components/Contact'
 
 import { readContent, readContentDirectoryAsData } from '../util'
-import { Info } from '../types'
+import { Experience, History, Info, Navigation, Project, Section } from '../types'
 
 const query = `
 {
@@ -28,65 +23,83 @@ const query = `
     title
     headshot {
       url
+      width
+      height
+      blur: responsiveImage {
+        url: base64
+      }
     }
     github
     linkedin
     email
     about
   }
-
-  allExperiences {
+  experience: allExperiences {
     name
     description
     icon
   }
-
-  allProjects {
+  agile {
+    content
+  }
+  design {
+    content
+  }
+  projects: allProjects {
     name
     url
     sourceUrl
     blurb
     description
+    tags
     image {
       url
+      width
+      height
+      blur: responsiveImage {
+        url: base64
+      }
     }
+  }
+  history: allHistories {
+    name
+    title
+    description
+    url
+    startDate
+    endDate
   }
 }
 `
 
-export type HomeProps = {
-  navBar: NavBarItemProps[],
-  hero: HeroProps,
-  about: string,
-  experience: ExperienceItemProps[],
-  agile: string,
-  design: string,
-  projects: ProjectItemProps[],
-  history: HistoryItemProps[],
-  contact: ContactProps,
+type Props = {
+  navigation: Navigation[],
+  // hero: HeroProps,
+  hero: Info,
+  // about: string,
+  // experience: ExperienceItemProps[],
+  // agile: string,
+  // design: string,
+  // projects: ProjectItemProps[],
+  // history: HistoryItemProps[],
+  // contact: ContactProps,
 }
 
 export default function Home({
-  navBar,
+  navigation,
   hero,
-  about,
-  experience,
-  agile,
-  design,
-  projects,
-  history,
-  contact
-}: HomeProps) {
-
-  request<{
-    info: Info
-    allExperiences: ExperienceItemProps[],
-    allProjects: ProjectItemProps[],
-  }>(query).then(console.log)
+  // about,
+  // experience,
+  // agile,
+  // design,
+  // projects,
+  // history,
+  // contact
+}: Props) {
 
   return (
     <main>
-      <NavBar>{navBar}</NavBar>
+      {/* <NavBar>{navBar}</NavBar>
       <Hero {...hero} />
       <About>{about}</About>
       <Experience>{experience}</Experience>
@@ -94,43 +107,28 @@ export default function Home({
       <Design>{design}</Design>
       <Projects>{projects}</Projects>
       <History>{history}</History>
-      <Contact {...contact} />
+      <Contact {...contact} /> */}
+      <NavBar>{navigation}</NavBar>
+      <Hero {...hero} />
     </main>
   )
 }
 
-export const getStaticProps: GetStaticProps<HomeProps> = async context => {
-  const { data: info } = readContent('info')
-  const { data: navBar } = readContent('navbar')
-  const { content: about } = readContent('about')
-  const { data: experience } = readContent('experience')
-  const { content: agile } = readContent('agile')
-  const { content: design } = readContent('design')
-  const projects = readContentDirectoryAsData('projects')
-  const history = readContentDirectoryAsData('history')
-
-  // @ts-ignore
-  const plaiceholders = await Promise.all(Object.values(projects).map((project: ProjectItemProps) => {
-    return getPlaiceholder(project.image)
-  }))
-
-  // @ts-ignore
-  plaiceholders.forEach((plaiceholder, index) => {
-    // @ts-ignore
-    projects[index].plaiceholder = plaiceholder.base64
-  })
+export const getStaticProps: GetStaticProps<Props> = async context => {
+  const data = await request<{
+    navigation: Navigation[],
+    info: Info,
+    experience: Experience[],
+    agile: Section,
+    design: Section,
+    projects: Project[],
+    history: History[],
+  }>(query)
 
   return {
     props: {
-      navBar: navBar as NavBarItemProps[],
-      hero: info as HeroProps,
-      about,
-      experience: experience as ExperienceItemProps[],
-      agile,
-      design,
-      projects: projects as ProjectItemProps[],
-      history: history as HistoryItemProps[],
-      contact: info as ContactProps,
+      hero: data.info,
+      navigation: data.navigation,
     }
   }
 }
