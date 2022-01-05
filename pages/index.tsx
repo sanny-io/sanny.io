@@ -1,6 +1,7 @@
 import React from 'react'
 import { GetStaticProps } from 'next'
 import { getPlaiceholder } from 'plaiceholder'
+import { request } from '../datocms'
 
 import NavBar from '../components/NavBar'
 import Hero, { HeroProps } from '../components/Hero'
@@ -18,6 +19,40 @@ import { ProjectItemProps } from '../components/Projects/ProjectItem'
 import { HistoryItemProps } from '../components/History/HistoryItem'
 
 import { readContent, readContentDirectoryAsData } from '../util'
+import { Info } from '../types'
+
+const query = `
+{
+  info {
+    name
+    title
+    headshot {
+      url
+    }
+    github
+    linkedin
+    email
+    about
+  }
+
+  allExperiences {
+    name
+    description
+    icon
+  }
+
+  allProjects {
+    name
+    url
+    sourceUrl
+    blurb
+    description
+    image {
+      url
+    }
+  }
+}
+`
 
 export type HomeProps = {
   navBar: NavBarItemProps[],
@@ -42,6 +77,12 @@ export default function Home({
   history,
   contact
 }: HomeProps) {
+
+  request<{
+    info: Info
+    allExperiences: ExperienceItemProps[],
+    allProjects: ProjectItemProps[],
+  }>(query).then(console.log)
 
   return (
     <main>
