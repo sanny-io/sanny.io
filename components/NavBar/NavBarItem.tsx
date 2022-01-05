@@ -1,7 +1,7 @@
+import type { Navigation } from '../../types'
 import React from 'react'
 import Icon from '../Icon'
 import { usePopperTooltip } from 'react-popper-tooltip'
-import { Navigation } from '../../types'
 
 type Props = Navigation
 

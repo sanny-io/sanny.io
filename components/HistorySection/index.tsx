@@ -1,11 +1,12 @@
+import type { History } from '../../types'
 import React from 'react'
-import HistoryItem, { HistoryItemProps } from './HistoryItem'
+import HistoryItem from './HistoryItem'
 
-export type HistoryProps = {
-  children: HistoryItemProps[],
+type Props = {
+  children: History[],
 }
 
-export default function HistorySection({ children }: HistoryProps) {
+export default function HistorySection({ children }: Props) {
   return (
     <section id="history" className="container px-4 py-16 mx-auto text-white md:px-32">
       <hr className="mb-16 border-t-2 border-primary" />

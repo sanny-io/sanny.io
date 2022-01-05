@@ -8,7 +8,7 @@ module.exports = withPlaiceholder({
     })
 
     config.module.rules.push({
-      test: /\.md|graphql$/,
+      test: /\.graphql$/,
       use: 'raw-loader',
     })
 
@@ -24,8 +24,8 @@ module.exports = withPlaiceholder({
   async redirects() {
     return [
       {
-        source: '/dashboard',
-        destination: 'https://admin.sanny.io/dashboard',
+        source: '/admin',
+        destination: 'https://sanny-io.admin.datocms.com',
         permanent: false,
       },
     ]

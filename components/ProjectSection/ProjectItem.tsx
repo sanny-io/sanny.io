@@ -1,10 +1,10 @@
+import type { Project } from '../../types'
 import React, { useContext } from 'react'
 import Tag from './Tag'
 import Markdown from '../Markdown'
 import Icon from '../Icon'
 import Image from 'next/image'
 import { ProjectsContext } from '.'
-import { Project } from '../../types'
 
 type Props = Project & {
   reverse: boolean,

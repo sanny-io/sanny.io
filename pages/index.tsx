@@ -1,6 +1,8 @@
+import type { GetStaticProps } from 'next'
+import type { Experience, History, Image, Info, Navigation, Project, Section } from '../types'
+
 import React from 'react'
-import { GetStaticProps } from 'next'
-import { request } from '../datocms'
+import { GraphQLClient } from 'graphql-request'
 
 import NavBar from '../components/NavBar'
 import HeroSection from '../components/HeroSection'
@@ -12,20 +14,17 @@ import ProjectSection from '../components/ProjectSection'
 import HistorySection from '../components/HistorySection'
 import ContactSection from '../components/ContactSection'
 
-import { Experience, History, Info, Navigation, Project, Section } from '../types'
-
 import query from '../query.graphql'
 
 type Props = {
   navigation: Navigation[],
-  // hero: HeroProps,
   hero: Info,
   about: string,
   experience: Experience[],
-  // agile: string,
-  // design: string,
-  // projects: ProjectItemProps[],
-  // history: HistoryItemProps[],
+  agile: Section,
+  design: Section & { image: Image },
+  projects: Project[],
+  history: History[],
   contact: Info,
 }
 
@@ -34,10 +33,10 @@ export default function Home({
   hero,
   about,
   experience,
-  // agile,
-  // design,
-  // projects,
-  // history,
+  agile,
+  design,
+  projects,
+  history,
   contact
 }: Props) {
 
@@ -45,7 +44,6 @@ export default function Home({
     <main>
       {/* <NavBar>{navBar}</NavBar>
       <Experience>{experience}</Experience>
-      <Agile>{agile}</Agile>
       <Design>{design}</Design>
       <Projects>{projects}</Projects>
       <History>{history}</History>*/}
@@ -53,19 +51,28 @@ export default function Home({
       <HeroSection {...hero} />
       <AboutSection>{about}</AboutSection>
       <ExperienceSection>{experience}</ExperienceSection>
-      {/* <AgileSection>{agile}</AgileSection> */}
+      <AgileSection {...agile} />
+      <DesignSection {...design} />
+      <ProjectSection>{projects}</ProjectSection>
+      <HistorySection>{history}</HistorySection>
       <ContactSection {...contact} />
     </main>
   )
 }
 
 export const getStaticProps: GetStaticProps<Props> = async context => {
-  const data = await request<{
+  const graphql = new GraphQLClient(process.env.NEXT_PUBLIC_DATOCMS_URL as string, {
+    headers: {
+      authorization: `Bearer ${process.env.NEXT_PUBLIC_DATOCMS_KEY}`
+    }
+  })
+
+  const data = await graphql.request<{
     navigation: Navigation[],
     info: Info,
     experience: Experience[],
     agile: Section,
-    design: Section,
+    design: Section & { image: Image },
     projects: Project[],
     history: History[],
   }>(query)
@@ -76,7 +83,10 @@ export const getStaticProps: GetStaticProps<Props> = async context => {
       navigation: data.navigation,
       about: data.info.about,
       experience: data.experience,
-      // agile: data.agile,
+      agile: data.agile,
+      design: data.design,
+      projects: data.projects,
+      history: data.history,
       contact: data.info,
     }
   }

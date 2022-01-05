@@ -1,5 +1,6 @@
+import type { Icon as IconType } from '../../types'
 import React from 'react'
-import Icon, { IconType } from '../Icon'
+import Icon from '../Icon'
 
 export type ExperienceItemProps = {
   name: string,

@@ -1,12 +1,12 @@
+import type { Navigation } from '../../types'
 import React from 'react'
-import { Navigation } from '../../types'
 import NavBarItem from './NavBarItem'
 
-export type NavBarProps = {
+type Props = {
   children: Navigation[],
 }
 
-export default function NavBar({ children }: NavBarProps) {
+export default function NavBar({ children }: Props) {
   return (
     <nav className="fixed z-10 hidden p-2 text-gray-200 transform -translate-y-1/2 bg-gray-900 border border-gray-800 shadow-2xl lg:block top-1/2 left-8">
       <ul className="grid grid-cols-1 gap-y-4">

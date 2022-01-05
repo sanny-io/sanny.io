@@ -1,3 +1,4 @@
+import type { Project } from '../../types'
 import React, { useState, createContext } from 'react'
 import ProjectItem from './ProjectItem'
 import { Dialog } from '@headlessui/react'
@@ -5,7 +6,6 @@ import Tag from './Tag'
 import Markdown from '../Markdown'
 import Icon from '../Icon'
 import Image from 'next/image'
-import { Project } from '../../types'
 
 type Props = {
   children: Project[],

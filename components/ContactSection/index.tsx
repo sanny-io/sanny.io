@@ -1,7 +1,7 @@
+import type { ContactFields } from '../../types'
 import React, { useState } from 'react'
 import { Formik, Form } from 'formik'
 import Field from './Field'
-import type { ContactFields } from '../../types'
 
 type Props = {
   email: string,

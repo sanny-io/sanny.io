@@ -1,12 +1,11 @@
+import type { Section } from '../../types'
 import React from 'react'
 import Markdown from '../Markdown'
 import { useInView } from 'react-intersection-observer'
 
-export type AgileProps = {
-  children: string,
-}
+type Props = Section
 
-export default function AgileSection({ children }: AgileProps) {
+export default function AgileSection({ children }: Props) {
   const { ref: inViewRef, inView } = useInView({ triggerOnce: true })
 
   return (

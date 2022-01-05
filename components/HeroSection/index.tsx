@@ -1,7 +1,7 @@
+import type { Info } from '../../types'
 import React from 'react'
 import Social from '../Social'
 import Image from 'next/image'
-import { Info } from '../../types'
 
 type Props = Info
 

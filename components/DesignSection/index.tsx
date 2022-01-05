@@ -1,7 +1,7 @@
+import type { Image, Section } from '../../types'
 import React from 'react'
 import NextImage from 'next/image'
 import Markdown from '../Markdown'
-import { Image, Section } from '../../types'
 
 type Props = Section & {
   image: Image,
@@ -10,7 +10,6 @@ type Props = Section & {
 export default function DesignSection({ children, image }: Props) {
   return (
     <section className="pb-2 text-white bg-primary">
-      {/* <div className="container flex flex-col px-4 mx-auto lg:flex-row lg:space-x-14"> */}
       <div className="container flex flex-col px-4 mx-auto lg:flex-row lg:space-x-14">
         <div className="self-center w-1/2 mb-8 lg:w-1/3 md:mb-16">
           <NextImage

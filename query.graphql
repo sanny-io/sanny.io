@@ -26,10 +26,18 @@
     icon
   }
   agile {
-    content
+    children: content
   }
   design {
-    content
+    children: content
+    image {
+      url
+      width
+      height
+      blur: responsiveImage {
+        url: base64
+      }
+    }
   }
   projects: allProjects {
     name
