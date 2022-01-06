@@ -26,7 +26,7 @@ module.exports = withPlaiceholder({
     return [
       {
         source: '/admin',
-        destination: 'https://sanny-io.admin.datocms.com',
+        destination: 'https://admin.sanny.io',
         permanent: false,
       },
     ]
