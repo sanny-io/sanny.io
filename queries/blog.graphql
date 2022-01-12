@@ -1,0 +1,8 @@
+{
+  posts: allPosts {
+    title
+    slug
+    publishedOn: _firstPublishedAt
+    children: content
+  }
+}

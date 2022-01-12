@@ -1,0 +1,8 @@
+query ($slug: String) {
+  post: allPosts(filter: { slug: { eq: $slug } }) {
+    title
+    slug
+    publishedOn: _firstPublishedAt
+    children: content
+  }
+}

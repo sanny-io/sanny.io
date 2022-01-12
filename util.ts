@@ -1,0 +1,1 @@
+export const stringifyDate = (date: Date) => `${date.toLocaleString('default', { month: 'long' })} ${date.getFullYear()}`

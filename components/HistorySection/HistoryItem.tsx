@@ -1,10 +1,9 @@
 import type { History } from '../../types'
 import React from 'react'
 import Markdown from '../Markdown'
+import { stringifyDate } from '../../util'
 
 type Props = History
-
-const stringifyDate = (date: Date) => `${date.toLocaleString('default', { month: 'long' })} ${date.getFullYear()}`
 
 export default function HistoryItem({ name, title, description, startDate, endDate, url }: Props) {
   return (

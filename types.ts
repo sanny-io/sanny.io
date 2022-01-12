@@ -74,3 +74,10 @@ export type ContactFields = {
   email: string,
   message: string,
 }
+
+export type Post = {
+  title: string,
+  slug: string,
+  publishedOn: string,
+  children: string,
+}

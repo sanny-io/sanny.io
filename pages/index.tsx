@@ -2,7 +2,7 @@ import type { GetStaticProps } from 'next'
 import type { Experience, History, Image, Info, Navigation, Project, Section } from '../types'
 
 import React from 'react'
-import { GraphQLClient } from 'graphql-request'
+import graphql from '../graphql'
 
 import NavBar from '../components/NavBar'
 import HeroSection from '../components/HeroSection'
@@ -14,7 +14,7 @@ import ProjectSection from '../components/ProjectSection'
 import HistorySection from '../components/HistorySection'
 import ContactSection from '../components/ContactSection'
 
-import query from '../query.graphql'
+import homeQuery from '../queries/home.graphql'
 
 type Props = {
   navigation: Navigation[],
@@ -56,12 +56,6 @@ export default function Home({
 }
 
 export const getStaticProps: GetStaticProps<Props> = async context => {
-  const graphql = new GraphQLClient(process.env.DATOCMS_URL as string, {
-    headers: {
-      authorization: `Bearer ${process.env.DATOCMS_KEY}`
-    }
-  })
-
   const data = await graphql.request<{
     navigation: Navigation[],
     info: Info,
@@ -70,7 +64,7 @@ export const getStaticProps: GetStaticProps<Props> = async context => {
     design: Section & { image: Image },
     projects: Project[],
     history: History[],
-  }>(query)
+  }>(homeQuery)
 
   return {
     props: {
