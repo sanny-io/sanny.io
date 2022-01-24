@@ -1,9 +1,10 @@
+import type { AppProps } from 'next/app'
+
 import '../index.css'
 import Head from 'next/head'
 import Footer from '../components/Footer'
-import { AppProps } from 'next/app'
 
-export default function MyApp({ Component, pageProps }: AppProps) {
+export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
