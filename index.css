@@ -77,26 +77,26 @@
 
   .button {
     @apply px-4 py-2;
-}
+  }
 
-.button.link {
+  .button.link {
     @apply tracking-wide text-blue-300 uppercase hover:text-blue-500;
-}
+  }
 
-.button.link.full {
+  .button.link.full {
     @apply border border-blue-300 rounded hover:border-blue-500;
-}
+  }
 
-.button.primary {
+  .button.primary {
     @apply bg-gradient-to-r from-blue-600 to-blue-700;
     @apply hover:from-blue-700 hover:to-blue-800;
     @apply active:from-blue-800 active:to-blue-900;
     @apply disabled:cursor-not-allowed disabled:bg-blue-500 disabled:bg-none;
-}
-/*
-For popper
-*/
-.tooltip-container {
+  }
+  /*
+    For popper
+  */
+  .tooltip-container {
     --tooltipBackground: rgb(32, 32, 32);
     --tooltipBorder: #333333;
     color: white;
