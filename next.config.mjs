@@ -1,6 +1,4 @@
-const { withPlaiceholder } = require('@plaiceholder/next')
-
-module.exports = withPlaiceholder({
+export default {
   swcMinify: true,
 
   webpack(config) {
@@ -31,4 +29,4 @@ module.exports = withPlaiceholder({
       },
     ]
   },
-})
+}
