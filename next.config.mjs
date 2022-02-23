@@ -1,5 +1,9 @@
 export default {
   swcMinify: true,
+  reactStrictMode: true,
+  experimental: {
+    reactRoot: true
+  },
 
   webpack(config) {
     config.module.rules.push({
