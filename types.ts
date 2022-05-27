@@ -33,6 +33,7 @@ export type Icon =
   | 'suitcase'
   | 'project'
   | 'technology'
+  | 'docker'
 
 export type Experience = {
   name: string,

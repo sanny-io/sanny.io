@@ -14,6 +14,8 @@ import ProfileIcon from '../../public/assets/icons/profile.svg'
 import SuitcaseIcon from '../../public/assets/icons/suitcase.svg'
 import ProjectIcon from '../../public/assets/icons/project.svg'
 import TechnologyIcon from '../../public/assets/icons/experience.svg'
+import DockerIcon from '../../public/assets/icons/docker.svg'
+import CloudIcon from '../../public/assets/icons/cloud.svg'
 
 import { Icon as IconType } from '../../types'
 
@@ -40,6 +42,8 @@ const icons = {
   suitcase: SuitcaseIcon,
   project: ProjectIcon,
   technology: TechnologyIcon,
+  docker: DockerIcon,
+  cloud: CloudIcon,
 }
 
 export default function Icon({ type, className, link, description }: Props) {
