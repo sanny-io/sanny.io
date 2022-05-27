@@ -62,17 +62,20 @@ export default function ProjectSection({ children }: Props) {
                   }
                 </ul>
 
-                <div className="my-6">
-                  <a
-                    href={activeProject.sourceUrl}
-                    className="items-center full button link"
-                    target="__blank"
-                    rel="noopener noreferrer"
-                  >
-                    <Icon type="github" className="inline w-5 mr-2" />
-                    View Source
-                  </a>
-                </div>
+                {
+                  activeProject.sourceUrl &&
+                    <div className="my-6">
+                      <a
+                        href={activeProject.sourceUrl}
+                        className="items-center full button link"
+                        target="__blank"
+                        rel="noopener noreferrer"
+                      >
+                        <Icon type="github" className="inline w-5 mr-2" />
+                        View Source
+                      </a>
+                  </div>
+                }
 
                 <hr className="my-4 border-t-2 border-primary" />
 

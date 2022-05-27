@@ -66,15 +66,19 @@ export default function ProjectItem(props: Props) {
           }}>
             View More Details
           </button>
-          <a
-            href={sourceUrl}
-            className="inline-flex items-center text-left button link"
-            target="__blank"
-            rel="noopener noreferrer"
-          >
-            <Icon type="github" className="inline w-5 mr-2" />
-            View Source
-          </a>
+          
+          {
+            sourceUrl &&
+            <a
+              href={sourceUrl}
+              className="inline-flex items-center text-left button link"
+              target="__blank"
+              rel="noopener noreferrer"
+            >
+              <Icon type="github" className="inline w-5 mr-2" />
+              View Source
+            </a>
+          }
         </div>
       </div>
     </div>
