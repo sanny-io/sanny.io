@@ -1,9 +1,9 @@
+import { withPayload } from '@payloadcms/next/withPayload'
+
 /**
  * @type {import('next').NextConfig}
  */
-export default {
-  swcMinify: true,
-
+export default withPayload({
   webpack: config => {
     config.resolve.fallback = {
       fs: false,
@@ -29,4 +29,4 @@ export default {
       },
     ],
   },
-}
+})
