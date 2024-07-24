@@ -1,0 +1,46 @@
+version: "3"
+
+volumes:
+  database-data:
+
+
+networks:
+  core:
+    external: false
+
+services:
+  core:
+    container_name: untitled-core
+    image: mcr.microsoft.com/devcontainers/javascript-node:22
+    command: sleep infinity
+    ports:
+      - 3000:3000
+    networks:
+      - core
+    # depends_on:
+    #   - database
+    #   - redis
+    volumes:
+      - .:/workspace:cached
+    # links:
+    #   - database
+    #   - redis
+    # database:
+    #   container_name: database
+    #   image: postgres:14
+    #   restart: always
+    #   volumes:
+    #     - database-data:/var/lib/postgresql/data/
+    #   env_file: .env
+    #   networks:
+    #     - core
+    #   ports:
+    #     - 5432:5432
+    # redis:
+    #   container_name: redis
+    #   image: redis:6.2
+    #   command: redis-server
+    #   networks:
+    #     - core
+    #   ports:
+    #     - 6379:6379

@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply flex flex-col;
+    @apply min-h-screen;
+  }
+
+  body {
+    @apply flex flex-col flex-grow;
+  }
+
+  body > main {
+    @apply flex flex-col flex-grow flex-shrink-0;
+  }
+
+  body > footer {
+    @apply flex-shrink-0;
+  }
+}

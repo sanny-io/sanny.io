@@ -1,0 +1,20 @@
+{
+  "name": "untitled",
+  "version": "0.0.1",
+  "description": "",
+  "scripts": {
+    "dev": "turbo run dev",
+    "build": "turbo run build",
+    "start": "turbo run start"
+  },
+  "keywords": [],
+  "author": "sanny-io",
+  "dependencies": {},
+  "devDependencies": {
+    "dotenv-cli": "7.4.2",
+    "tsx": "4.16.2",
+    "typescript": "5.5.4",
+    "turbo": "2.0.9"
+  },
+  "packageManager": "pnpm@9.1.0"
+}

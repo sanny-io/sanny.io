@@ -1,0 +1,21 @@
+{
+	"name": "untitled",
+	"dockerComposeFile": [
+		"../docker-compose.yaml"
+	],
+	"workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind",
+	"workspaceFolder": "/workspace",
+	"service": "core",
+	"shutdownAction": "stopCompose",
+	"remoteUser": "node",
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"bradlc.vscode-tailwindcss",
+				// "Prisma.prisma",
+				"heybourn.headwind",
+				// "zenstack.zenstack"
+			]
+		}
+	}
+}

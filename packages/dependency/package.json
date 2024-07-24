@@ -1,0 +1,16 @@
+{
+  "name": "@untitled/dependency",
+  "version": "0.0.1",
+  "description": "",
+  "author": "sanny-io",
+  "private": "true",
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch ./src",
+    "build": "tsc"
+  },
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "keywords": []
+}
