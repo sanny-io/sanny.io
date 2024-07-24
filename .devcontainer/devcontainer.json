@@ -1,5 +1,5 @@
 {
-	"name": "untitled",
+	"name": "sanny-io",
 	"dockerComposeFile": [
 		"../docker-compose.yaml"
 	],

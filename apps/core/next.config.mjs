@@ -23,7 +23,7 @@ export default {
     remotePatterns: [
       {
         protocol: 'http',
-        hostname: 'untitled.test',
+        hostname: 'sanny-io.test',
         port: '3000',
         pathname: '/**',
       },
