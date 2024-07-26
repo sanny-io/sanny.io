@@ -25,6 +25,6 @@
 
 @layer components {
   .button {
-    @apply bg-white rounded text-black px-3 py-2;
+    @apply bg-white rounded-md text-black px-4 py-2 font-medium hover:bg-white/90;
   }
 }

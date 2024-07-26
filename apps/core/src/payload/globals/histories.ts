@@ -25,6 +25,18 @@ export const Histories: GlobalConfig = {
         },
 
         {
+          type: 'text',
+          name: 'title',
+          required: true,
+        },
+
+        {
+          type: 'text',
+          name: 'url',
+          required: false,
+        },
+
+        {
           type: 'textarea',
           name: 'lede',
           required: true,

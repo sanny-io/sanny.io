@@ -296,6 +296,8 @@ export interface History {
   histories?:
     | {
         name: string;
+        title: string;
+        url?: string | null;
         lede: string;
         description: {
           root: {
