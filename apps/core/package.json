@@ -10,20 +10,24 @@
     "start": "next start"
   },
   "dependencies": {
-    "@payloadcms/db-postgres": "^0.8.5",
-    "@payloadcms/next": "3.0.0-beta.68",
-    "@payloadcms/richtext-lexical": "3.0.0-beta.68",
-    "graphql": "16.9.0",
-    "next": "15.0.0-canary.53",
-    "payload": "3.0.0-beta.68",
+    "@payloadcms/db-postgres": "3.0.0-beta.67",
+    "@payloadcms/next": "3.0.0-beta.67",
+    "@payloadcms/richtext-lexical": "3.0.0-beta.67",
+    "@payloadcms/richtext-slate": "3.0.0-beta.67",
+    "@payloadcms/ui": "3.0.0-beta.67",
+    "graphql": "16.8.2",
+    "next": "15.0.0-canary.58",
+    "payload": "3.0.0-beta.67",
     "react": "19.0.0-rc-6230622a1a-20240610",
     "react-dom": "19.0.0-rc-6230622a1a-20240610",
-    "sharp": "0.33.4"
+    "sharp": "0.32.6"
   },
   "devDependencies": {
     "@tailwindcss/typography": "0.5.13",
-    "@types/node": "20.14.12",
-    "@types/react": "18.3.3",
+    "@payloadcms/graphql": "3.0.0-beta.67",
+    "@types/node": "^20.14.9",
+    "@types/react": "npm:types-react@19.0.0-rc.0",
+    "@types/react-dom": "npm:types-react-dom@19.0.0-rc.0",
     "autoprefixer": "10.4.19",
     "postcss": "8.4.39",
     "postcss-preset-env": "9.6.0",
