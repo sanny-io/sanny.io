@@ -28,6 +28,7 @@ export interface Config {
     'responsive-design': ResponsiveDesign;
     projects: Project;
     histories: History;
+    navigation: Navigation;
   };
   locale: null;
   user: User & {
@@ -144,8 +145,9 @@ export interface PayloadMigration {
  */
 export interface Header {
   id: number;
-  name?: string | null;
-  title?: string | null;
+  name: string;
+  title: string;
+  image: number | Media;
   updatedAt?: string | null;
   createdAt?: string | null;
 }
@@ -155,8 +157,8 @@ export interface Header {
  */
 export interface AboutMe {
   id: number;
-  title?: string | null;
-  description?: {
+  title: string;
+  description: {
     root: {
       type: string;
       children: {
@@ -170,7 +172,7 @@ export interface AboutMe {
       version: number;
     };
     [k: string]: unknown;
-  } | null;
+  };
   updatedAt?: string | null;
   createdAt?: string | null;
 }
@@ -180,7 +182,7 @@ export interface AboutMe {
  */
 export interface Experience {
   id: number;
-  title?: string | null;
+  title: string;
   experiences?:
     | {
         icon: number | Media;
@@ -303,6 +305,23 @@ export interface History {
         };
         start: string;
         end?: string | null;
+        id?: string | null;
+      }[]
+    | null;
+  updatedAt?: string | null;
+  createdAt?: string | null;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "navigation".
+ */
+export interface Navigation {
+  id: number;
+  links?:
+    | {
+        name: string;
+        link: string;
+        icon: string;
         id?: string | null;
       }[]
     | null;

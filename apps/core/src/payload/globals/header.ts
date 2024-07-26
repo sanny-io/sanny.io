@@ -7,11 +7,20 @@ export const Header: GlobalConfig = {
     {
       type: 'text',
       name: 'name',
+      required: true,
     },
 
     {
       type: 'text',
       name: 'title',
+      required: true,
+    },
+
+    {
+      type: 'upload',
+      name: 'image',
+      relationTo: 'media',
+      required: true,
     },
   ],
 }

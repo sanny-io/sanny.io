@@ -8,6 +8,7 @@ export const Experiences: GlobalConfig = {
     {
       type: 'text',
       name: 'title',
+      required: true,
     },
 
     {

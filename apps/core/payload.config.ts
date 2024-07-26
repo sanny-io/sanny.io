@@ -17,6 +17,8 @@ import { Header } from '@/payload/globals/header'
 import { Projects } from '@/payload/globals/projects'
 import { ResponsiveDesign } from '@/payload/globals/responsive-design'
 import { Histories } from '@/payload/globals/histories'
+import { Navigation } from '@/payload/globals/navigation'
+import { ContactMe } from '@/payload/globals/contact-me'
 
 const filename = fileURLToPath(import.meta.url)
 const dirname = path.dirname(filename)
@@ -26,7 +28,7 @@ export default buildConfig({
     user: Users.slug,
   },
   collections: [Users, Media, Svg],
-  globals: [Header, AboutMe, Experiences, Agile, ResponsiveDesign, Projects, Histories],
+  globals: [Header, AboutMe, Experiences, Agile, ResponsiveDesign, Projects, Histories, ContactMe, Navigation],
   editor: lexicalEditor(),
   secret: 'sanny.io',
   typescript: {

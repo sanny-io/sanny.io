@@ -2,6 +2,7 @@ import type { GlobalConfig } from 'payload'
 
 export const Histories: GlobalConfig = {
   slug: 'histories',
+  label: 'History',
 
   fields: [
     {
@@ -13,6 +14,7 @@ export const Histories: GlobalConfig = {
     {
       type: 'array',
       name: 'histories',
+      label: 'History',
 
       fields: [
         {
