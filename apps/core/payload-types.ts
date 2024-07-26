@@ -174,7 +174,7 @@ export interface AboutMe {
     };
     [k: string]: unknown;
   };
-  description_html?: string | null;
+  descriptionHtml?: string | null;
   updatedAt?: string | null;
   createdAt?: string | null;
 }
@@ -187,8 +187,9 @@ export interface Experience {
   title: string;
   experiences?:
     | {
-        icon: number | Media;
+        name: string;
         description: string;
+        icon: number | Svg;
         id?: string | null;
       }[]
     | null;

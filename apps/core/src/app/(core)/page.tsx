@@ -1,4 +1,5 @@
 import { AboutMe } from '@/components/about-me'
+import { Experiences } from '@/components/experiences'
 import { Header } from '@/components/header'
 
 export default function HomePage() {
@@ -8,6 +9,7 @@ export default function HomePage() {
     >
       <Header />
       <AboutMe />
+      <Experiences />
     </div>
   )
 }

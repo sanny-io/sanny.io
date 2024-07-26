@@ -25,7 +25,7 @@ export const AboutMe: GlobalConfig = {
     },
 
     lexicalHTML('description', {
-      name: 'description_html',
+      name: 'descriptionHtml',
     }),
   ],
 }

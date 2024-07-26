@@ -6,8 +6,6 @@ export async function AboutMe() {
     slug: 'about-me',
   })
 
-  console.log({ aboutMe })
-
   return (
     <section>
       <div>
@@ -21,10 +19,11 @@ export async function AboutMe() {
           </h2>
 
           <article
-            className='mb-16'
-          >
-            {/* {children} */}
-          </article>
+            className='mb-16 prose leading-6'
+            dangerouslySetInnerHTML={{
+              __html: aboutMe.descriptionHtml!,
+            }}
+          />
         </div>
       </div>
     </section>

@@ -18,16 +18,22 @@ export const Experiences: GlobalConfig = {
 
       fields: [
         {
-          type: 'upload',
-          name: 'icon',
+          type: 'text',
+          name: 'name',
           required: true,
-          relationTo: 'media',
         },
 
         {
           type: 'text',
           name: 'description',
           required: true,
+        },
+
+        {
+          type: 'upload',
+          name: 'icon',
+          required: true,
+          relationTo: 'svg',
         },
       ],
     },
