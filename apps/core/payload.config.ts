@@ -1,5 +1,6 @@
 // storage-adapter-import-placeholder
 import { postgresAdapter } from '@payloadcms/db-postgres' // database-adapter-import
+import { mongooseAdapter } from '@payloadcms/db-mongodb'
 import { lexicalEditor } from '@payloadcms/richtext-lexical'
 import path from 'path'
 import { buildConfig } from 'payload'
@@ -40,6 +41,9 @@ export default buildConfig({
       connectionString: process.env.DATABASE_URL,
     },
   }),
+  // db: mongooseAdapter({
+  //   url: process.env.MONGO_URL!,
+  // }),
   // database-adapter-config-end
   sharp,
   plugins: [

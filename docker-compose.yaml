@@ -3,6 +3,7 @@ version: "3"
 volumes:
   database-data:
   pgadmin-data:
+  mongo-data:
 
 networks:
   core:
@@ -19,6 +20,7 @@ services:
       - core
     depends_on:
       - database
+      - mongo
     volumes:
       - .:/workspace:cached
     links:
@@ -34,6 +36,20 @@ services:
       - core
     ports:
       - 5432:5432
+  mongo:
+    container_name: sanny-io-mongo
+    image: mongo
+    restart: always
+    networks:
+      - core
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: mongo
+      MONGO_INITDB_ROOT_PASSWORD: mongo
+      MONGO_INITDB_DATABASE: payload
+    ports:
+      - 27017:27017
+    volumes:
+      - mongo-data:/data/db
   pgadmin:
     image: dpage/pgadmin4
     container_name: sanny-io-pgadmin
