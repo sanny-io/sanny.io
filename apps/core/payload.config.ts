@@ -30,7 +30,7 @@ export default buildConfig({
   collections: [Users, Media, Svg],
   globals: [Header, AboutMe, Experiences, Agile, ResponsiveDesign, Projects, Histories, ContactMe, Navigation],
   editor: lexicalEditor(),
-  secret: 'sanny.io',
+  secret: process.env.PAYLOAD_SECRET!,
   typescript: {
     outputFile: path.resolve(dirname, 'payload-types.ts'),
   },

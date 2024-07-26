@@ -46,6 +46,13 @@ export const Projects: GlobalConfig = {
         },
 
         {
+          type: 'upload',
+          name: 'image',
+          relationTo: 'media',
+          required: false,
+        },
+
+        {
           type: 'text',
           name: 'tags',
           required: false,

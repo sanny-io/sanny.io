@@ -28,6 +28,7 @@ export interface Config {
     'responsive-design': ResponsiveDesign;
     projects: Project;
     histories: History;
+    'contact-me': ContactMe;
     navigation: Navigation;
   };
   locale: null;
@@ -173,6 +174,7 @@ export interface AboutMe {
     };
     [k: string]: unknown;
   };
+  description_html?: string | null;
   updatedAt?: string | null;
   createdAt?: string | null;
 }
@@ -270,6 +272,7 @@ export interface Project {
           };
           [k: string]: unknown;
         };
+        image?: number | Media | null;
         tags?: string[] | null;
         id?: string | null;
       }[]
@@ -308,6 +311,31 @@ export interface History {
         id?: string | null;
       }[]
     | null;
+  updatedAt?: string | null;
+  createdAt?: string | null;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "contact-me".
+ */
+export interface ContactMe {
+  id: number;
+  title: string;
+  description: {
+    root: {
+      type: string;
+      children: {
+        type: string;
+        version: number;
+        [k: string]: unknown;
+      }[];
+      direction: ('ltr' | 'rtl') | null;
+      format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
+      indent: number;
+      version: number;
+    };
+    [k: string]: unknown;
+  };
   updatedAt?: string | null;
   createdAt?: string | null;
 }

@@ -32,8 +32,12 @@ const config = {
       yellow: colors.amber,
       pink: colors.fuchsia,
 
-      brand: {
-        DEFAULT: '#00a1f2',
+      primary: {
+        DEFAULT: colors.blue[600],
+      },
+
+      secondary: {
+        DEFAULT: colors.blue[400],
       },
     },
 
