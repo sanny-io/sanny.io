@@ -22,3 +22,9 @@
     @apply flex-shrink-0;
   }
 }
+
+@layer components {
+  .button {
+    @apply bg-white rounded text-black px-3 py-2;
+  }
+}

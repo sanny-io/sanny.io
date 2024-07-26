@@ -245,6 +245,7 @@ export interface ResponsiveDesign {
     [k: string]: unknown;
   };
   descriptionHtml?: string | null;
+  image: number | Media;
   updatedAt?: string | null;
   createdAt?: string | null;
 }

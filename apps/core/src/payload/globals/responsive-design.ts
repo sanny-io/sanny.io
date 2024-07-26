@@ -27,5 +27,12 @@ export const ResponsiveDesign: GlobalConfig = {
     lexicalHTML('description', {
       name: 'descriptionHtml',
     }),
+
+    {
+      type: 'upload',
+      name: 'image',
+      required: true,
+      relationTo: 'media',
+    },
   ],
 }
