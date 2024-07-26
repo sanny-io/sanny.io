@@ -1,4 +1,5 @@
 import { initializePayload } from '@/services/payload'
+import Image from 'next/image'
 
 export async function Experiences() {
   const payload = await initializePayload()
@@ -6,10 +7,12 @@ export async function Experiences() {
     slug: 'experiences',
   })
 
+  console.log(JSON.stringify(experiences, null, 2))
+
   return (
     <section
       id='experiences'
-      className='text-bg-gray-800'
+      className='bg-gray-800'
     >
       <div
         className='container px-2 py-16 mx-auto'
@@ -32,8 +35,11 @@ export async function Experiences() {
                   key={experience.id}
                   className='flex p-6 transition-colors duration-300 border border-gray-700 rounded hover:border-blue-500'
                 >
-                  <div
+                  <Image
                     className='hidden w-16 mr-6 md:inline-block min-w-[60px] max-w-[60px] max-h-[60px] self-center'
+                    src={experience.icon.url}
+                    width={64}
+                    height={64}
                   />
 
                   <div>

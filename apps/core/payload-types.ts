@@ -217,6 +217,8 @@ export interface Agile {
     };
     [k: string]: unknown;
   };
+  backgroundImage: number | Media;
+  descriptionHtml?: string | null;
   updatedAt?: string | null;
   createdAt?: string | null;
 }
@@ -242,6 +244,7 @@ export interface ResponsiveDesign {
     };
     [k: string]: unknown;
   };
+  descriptionHtml?: string | null;
   updatedAt?: string | null;
   createdAt?: string | null;
 }
@@ -273,6 +276,7 @@ export interface Project {
           };
           [k: string]: unknown;
         };
+        descriptionHtml?: string | null;
         image?: number | Media | null;
         tags?: string[] | null;
         id?: string | null;
@@ -307,6 +311,7 @@ export interface History {
           };
           [k: string]: unknown;
         };
+        descriptionHtml?: string | null;
         start: string;
         end?: string | null;
         id?: string | null;

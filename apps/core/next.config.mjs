@@ -29,4 +29,6 @@ export default withPayload({
       },
     ],
   },
+
+  transpilePackages: ['@payloadcms/db-postgres'],
 })
