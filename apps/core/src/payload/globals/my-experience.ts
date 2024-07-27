@@ -1,7 +1,7 @@
 import type { GlobalConfig } from 'payload'
 
-export const Experiences: GlobalConfig = {
-  slug: 'experiences',
+export const MyExperience: GlobalConfig = {
+  slug: 'my-experience',
   label: 'Experience',
 
   fields: [

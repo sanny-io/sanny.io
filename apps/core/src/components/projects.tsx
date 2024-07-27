@@ -94,7 +94,7 @@ export async function Projects() {
                     project.sourceUrl ?
                       <a
                         href={project.sourceUrl}
-                        className='inline-flex items-center'
+                        className='inline-flex items-center text-secondary'
                         target='__blank'
                         rel='noopener noreferrer'
                       >

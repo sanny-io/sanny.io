@@ -4,7 +4,12 @@ import { Resend } from 'resend'
 
 const resend = new Resend(process.env.RESEND_KEY)
 
-export async function sendMail(formData: FormData) {
+type FormState = {
+  error: boolean,
+  message: string,
+}
+
+export async function sendMail(previousState: FormState, formData: FormData) {
   const name = formData.get('name')
   const email = formData.get('email')
   const message = formData.get('message')
@@ -14,7 +19,7 @@ export async function sendMail(formData: FormData) {
       throw new Error('Missing parameters')
     }
 
-    const { data, error } = await resend.emails.send({
+    const { error } = await resend.emails.send({
       from: 'sanny.io <mail@sanny.io>',
       to: 'sannysherief@gmail.com',
       subject: `Contact from ${name} (${email})`,
@@ -24,13 +29,19 @@ export async function sendMail(formData: FormData) {
     if (error) {
       throw new Error(error.message)
     }
+
+    return {
+      error: false,
+      message: 'Message received! Thanks',
+    }
   }
 
   catch (error) {
     console.error(error)
 
     return {
-      error: 'Something went wrong. Contact me manually at sannysherief@gmail.com',
+      error: true,
+      message: 'Something went wrong. Contact me directly at <a href="mailto:sannysherief@gmail.com">sannysherief@gmail.com</a>',
     }
   }
 }

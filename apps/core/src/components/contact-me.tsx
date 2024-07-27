@@ -1,14 +1,23 @@
 'use client'
 
 import { sendMail } from '@/actions/mail'
+import { useActionState } from 'react'
 import { useFormStatus } from 'react-dom'
 
-const fieldClassName = 'p-2 bg-gray-900 border border-gray-700 shadow-2xl outline-none focus:border-blue-500 transition'
 
-export async function ContactMe() {
-  const form = useFormStatus()
+type Props = {
+  title: string,
+  description: string,
+}
 
-  console.log({ form })
+export function ContactMe({ title, description }: Props) {
+  const formStatus = useFormStatus()
+  const [formState, formAction] = useActionState(sendMail, {
+    error: false,
+    message: '',
+  })
+
+  console.log({ formState })
 
   return (
     <section
@@ -18,17 +27,18 @@ export async function ContactMe() {
       <h2
         className='mb-4 text-5xl tracking-widest text-center !text-secondary uppercase md:text-6xl font-light'
       >
-        Contact me
+        {title}
       </h2>
 
-      <p className='text-2xl font-light text-center text-gray-400'
+      <p
+        className='text-2xl font-light text-center text-gray-400'
       >
-        Let's get this bread.
+        {description}
       </p>
 
       <form
         className='max-w-4xl py-8 mx-auto'
-        action={sendMail}
+        action={formAction}
       >
         <div
           className='grid grid-cols-1 gap-4 mb-4 text-center md:grid-cols-2'
@@ -38,7 +48,7 @@ export async function ContactMe() {
             type='text'
             name='name'
             placeholder='Name'
-            className={fieldClassName}
+            autoComplete='off'
           />
 
           <input
@@ -46,7 +56,7 @@ export async function ContactMe() {
             type='email'
             name='email'
             placeholder='Email'
-            className={fieldClassName}
+            autoComplete='off'
           />
 
           <textarea
@@ -54,31 +64,33 @@ export async function ContactMe() {
             name='message'
             rows={5}
             placeholder='Message'
-            className={`${fieldClassName} md:col-span-2`}
+            autoComplete='off'
+            className='md:col-span-2'
           />
         </div>
 
         <div
-          className='flex'
+          className='flex gap-4 items-center justify-end flex-col-reverse md:flex-row'
         >
+          {
+            formState.message
+              ? <span
+                className={formState.error ? 'text-red-500' : 'text-green-500'}
+
+                dangerouslySetInnerHTML={{
+                  __html: formState.message,
+                }}
+              />
+              : null
+          }
+
           <button
             type='submit'
-            // disabled={hasError === false}
-            className='block w-full mb-4 primary button md:inline-block md:w-max ml-auto'
+            disabled={formStatus.pending}
+            className='block w-full primary button md:inline-block md:w-max'
           >
             Submit
           </button>
-
-          {/* <span
-            className={
-              `md:ml-4 inline-block ${hasError === null && 'hidden'} ${hasError ? 'text-red-500' : 'text-green-500'}`
-            }>
-            {
-              hasError
-                ? <>Error. Contact me directly at <a href={`mailto:${email}`} className='font-bold'>{email}</a></>
-                : <>Message received! Thanks.</>
-            }
-          </span> */}
         </div>
       </form>
     </section>

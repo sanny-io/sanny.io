@@ -11,7 +11,7 @@ export const ContactMe: GlobalConfig = {
     },
 
     {
-      type: 'richText',
+      type: 'text',
       name: 'description',
       required: true,
     },

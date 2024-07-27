@@ -1,25 +1,35 @@
 import { AboutMe } from '@/components/about-me'
 import { Agile } from '@/components/agile'
 import { ContactMe } from '@/components/contact-me'
-import { Experiences } from '@/components/experiences'
+import { MyExperience } from '@/components/my-experience'
 import { Header } from '@/components/header'
-import { Histories } from '@/components/histories'
+import { MyHistory } from '@/components/my-history'
 import { Projects } from '@/components/projects'
 import { ResponsiveDesign } from '@/components/responsive-design'
+import { initializePayload } from '@/services/payload'
 
-export default function HomePage() {
+export default async function HomePage() {
+  const payload = await initializePayload()
+  const contactMe = await payload.findGlobal({
+    slug: 'contact-me',
+  })
+
   return (
     <div
       className='flex-grow'
     >
       <Header />
       <AboutMe />
-      <Experiences />
+      <MyExperience />
       <Agile />
       <ResponsiveDesign />
       <Projects />
-      <Histories />
-      <ContactMe />
+      <MyHistory />
+
+      <ContactMe
+        title={contactMe.title}
+        description={contactMe.description}
+      />
     </div>
   )
 }

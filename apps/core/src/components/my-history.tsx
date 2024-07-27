@@ -2,10 +2,10 @@ import { initializePayload } from '@/services/payload'
 
 const stringifyDate = (date: Date) => `${date.toLocaleString('default', { month: 'long' })} ${date.getFullYear()}`
 
-export async function Histories() {
+export async function MyHistory() {
   const payload = await initializePayload()
   const histories = await payload.findGlobal({
-    slug: 'histories',
+    slug: 'my-history',
   })
 
   return (

@@ -26,5 +26,12 @@
 @layer components {
   .button {
     @apply bg-white rounded-md text-black px-4 py-2 font-medium hover:bg-white/90;
+    @apply disabled:bg-white/50 disabled:cursor-not-allowed;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    @apply p-2 bg-gray-900 border border-gray-700 shadow-2xl outline-none focus:border-blue-500 transition;
   }
 }

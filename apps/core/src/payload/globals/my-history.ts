@@ -1,8 +1,8 @@
 import { HTMLConverterFeature, lexicalEditor, lexicalHTML } from '@payloadcms/richtext-lexical'
 import type { GlobalConfig } from 'payload'
 
-export const Histories: GlobalConfig = {
-  slug: 'histories',
+export const MyHistory: GlobalConfig = {
+  slug: 'my-history',
   label: 'History',
 
   fields: [

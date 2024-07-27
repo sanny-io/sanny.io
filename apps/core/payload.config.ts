@@ -13,23 +13,34 @@ import { Svg } from '@/payload/collections/svg'
 
 import { AboutMe } from '@/payload/globals/about-me'
 import { Agile } from '@/payload/globals/agile'
-import { Experiences } from '@/payload/globals/experiences'
+import { MyExperience } from '@/payload/globals/my-experience'
 import { Header } from '@/payload/globals/header'
 import { Projects } from '@/payload/globals/projects'
 import { ResponsiveDesign } from '@/payload/globals/responsive-design'
-import { Histories } from '@/payload/globals/histories'
+import { MyHistory } from '@/payload/globals/my-history'
 import { Navigation } from '@/payload/globals/navigation'
 import { ContactMe } from '@/payload/globals/contact-me'
 
+import { gcsAdapter } from '@payloadcms/plugin-cloud-storage/gcs'
+import { cloudStoragePlugin } from '@payloadcms/plugin-cloud-storage'
+
 const filename = fileURLToPath(import.meta.url)
 const dirname = path.dirname(filename)
+
+const adapter = gcsAdapter({
+  options: {
+    credentials: JSON.parse(Buffer.from(process.env.GCS_CREDENTIALS!, 'base64').toString()),
+  },
+
+  bucket: process.env.GCS_BUCKET!,
+})
 
 export default buildConfig({
   admin: {
     user: Users.slug,
   },
   collections: [Users, Media, Svg],
-  globals: [Header, AboutMe, Experiences, Agile, ResponsiveDesign, Projects, Histories, ContactMe, Navigation],
+  globals: [Header, AboutMe, MyExperience, Agile, ResponsiveDesign, Projects, MyHistory, ContactMe, Navigation],
   editor: lexicalEditor(),
   secret: process.env.PAYLOAD_SECRET!,
   typescript: {
@@ -48,5 +59,14 @@ export default buildConfig({
   sharp,
   plugins: [
     // storage-adapter-placeholder
+    // @ts-ignore
+    cloudStoragePlugin({
+      collections: {
+        media: {
+          // @ts-ignore
+          adapter,
+        },
+      },
+    }),
   ],
 })

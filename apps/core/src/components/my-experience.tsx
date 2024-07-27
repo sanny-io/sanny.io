@@ -1,13 +1,11 @@
 import { initializePayload } from '@/services/payload'
 import Image from 'next/image'
 
-export async function Experiences() {
+export async function MyExperience() {
   const payload = await initializePayload()
   const experiences = await payload.findGlobal({
-    slug: 'experiences',
+    slug: 'my-experience',
   })
-
-  console.log(JSON.stringify(experiences, null, 2))
 
   return (
     <section
