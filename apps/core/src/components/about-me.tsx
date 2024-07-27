@@ -20,6 +20,7 @@ export async function AboutMe() {
 
           <article
             className='mb-16 prose leading-6'
+
             dangerouslySetInnerHTML={{
               __html: aboutMe.descriptionHtml!,
             }}

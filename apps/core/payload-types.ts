@@ -18,7 +18,7 @@ export interface Config {
     'payload-migrations': PayloadMigration;
   };
   db: {
-    defaultIDType: number;
+    defaultIDType: string;
   };
   globals: {
     header: Header;
@@ -57,7 +57,7 @@ export interface UserAuthOperations {
  * via the `definition` "users".
  */
 export interface User {
-  id: number;
+  id: string;
   updatedAt: string;
   createdAt: string;
   email: string;
@@ -74,7 +74,7 @@ export interface User {
  * via the `definition` "media".
  */
 export interface Media {
-  id: number;
+  id: string;
   alt?: string | null;
   updatedAt: string;
   createdAt: string;
@@ -93,7 +93,7 @@ export interface Media {
  * via the `definition` "svg".
  */
 export interface Svg {
-  id: number;
+  id: string;
   updatedAt: string;
   createdAt: string;
   url?: string | null;
@@ -111,10 +111,10 @@ export interface Svg {
  * via the `definition` "payload-preferences".
  */
 export interface PayloadPreference {
-  id: number;
+  id: string;
   user: {
     relationTo: 'users';
-    value: number | User;
+    value: string | User;
   };
   key?: string | null;
   value?:
@@ -134,7 +134,7 @@ export interface PayloadPreference {
  * via the `definition` "payload-migrations".
  */
 export interface PayloadMigration {
-  id: number;
+  id: string;
   name?: string | null;
   batch?: number | null;
   updatedAt: string;
@@ -145,10 +145,10 @@ export interface PayloadMigration {
  * via the `definition` "header".
  */
 export interface Header {
-  id: number;
+  id: string;
   name: string;
   title: string;
-  image: number | Media;
+  image: string | Media;
   updatedAt?: string | null;
   createdAt?: string | null;
 }
@@ -157,7 +157,7 @@ export interface Header {
  * via the `definition` "about-me".
  */
 export interface AboutMe {
-  id: number;
+  id: string;
   title: string;
   description: {
     root: {
@@ -183,13 +183,13 @@ export interface AboutMe {
  * via the `definition` "experiences".
  */
 export interface Experience {
-  id: number;
+  id: string;
   title: string;
   experiences?:
     | {
         name: string;
         description: string;
-        icon: number | Svg;
+        icon: string | Svg;
         id?: string | null;
       }[]
     | null;
@@ -201,7 +201,7 @@ export interface Experience {
  * via the `definition` "agile".
  */
 export interface Agile {
-  id: number;
+  id: string;
   description: {
     root: {
       type: string;
@@ -217,7 +217,7 @@ export interface Agile {
     };
     [k: string]: unknown;
   };
-  backgroundImage: number | Media;
+  backgroundImage: string | Media;
   descriptionHtml?: string | null;
   updatedAt?: string | null;
   createdAt?: string | null;
@@ -227,7 +227,7 @@ export interface Agile {
  * via the `definition` "responsive-design".
  */
 export interface ResponsiveDesign {
-  id: number;
+  id: string;
   title: string;
   description: {
     root: {
@@ -245,7 +245,7 @@ export interface ResponsiveDesign {
     [k: string]: unknown;
   };
   descriptionHtml?: string | null;
-  image: number | Media;
+  image: string | Media;
   updatedAt?: string | null;
   createdAt?: string | null;
 }
@@ -254,7 +254,7 @@ export interface ResponsiveDesign {
  * via the `definition` "projects".
  */
 export interface Project {
-  id: number;
+  id: string;
   title: string;
   projects?:
     | {
@@ -278,7 +278,7 @@ export interface Project {
           [k: string]: unknown;
         };
         descriptionHtml?: string | null;
-        image?: number | Media | null;
+        image?: string | Media | null;
         tags?: string[] | null;
         id?: string | null;
       }[]
@@ -291,7 +291,7 @@ export interface Project {
  * via the `definition` "histories".
  */
 export interface History {
-  id: number;
+  id: string;
   title: string;
   histories?:
     | {
@@ -328,7 +328,7 @@ export interface History {
  * via the `definition` "contact-me".
  */
 export interface ContactMe {
-  id: number;
+  id: string;
   title: string;
   description: {
     root: {
@@ -353,7 +353,7 @@ export interface ContactMe {
  * via the `definition` "navigation".
  */
 export interface Navigation {
-  id: number;
+  id: string;
   links?:
     | {
         name: string;

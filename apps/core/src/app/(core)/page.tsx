@@ -1,5 +1,6 @@
 import { AboutMe } from '@/components/about-me'
 import { Agile } from '@/components/agile'
+import { ContactMe } from '@/components/contact-me'
 import { Experiences } from '@/components/experiences'
 import { Header } from '@/components/header'
 import { Histories } from '@/components/histories'
@@ -18,6 +19,7 @@ export default function HomePage() {
       <ResponsiveDesign />
       <Projects />
       <Histories />
+      <ContactMe />
     </div>
   )
 }
