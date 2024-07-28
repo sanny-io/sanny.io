@@ -43,6 +43,9 @@ export default buildConfig({
   globals: [Header, AboutMe, MyExperience, Agile, ResponsiveDesign, Projects, MyHistory, ContactMe, Navigation],
   editor: lexicalEditor(),
   secret: process.env.PAYLOAD_SECRET!,
+  rateLimit: {
+    trustProxy: true,
+  },
   typescript: {
     outputFile: path.resolve(dirname, 'payload-types.ts'),
   },
