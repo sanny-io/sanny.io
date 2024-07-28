@@ -182,7 +182,7 @@ export interface MyExperience {
     | {
         name: string;
         description: string;
-        icon: number | Media;
+        icon: string;
         id?: string | null;
       }[]
     | null;
@@ -254,7 +254,21 @@ export interface Project {
         name: string;
         liveUrl?: string | null;
         sourceUrl?: string | null;
-        lede: string;
+        lede: {
+          root: {
+            type: string;
+            children: {
+              type: string;
+              version: number;
+              [k: string]: unknown;
+            }[];
+            direction: ('ltr' | 'rtl') | null;
+            format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
+            indent: number;
+            version: number;
+          };
+          [k: string]: unknown;
+        };
         description: {
           root: {
             type: string;
@@ -270,6 +284,7 @@ export interface Project {
           };
           [k: string]: unknown;
         };
+        ledeHtml?: string | null;
         descriptionHtml?: string | null;
         image?: number | Media | null;
         tags?: string[] | null;
@@ -291,7 +306,6 @@ export interface MyHistory {
         name: string;
         title: string;
         url?: string | null;
-        lede: string;
         description: {
           root: {
             type: string;

@@ -35,9 +35,16 @@ export const Projects: GlobalConfig = {
         },
 
         {
-          type: 'textarea',
+          type: 'richText',
           name: 'lede',
           required: true,
+
+          editor: lexicalEditor({
+            features: ({ defaultFeatures }) => [
+              ...defaultFeatures,
+              HTMLConverterFeature({}),
+            ],
+          }),
         },
 
         {
@@ -52,6 +59,10 @@ export const Projects: GlobalConfig = {
             ],
           }),
         },
+
+        lexicalHTML('lede', {
+          name: 'ledeHtml',
+        }),
 
         lexicalHTML('description', {
           name: 'descriptionHtml',

@@ -30,10 +30,9 @@ export const MyExperience: GlobalConfig = {
         },
 
         {
-          type: 'upload',
+          type: 'code',
           name: 'icon',
           required: true,
-          relationTo: 'media',
         },
       ],
     },

@@ -37,12 +37,6 @@ export const MyHistory: GlobalConfig = {
         },
 
         {
-          type: 'textarea',
-          name: 'lede',
-          required: true,
-        },
-
-        {
           type: 'richText',
           name: 'description',
           required: true,

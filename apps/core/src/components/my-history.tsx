@@ -60,7 +60,7 @@ export async function MyHistory() {
               />
 
               <div
-                className='prose'
+                className='prose max-w-none'
 
                 dangerouslySetInnerHTML={{
                   __html: history.descriptionHtml!,

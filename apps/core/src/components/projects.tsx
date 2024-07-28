@@ -61,7 +61,7 @@ export async function Projects() {
                   className='mb-4 prose leading-6'
 
                   dangerouslySetInnerHTML={{
-                    __html: project.descriptionHtml!,
+                    __html: project.ledeHtml!,
                   }}
                 />
 
