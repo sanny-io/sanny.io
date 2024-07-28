@@ -12,7 +12,7 @@ const sizes: [string, number][] = [
   ['sm', 640],
 ]
 
-export function Agile({ backgroundImage, descriptionHtml, ...rest }: Agile) {
+export function Agile({ backgroundImage, descriptionHtml }: Agile) {
   const { ref, isIntersecting } = useIntersectionObserver({
     freezeOnceVisible: true,
   })
