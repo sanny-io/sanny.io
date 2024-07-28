@@ -10,6 +10,10 @@
     color-scheme: dark;
   }
 
+  html:has(dialog[open]) {
+    @apply overflow-hidden;
+  }
+
   body {
     @apply flex flex-col flex-grow;
     @apply text-white bg-gray-900;
@@ -29,6 +33,11 @@
     @apply bg-white rounded-md text-black px-4 py-2 font-medium hover:bg-white/80;
     @apply disabled:bg-white/50 disabled:cursor-not-allowed;
     @apply duration-300 transition-colors;
+    @apply text-center;
+  }
+
+  .tag {
+    @apply bg-primary py-1 px-2 text-sm;
   }
 
   input[type="text"],

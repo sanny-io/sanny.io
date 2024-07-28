@@ -1,11 +1,11 @@
 import '@/styles.css'
 import type { ReactNode } from 'react'
-import { Footer } from '@/components/footer'
 import { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 
 type Props = {
   children: ReactNode,
+  project: ReactNode,
 }
 
 const inter = Inter({
@@ -14,7 +14,7 @@ const inter = Inter({
   weight: ['400', '500', '600', '900'],
 })
 
-export default function MainLayout({ children }: Props) {
+export default function MainLayout({ children, project }: Props) {
   return (
     <html
       lang='en'
@@ -25,6 +25,7 @@ export default function MainLayout({ children }: Props) {
       <body>
         <main>
           {children}
+          {project}
         </main>
       </body>
     </html>

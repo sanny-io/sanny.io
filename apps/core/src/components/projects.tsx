@@ -19,7 +19,7 @@ export async function Projects() {
       </h2>
 
       <div
-        className='flex flex-col gap-8 md:gap-24'
+        className='flex flex-col gap-8 lg:gap-24'
       >
         {
           projects.projects?.map(project => (
@@ -72,7 +72,7 @@ export async function Projects() {
                     project.tags?.map(tag => (
                       <li
                         key={tag}
-                        className='bg-primary py-1 px-2 text-sm'
+                        className='tag'
                       >
                         {tag}
                       </li>
@@ -84,6 +84,7 @@ export async function Projects() {
                   className='flex mt-auto gap-3 text-sm'
                 >
                   <button
+                    disabled
                     type='button'
                     className='button'
                   >
