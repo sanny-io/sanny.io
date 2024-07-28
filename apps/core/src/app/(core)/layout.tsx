@@ -26,8 +26,6 @@ export default function MainLayout({ children }: Props) {
         <main>
           {children}
         </main>
-
-        <Footer />
       </body>
     </html>
   )
