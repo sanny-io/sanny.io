@@ -22,6 +22,7 @@ export async function Navigation() {
               <a
                 href={link.url}
                 title={link.name}
+                aria-label={link.name}
               >
                 <div
                   className='w-5'

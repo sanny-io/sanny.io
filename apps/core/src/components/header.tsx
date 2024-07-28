@@ -40,6 +40,8 @@ export async function Header() {
                   >
                     <a
                       href={social.url}
+                      title={social.tooltip}
+                      aria-label={social.tooltip}
                     >
                       <div
                         dangerouslySetInnerHTML={{

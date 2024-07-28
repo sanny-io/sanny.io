@@ -37,4 +37,6 @@ export const metadata: Metadata = {
     default: 'Sanny Sherief',
     template: '%s - sanny.io',
   },
+
+  description: 'Portfolio of Sanny Sherief',
 }

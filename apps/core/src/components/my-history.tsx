@@ -28,7 +28,7 @@ export async function MyHistory() {
       >
         {
           histories.histories?.map(history => (
-            <div
+            <li
               key={history.id}
               className='w-full p-4 duration-300 bg-gray-900 border border-gray-800 rounded hover:bg-gray-800'
             >
@@ -66,7 +66,7 @@ export async function MyHistory() {
                   __html: history.descriptionHtml!,
                 }}
               />
-            </div>
+            </li>
           ))
         }
       </ol>
