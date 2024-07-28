@@ -46,6 +46,9 @@ export default buildConfig({
   typescript: {
     outputFile: path.resolve(dirname, 'payload-types.ts'),
   },
+  csrf: [
+    'https://sanny.io',
+  ],
   // database-adapter-config-start
   db: postgresAdapter({
     pool: {
