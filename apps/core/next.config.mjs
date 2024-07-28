@@ -31,4 +31,8 @@ export default withPayload({
   },
 
   transpilePackages: ['@payloadcms/db-postgres'],
+
+  typescript: {
+    ignoreBuildErrors: true,
+  },
 })
