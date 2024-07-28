@@ -8,41 +8,46 @@ export const Media: CollectionConfig = {
     mimeTypes: ['image/*'],
     disableLocalStorage: true,
 
-    // imageSizes: [
-    //   {
-    //     name: 'sm',
-    //     width: 640,
-    //     height: undefined,
-    //   },
+    imageSizes: [
+      {
+        name: 'sm',
+        width: 640,
+        height: undefined,
+      },
 
-    //   {
-    //     name: 'md',
-    //     width: 768,
-    //     height: undefined,
-    //   },
+      {
+        name: 'md',
+        width: 768,
+        height: undefined,
+      },
 
-    //   {
-    //     name: 'lg',
-    //     width: 1024,
-    //     height: undefined,
-    //   },
+      {
+        name: 'lg',
+        width: 1024,
+        height: undefined,
+      },
 
-    //   {
-    //     name: 'xl',
-    //     width: 1280,
-    //     height: undefined,
-    //   },
+      {
+        name: 'xl',
+        width: 1280,
+        height: undefined,
+      },
 
-    //   {
-    //     name: '2xl',
-    //     width: 1400,
-    //     height: undefined,
-    //   },
-    // ]
+      {
+        name: '2xl',
+        width: 1400,
+        height: undefined,
+      },
+    ]
   },
 
   access: {
     read: () => true,
+    create: ({ req }) => true,
+    delete: ({ req }) => true,
+    update: ({ req }) => true,
+    unlock: ({ req }) => true,
+    admin: ({ req }) => true,
   },
 
   fields: [

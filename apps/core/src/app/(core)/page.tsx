@@ -11,9 +11,27 @@ import { Navigation } from '@/components/navigation'
 
 export default async function HomePage() {
   const payload = await initializePayload()
-  const contactMe = await payload.findGlobal({
-    slug: 'contact-me',
-  })
+
+  // const agile = await payload.findGlobal({
+  //   slug: 'agile',
+  // })
+
+  // const contactMe = await payload.findGlobal({
+  //   slug: 'contact-me',
+  // })
+
+  const [
+    agile,
+    contactMe
+  ] = await Promise.all([
+    payload.findGlobal({
+      slug: 'agile',
+    }),
+
+    payload.findGlobal({
+      slug: 'contact-me',
+    })
+  ])
 
   return (
     <div
@@ -24,14 +42,17 @@ export default async function HomePage() {
       <Header />
       <AboutMe />
       <MyExperience />
-      <Agile />
+
+      <Agile
+        {...agile}
+      />
+
       <ResponsiveDesign />
       <Projects />
       <MyHistory />
 
       <ContactMe
-        title={contactMe.title}
-        description={contactMe.description}
+        {...contactMe}
       />
     </div>
   )

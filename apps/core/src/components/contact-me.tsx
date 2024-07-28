@@ -1,15 +1,11 @@
 'use client'
 
 import { sendMail } from '@/actions/mail'
+import type { ContactMe } from 'payload-types'
 import { useActionState } from 'react'
 import { useFormStatus } from 'react-dom'
 
-type Props = {
-  title: string,
-  description: string,
-}
-
-export function ContactMe({ title, description }: Props) {
+export function ContactMe({ title, description }: ContactMe) {
   const formStatus = useFormStatus()
   const [formState, formAction] = useActionState(sendMail, {
     error: false,

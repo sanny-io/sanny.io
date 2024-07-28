@@ -1,9 +1,14 @@
 import { withPayload } from '@payloadcms/next/withPayload'
+import configureBundleAnalyzer from '@next/bundle-analyzer'
+
+const withBundleAnalyzer = configureBundleAnalyzer({
+  enabled: process.env.ANALYZE === '1'
+})
 
 /**
  * @type {import('next').NextConfig}
  */
-export default withPayload({
+export default withBundleAnalyzer(withPayload({
   webpack: config => {
     config.resolve.fallback = {
       fs: false,
@@ -30,9 +35,7 @@ export default withPayload({
     ],
   },
 
-  transpilePackages: ['@payloadcms/db-postgres'],
-
   typescript: {
     ignoreBuildErrors: true,
   },
-})
+}))

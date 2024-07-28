@@ -1,17 +1,49 @@
-import { initializePayload } from '@/services/payload'
+'use client'
 
-export async function Agile() {
-  const payload = await initializePayload()
-  const agile = await payload.findGlobal({
-    slug: 'agile',
+import type { Agile } from 'payload-types'
+import { useRef } from 'react'
+import { useIntersectionObserver, useMediaQuery } from 'usehooks-ts'
+
+const sizes: [string, number][] = [
+  ['2xl', 1400],
+  ['xl', 1280],
+  ['lg', 1024],
+  ['md', 768],
+  ['sm', 640],
+]
+
+export function Agile({ backgroundImage, descriptionHtml, ...rest }: Agile) {
+  const { ref, isIntersecting } = useIntersectionObserver({
+    freezeOnceVisible: true,
   })
+
+  const mediaQueries = sizes.map(([, width]) => (
+    useMediaQuery(`(min-width: ${width}px)`)
+  ))
+
+  let deviceSizeIndex = mediaQueries.findIndex(isMatch => !!isMatch)
+
+  if (deviceSizeIndex === -1) {
+    deviceSizeIndex = sizes.length - 1
+  }
+
+  const largestDeviceSizeIndex = useRef(deviceSizeIndex)
+
+  if (deviceSizeIndex < largestDeviceSizeIndex.current) {
+    largestDeviceSizeIndex.current = deviceSizeIndex
+  }
+
+  const [deviceSize] = sizes[largestDeviceSizeIndex.current]
 
   return (
     <section
+      ref={ref}
       className='bg-fixed bg-cover'
 
       style={{
-        backgroundImage: `url(${agile.backgroundImage.url})`,
+        backgroundImage: isIntersecting
+          ? `url(${backgroundImage.sizes[deviceSize].url})`
+          : undefined,
       }}
     >
       <div
@@ -41,7 +73,7 @@ export async function Agile() {
             className='pb-8 space-y-8 text-xl border-primary border-b-[3px] self-start'
 
             dangerouslySetInnerHTML={{
-              __html: agile.descriptionHtml!,
+              __html: descriptionHtml!,
             }}
           />
         </div>
