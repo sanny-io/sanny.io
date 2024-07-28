@@ -17,16 +17,13 @@ export async function ResponsiveDesign() {
         <div
           className='self-center w-1/2 mb-8 lg:w-1/3 md:mb-16'
         >
-          {/* <Image
-            src={image.url}
-            width={image.width}
-            height={image.height}
-            blurDataURL={image.blur.url}
-            placeholder='blur'
-            layout='responsive'
+          <Image
+            src={responsiveDesign.image.url}
+            width={responsiveDesign.image.width}
+            height={responsiveDesign.image.height}
             className='duration-200'
             alt='Sample site as viewed on a mobile phone'
-          /> */}
+          />
         </div>
 
         <div

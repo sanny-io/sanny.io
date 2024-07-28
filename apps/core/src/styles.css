@@ -25,8 +25,9 @@
 
 @layer components {
   .button {
-    @apply bg-white rounded-md text-black px-4 py-2 font-medium hover:bg-white/90;
+    @apply bg-white rounded-md text-black px-4 py-2 font-medium hover:bg-white/80;
     @apply disabled:bg-white/50 disabled:cursor-not-allowed;
+    @apply duration-300 transition-colors;
   }
 
   input[type="text"],

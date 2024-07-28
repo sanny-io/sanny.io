@@ -19,7 +19,7 @@ export async function Projects() {
       </h2>
 
       <div
-        className='flex flex-col gap-16 md:gap-24'
+        className='flex flex-col gap-8 md:gap-24'
       >
         {
           projects.projects?.map(project => (
@@ -45,7 +45,7 @@ export async function Projects() {
                 className='flex flex-col w-full p-4 md:p-8 lg:w-2/5'
               >
                 <h3
-                  className='inline-block mb-2 text-4xl font-semibold hover:text-blue-500'
+                  className='inline-block mb-2 text-4xl font-semibold hover:text-blue-500 w-max'
                 >
                   <a
                     href={project.liveUrl!}
@@ -66,13 +66,13 @@ export async function Projects() {
                 />
 
                 <ol
-                  className='flex flex-wrap -m-1 mb-4 gap-2 text-sm'
+                  className='flex flex-wrap -m-1 mb-4 gap-2 '
                 >
                   {
                     project.tags?.map(tag => (
                       <li
                         key={tag}
-                        className='bg-primary py-1 px-2'
+                        className='bg-primary py-1 px-2 text-sm'
                       >
                         {tag}
                       </li>

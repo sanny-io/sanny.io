@@ -35,7 +35,7 @@ export default function MainLayout({ children }: Props) {
 
 export const metadata: Metadata = {
   title: {
-    default: 'sanny.io',
+    default: 'Sanny Sherief',
     template: '%s - sanny.io',
   },
 }

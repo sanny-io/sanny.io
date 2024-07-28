@@ -33,7 +33,7 @@ export const MyExperience: GlobalConfig = {
           type: 'upload',
           name: 'icon',
           required: true,
-          relationTo: 'svg',
+          relationTo: 'media',
         },
       ],
     },

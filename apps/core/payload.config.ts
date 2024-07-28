@@ -9,7 +9,7 @@ import sharp from 'sharp'
 
 import { Users } from '@/payload/collections/users'
 import { Media } from '@/payload/collections/media'
-import { Svg } from '@/payload/collections/svg'
+import { Svgs } from '@/payload/collections/svgs'
 
 import { AboutMe } from '@/payload/globals/about-me'
 import { Agile } from '@/payload/globals/agile'
@@ -39,7 +39,7 @@ export default buildConfig({
   admin: {
     user: Users.slug,
   },
-  collections: [Users, Media, Svg],
+  collections: [Users, Media, Svgs],
   globals: [Header, AboutMe, MyExperience, Agile, ResponsiveDesign, Projects, MyHistory, ContactMe, Navigation],
   editor: lexicalEditor(),
   secret: process.env.PAYLOAD_SECRET!,

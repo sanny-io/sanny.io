@@ -9,7 +9,7 @@ export async function MyExperience() {
 
   return (
     <section
-      id='experiences'
+      id='experience'
       className='bg-gray-800'
     >
       <div
@@ -28,31 +28,35 @@ export async function MyExperience() {
             className='grid grid-cols-1 gap-4 md:gap-6 lg:grid-cols-2'
           >
             {
-              experiences.experiences?.map(experience => (
-                <div
-                  key={experience.id}
-                  className='flex p-6 transition-colors duration-300 border border-gray-700 rounded hover:border-blue-500'
-                >
-                  <Image
-                    className='hidden w-16 mr-6 md:inline-block min-w-[60px] max-w-[60px] max-h-[60px] self-center'
-                    src={experience.icon.url}
-                    width={64}
-                    height={64}
-                  />
+              experiences.experiences?.map(experience => {
+                console.log({ experience })
 
-                  <div>
-                    <h3
-                      className='text-xl font-bold text-blue-500'
-                    >
-                      {experience.name}
-                    </h3>
+                return (
+                  <div
+                    key={experience.id}
+                    className='flex p-6 transition-colors duration-300 border border-gray-700 rounded hover:border-blue-500'
+                  >
+                    <Image
+                      className='hidden w-16 mr-6 md:inline-block min-w-[60px] max-w-[60px] max-h-[60px] self-center'
+                      src={experience.icon.url}
+                      width={64}
+                      height={64}
+                    />
 
-                    <p>
-                      {experience.description}
-                    </p>
+                    <div>
+                      <h3
+                        className='text-xl font-bold text-blue-500'
+                      >
+                        {experience.name}
+                      </h3>
+
+                      <p>
+                        {experience.description}
+                      </p>
+                    </div>
                   </div>
-                </div>
-              ))
+                )
+              })
             }
           </div>
         </div>

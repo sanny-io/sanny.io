@@ -4,7 +4,6 @@ import { sendMail } from '@/actions/mail'
 import { useActionState } from 'react'
 import { useFormStatus } from 'react-dom'
 
-
 type Props = {
   title: string,
   description: string,
@@ -16,8 +15,6 @@ export function ContactMe({ title, description }: Props) {
     error: false,
     message: '',
   })
-
-  console.log({ formState })
 
   return (
     <section
