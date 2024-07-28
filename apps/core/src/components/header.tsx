@@ -28,7 +28,30 @@ export async function Header() {
             {header.title}
           </p>
 
-          {/* <Social /> */}
+          <nav>
+            <ul
+              className='flex justify-center space-x-5 text-white md:justify-end'
+            >
+              {
+                header.socials?.map(social => (
+                  <li
+                    key={social.id}
+                    className='w-6 hover:text-secondary'
+                  >
+                    <a
+                      href={social.url}
+                    >
+                      <div
+                        dangerouslySetInnerHTML={{
+                          __html: social.icon,
+                        }}
+                      />
+                    </a>
+                  </li>
+                ))
+              }
+            </ul>
+          </nav>
         </div>
 
         <div

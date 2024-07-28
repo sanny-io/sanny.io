@@ -15,5 +15,11 @@ export const ContactMe: GlobalConfig = {
       name: 'description',
       required: true,
     },
+
+    {
+      type: 'email',
+      name: 'email',
+      required: true,
+    },
   ],
 }

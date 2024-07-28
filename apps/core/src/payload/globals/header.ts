@@ -22,5 +22,31 @@ export const Header: GlobalConfig = {
       relationTo: 'media',
       required: true,
     },
+
+    {
+      type: 'array',
+      name: 'socials',
+      required: false,
+
+      fields: [
+        {
+          type: 'text',
+          name: 'tooltip',
+          required: true,
+        },
+
+        {
+          type: 'text',
+          name: 'url',
+          required: true,
+        },
+
+        {
+          type: 'code',
+          name: 'icon',
+          required: true,
+        },
+      ],
+    },
   ],
 }

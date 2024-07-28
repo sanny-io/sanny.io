@@ -142,6 +142,14 @@ export interface Header {
   name: string;
   title: string;
   image: number | Media;
+  socials?:
+    | {
+        tooltip: string;
+        url: string;
+        icon: string;
+        id?: string | null;
+      }[]
+    | null;
   updatedAt?: string | null;
   createdAt?: string | null;
 }
@@ -338,6 +346,7 @@ export interface ContactMe {
   id: number;
   title: string;
   description: string;
+  email: string;
   updatedAt?: string | null;
   createdAt?: string | null;
 }
@@ -350,7 +359,7 @@ export interface Navigation {
   links?:
     | {
         name: string;
-        link: string;
+        url: string;
         icon: string;
         id?: string | null;
       }[]

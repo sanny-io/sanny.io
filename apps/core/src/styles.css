@@ -6,6 +6,7 @@
   html {
     @apply flex flex-col;
     @apply min-h-screen;
+    @apply scroll-smooth;
     color-scheme: dark;
   }
 

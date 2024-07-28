@@ -10,7 +10,7 @@ export async function MyHistory() {
 
   return (
     <section
-      id='histories'
+      id='history'
       className='container px-4 py-16 mx-auto text-white md:px-32'
     >
       <hr

@@ -7,6 +7,7 @@ import { MyHistory } from '@/components/my-history'
 import { Projects } from '@/components/projects'
 import { ResponsiveDesign } from '@/components/responsive-design'
 import { initializePayload } from '@/services/payload'
+import { Navigation } from '@/components/navigation'
 
 export default async function HomePage() {
   const payload = await initializePayload()
@@ -18,6 +19,8 @@ export default async function HomePage() {
     <div
       className='flex-grow'
     >
+      <Navigation />
+
       <Header />
       <AboutMe />
       <MyExperience />

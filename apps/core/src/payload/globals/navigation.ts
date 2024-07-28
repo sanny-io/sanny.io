@@ -17,12 +17,12 @@ export const Navigation: GlobalConfig = {
 
         {
           type: 'text',
-          name: 'link',
+          name: 'url',
           required: true,
         },
 
         {
-          type: 'text',
+          type: 'code',
           name: 'icon',
           required: true,
         },
