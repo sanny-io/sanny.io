@@ -6,7 +6,6 @@ import { useActionState } from 'react'
 import { useFormStatus } from 'react-dom'
 
 export function ContactMe({ title, description }: ContactMe) {
-  const formStatus = useFormStatus()
   const [formState, formAction] = useActionState(sendMail, {
     error: false,
     message: '',
@@ -62,30 +61,55 @@ export function ContactMe({ title, description }: ContactMe) {
           />
         </div>
 
-        <div
-          className='flex gap-4 items-center justify-end flex-col-reverse md:flex-row'
-        >
-          {
-            formState.message
-              ? <span
-                className={formState.error ? 'text-red-500' : 'text-green-500'}
-
-                dangerouslySetInnerHTML={{
-                  __html: formState.message,
-                }}
-              />
-              : null
-          }
-
-          <button
-            type='submit'
-            disabled={formStatus.pending}
-            className='block w-full primary button md:inline-block md:w-max'
-          >
-            Submit
-          </button>
-        </div>
+        <BottomSection
+          formState={formState}
+        />
       </form>
     </section>
+  )
+}
+
+function BottomSection({
+  formState,
+}: {
+  formState: {
+    error: boolean,
+    message: string,
+  }
+}) {
+  const formStatus = useFormStatus()
+
+  return (
+    <div
+      className='flex gap-4 items-start md:items-center justify-end flex-col-reverse md:flex-row'
+    >
+      {
+        formState.message && !formStatus.pending
+          ? <span
+            className={formState.error ? 'text-red-500' : 'text-green-500'}
+
+            dangerouslySetInnerHTML={{
+              __html: formState.message,
+            }}
+          />
+          : null
+      }
+
+      {
+        formStatus.pending
+          ? <span>
+            Sending...
+          </span>
+          : null
+      }
+
+      <button
+        type='submit'
+        disabled={formStatus.pending}
+        className='block w-full primary button md:inline-block md:w-max'
+      >
+        Submit
+      </button>
+    </div>
   )
 }
