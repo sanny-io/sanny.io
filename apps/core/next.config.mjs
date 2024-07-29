@@ -24,6 +24,7 @@ export default withBundleAnalyzer(withPayload({
 
   images: {
     deviceSizes: [640, 768, 1024, 1280, 1400],
+    minimumCacheTTL: 31536000,
 
     remotePatterns: [
       {
