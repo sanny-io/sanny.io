@@ -1,6 +1,8 @@
 import { initializePayload } from '@/services/payload'
 import Image from 'next/image'
 import { TailwindImage } from '@/components/tailwind-image'
+import Link from 'next/link'
+import slugify from 'slugify'
 
 export async function Projects() {
   const payload = await initializePayload()
@@ -88,13 +90,15 @@ export async function Projects() {
                 <div
                   className='flex mt-auto gap-3 text-sm'
                 >
-                  <button
-                    disabled
-                    type='button'
+                  <Link
+                    scroll={false}
                     className='button'
+                    href={`/projects/${slugify(project.name, {
+                      lower: true,
+                    })}`}
                   >
                     View More Details
-                  </button>
+                  </Link>
 
                   {
                     project.sourceUrl ?

@@ -4,7 +4,7 @@ const stringifyDate = (date: Date) => `${date.toLocaleString('default', { month:
 
 export async function MyHistory() {
   const payload = await initializePayload()
-  const histories = await payload.findGlobal({
+  const myHistory = await payload.findGlobal({
     slug: 'my-history',
   })
 
@@ -20,14 +20,14 @@ export async function MyHistory() {
       <h2
         className='mb-16 text-5xl tracking-widest text-center uppercase lg:text-left lg:mb-24 md:text-6xl'
       >
-        {histories.title}
+        {myHistory.title}
       </h2>
 
       <ol
         className='flex flex-col space-y-6'
       >
         {
-          histories.histories?.map(history => (
+          myHistory.histories?.map(history => (
             <li
               key={history.id}
               className='w-full p-4 duration-300 bg-gray-900 border border-gray-800 rounded hover:bg-gray-800'

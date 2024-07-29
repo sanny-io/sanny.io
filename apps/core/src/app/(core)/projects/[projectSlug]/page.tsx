@@ -1,27 +1,37 @@
-import { initializePayload } from '@/services/payload'
+import { getProjects, initializePayload } from '@/services/payload'
 import Image from 'next/image'
 import Link from 'next/link'
+import slugify from 'slugify'
 
-export default async function ProjectPage() {
-  const payload = await initializePayload()
-  const projects = await payload.findGlobal({
-    slug: 'projects',
-  })
+type Props = {
+  params: {
+    projectSlug: string,
+  },
+}
+
+export default async function ProjectPage({ params: { projectSlug } }: Props) {
+  const projects = await getProjects()
+
+  projectSlug = projectSlug.toLowerCase()
 
   const project = projects.projects?.find(project => (
-    project.id === '66a62bdc14cad99e65cf3eda'
+    projectSlug === slugify(project.name, {
+      lower: true,
+    })
   ))
 
   return (
     <dialog
       open
-      className='flex flex-col w-screen h-screen bg-black/50'
+      className='fixed z-50 flex flex-col w-full h-full bg-black/50'
     >
       <div
         className='container relative p-4 m-auto bg-gray-900 border-l-4 border-primary'
       >
         <Link
           href='/'
+          autoFocus
+          scroll={false}
           className='absolute text-3xl text-gray-300 right-3 top-1 hover:text-gray-500'
           aria-label='Close project details window'
         >
@@ -98,4 +108,14 @@ export default async function ProjectPage() {
       </div>
     </dialog >
   )
+}
+
+export async function generateStaticParams() {
+  const projects = await getProjects()
+
+  return projects.projects?.map(project => ({
+    projectSlug: slugify(project.name, {
+      lower: true,
+    })
+  }))
 }

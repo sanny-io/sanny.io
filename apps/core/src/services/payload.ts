@@ -3,6 +3,7 @@ import path from 'path'
 import type { Payload } from 'payload'
 import payload from 'payload'
 import config from '../../payload.config'
+import { unstable_cache as cache } from 'next/cache'
 
 dotenv.config({
   path: path.resolve(__dirname, '../../.env'),
@@ -14,7 +15,7 @@ if (!cached) {
   cached = (global as any).payload = { client: null, promise: null }
 }
 
-export const initializePayload = async (): Promise<Payload> => {
+export async function initializePayload(): Promise<Payload> {
   if (cached.client) {
     return cached.client
   }
@@ -29,3 +30,12 @@ export const initializePayload = async (): Promise<Payload> => {
 
   return cached.client
 }
+
+export const getProjects = cache(async () => {
+  const payload = await initializePayload()
+  const projects = await payload.findGlobal({
+    slug: 'projects',
+  })
+
+  return projects
+}, ['projects'])
