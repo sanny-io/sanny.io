@@ -23,7 +23,7 @@ export default withBundleAnalyzer(withPayload({
   },
 
   images: {
-    deviceSizes: [640, 768, 1024, 1280, 1536],
+    deviceSizes: [640, 768, 1024, 1280, 1400],
 
     remotePatterns: [
       {
@@ -33,6 +33,8 @@ export default withBundleAnalyzer(withPayload({
         pathname: '/**',
       },
     ],
+
+    formats: ['image/avif', 'image/webp'],
   },
 
   typescript: {

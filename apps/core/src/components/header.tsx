@@ -64,7 +64,7 @@ export async function Header() {
             src={header.image.url}
             width={header.image.width}
             height={header.image.height}
-            alt='Headshot of Sanny Sherief'
+            alt={header.image.alt}
             className='rounded-full'
             quality={100}
           />

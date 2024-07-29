@@ -1,5 +1,6 @@
 import { initializePayload } from '@/services/payload'
 import Image from 'next/image'
+import { TailwindImage } from '@/components/tailwind-image'
 
 export async function Projects() {
   const payload = await initializePayload()
@@ -32,12 +33,16 @@ export async function Projects() {
                 target='__blank'
                 rel='noopener noreferrer'
               >
-                <Image
+                <TailwindImage
                   src={project.image.url}
                   width={project.image.width}
                   height={project.image.height}
                   className='object-cover w-full duration-200 filter drop-shadow-2xl'
                   alt={`Preview of ${project.name}`}
+
+                  sizes={{
+                    'lg': 30,
+                  }}
                 />
               </a>
 

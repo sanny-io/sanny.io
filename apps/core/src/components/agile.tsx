@@ -3,28 +3,23 @@
 import type { Agile } from 'payload-types'
 import { useRef } from 'react'
 import { useIntersectionObserver, useMediaQuery } from 'usehooks-ts'
+import { sizes } from '@/components/tailwind-image'
 
-const sizes: [string, number][] = [
-  ['2xl', 1400],
-  ['xl', 1280],
-  ['lg', 1024],
-  ['md', 768],
-  ['sm', 640],
-]
+const sizesArray = Object.entries(sizes).map(([size, width]) => [size, width])
 
 export function Agile({ backgroundImage, descriptionHtml }: Agile) {
   const { ref, isIntersecting } = useIntersectionObserver({
     freezeOnceVisible: true,
   })
 
-  const mediaQueries = sizes.map(([, width]) => (
+  const mediaQueries = sizesArray.map(([, width]) => (
     useMediaQuery(`(min-width: ${width}px)`)
   ))
 
   let deviceSizeIndex = mediaQueries.findIndex(isMatch => !!isMatch)
 
   if (deviceSizeIndex === -1) {
-    deviceSizeIndex = sizes.length - 1
+    deviceSizeIndex = sizesArray.length - 1
   }
 
   const largestDeviceSizeIndex = useRef(deviceSizeIndex)
@@ -33,7 +28,7 @@ export function Agile({ backgroundImage, descriptionHtml }: Agile) {
     largestDeviceSizeIndex.current = deviceSizeIndex
   }
 
-  const [deviceSize] = sizes[largestDeviceSizeIndex.current]
+  const [deviceSize] = sizesArray[largestDeviceSizeIndex.current]
 
   return (
     <section
