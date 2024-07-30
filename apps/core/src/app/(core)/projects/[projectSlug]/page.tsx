@@ -98,6 +98,7 @@ export default async function ProjectPage({ params: { projectSlug } }: Props) {
             rel='noopener noreferrer'
           >
             <Image
+              unoptimized
               src={project!.image.url}
               width={project!.image.width}
               height={project!.image.height}
