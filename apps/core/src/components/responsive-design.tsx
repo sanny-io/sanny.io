@@ -19,6 +19,7 @@ export async function ResponsiveDesign() {
           className='self-center w-1/2 mb-8 lg:w-1/3 md:mb-16 hidden md:block'
         >
           <TailwindImage
+            unoptimized
             src={responsiveDesign.image.url}
             width={responsiveDesign.image.width}
             height={responsiveDesign.image.height}

@@ -36,6 +36,7 @@ export async function Projects() {
                 rel='noopener noreferrer'
               >
                 <TailwindImage
+                  unoptimized
                   src={project.image.url}
                   width={project.image.width}
                   height={project.image.height}
