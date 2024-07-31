@@ -10,10 +10,6 @@
     color-scheme: dark;
   }
 
-  html:has(dialog[open]) {
-    @apply overflow-hidden;
-  }
-
   body {
     @apply flex flex-col flex-grow;
     @apply text-white bg-gray-900;
@@ -25,6 +21,10 @@
 
   body > footer {
     @apply flex-shrink-0;
+  }
+
+  *:not(input, textarea, :has(svg)) {
+    @apply focus:outline-none focus-visible:ring-4 ring-primary;
   }
 }
 
