@@ -52,8 +52,17 @@ export function ContactMe({ title, description }: ContactMe) {
           />
 
           <textarea
-            required
+            tabIndex={-1}
             name='message'
+            rows={5}
+            placeholder='Message'
+            autoComplete='off'
+            className='fixed left-[9999px]'
+          />
+
+          <textarea
+            required
+            name='realMessage'
             rows={5}
             placeholder='Message'
             autoComplete='off'

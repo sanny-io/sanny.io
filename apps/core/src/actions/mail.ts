@@ -14,14 +14,20 @@ export async function sendMail(previousState: FormState, formData: FormData) {
   const name = formData.get('name')
   const email = formData.get('email')
   const message = formData.get('message')
+  const realMessage = formData.get('realMessage')
+  const formCreatedAt = formData.get('formCreatedAt')
   const payload = await initializePayload()
   const contactMe = await payload.findGlobal({
     slug: 'contact-me',
   })
 
   try {
-    if (!name || !email || !message) {
+    if (!name || !email || !realMessage || !formCreatedAt) {
       throw new Error('Missing parameters')
+    }
+
+    if (message) {
+      throw new Error('Spam detected')
     }
 
     const { error } = await resend.emails.send({
