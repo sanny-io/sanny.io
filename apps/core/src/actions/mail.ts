@@ -34,7 +34,7 @@ export async function sendMail(previousState: FormState, formData: FormData) {
       from: 'sanny.io <mail@sanny.io>',
       to: contactMe.email,
       subject: `Contact from ${name} (${email})`,
-      text: message as string,
+      text: realMessage as string,
     })
 
     if (error) {
