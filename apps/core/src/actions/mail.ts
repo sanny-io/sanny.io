@@ -15,14 +15,13 @@ export async function sendMail(previousState: FormState, formData: FormData) {
   const email = formData.get('email')
   const message = formData.get('message')
   const realMessage = formData.get('realMessage')
-  const formCreatedAt = formData.get('formCreatedAt')
   const payload = await initializePayload()
   const contactMe = await payload.findGlobal({
     slug: 'contact-me',
   })
 
   try {
-    if (!name || !email || !realMessage || !formCreatedAt) {
+    if (!name || !email || !realMessage) {
       throw new Error('Missing parameters')
     }
 
