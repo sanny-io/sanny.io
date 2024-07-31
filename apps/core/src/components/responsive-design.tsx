@@ -1,6 +1,6 @@
 import { initializePayload } from '@/services/payload'
 import Image from 'next/image'
-import { TailwindImage } from '@/components/tailwind-image'
+import { OptimizedImage } from '@/components/optimized-image'
 
 export async function ResponsiveDesign() {
   const payload = await initializePayload()
@@ -18,17 +18,12 @@ export async function ResponsiveDesign() {
         <div
           className='self-center w-1/2 mb-8 lg:w-1/3 md:mb-16 hidden md:block'
         >
-          <TailwindImage
-            unoptimized
+          <OptimizedImage
             src={responsiveDesign.image.url}
             width={responsiveDesign.image.width}
             height={responsiveDesign.image.height}
             className='duration-200'
-            alt='Sample site as viewed on a mobile phone'
-            sizes={{
-              "sm": 75,
-              "lg": 40,
-            }}
+            alt={responsiveDesign.image.alt}
           />
         </div>
 

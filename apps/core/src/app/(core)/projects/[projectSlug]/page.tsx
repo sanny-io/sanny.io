@@ -1,4 +1,6 @@
+import { OptimizedImage } from '@/components/optimized-image'
 import { getProjects, initializePayload } from '@/services/payload'
+import ExportedImage from 'next-image-export-optimizer'
 import Image from 'next/image'
 import Link from 'next/link'
 import slugify from 'slugify'
@@ -97,8 +99,7 @@ export default async function ProjectPage({ params: { projectSlug } }: Props) {
             target='__blank'
             rel='noopener noreferrer'
           >
-            <Image
-              unoptimized
+            <OptimizedImage
               src={project!.image.url}
               width={project!.image.width}
               height={project!.image.height}

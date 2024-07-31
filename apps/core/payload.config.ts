@@ -21,19 +21,10 @@ import { MyHistory } from '@/payload/globals/my-history'
 import { Navigation } from '@/payload/globals/navigation'
 import { ContactMe } from '@/payload/globals/contact-me'
 
-import { gcsAdapter } from '@payloadcms/plugin-cloud-storage/gcs'
-import { cloudStoragePlugin } from '@payloadcms/plugin-cloud-storage'
+import { gcsStorage } from '@payloadcms/storage-gcs'
 
 const filename = fileURLToPath(import.meta.url)
 const dirname = path.dirname(filename)
-
-const adapter = gcsAdapter({
-  options: {
-    credentials: JSON.parse(Buffer.from(process.env.GCS_CREDENTIALS!, 'base64').toString()),
-  },
-
-  bucket: process.env.GCS_BUCKET!,
-})
 
 export default buildConfig({
   admin: {
@@ -66,13 +57,16 @@ export default buildConfig({
   plugins: [
     // storage-adapter-placeholder
     // @ts-ignore
-    cloudStoragePlugin({
+    gcsStorage({
+      bucket: process.env.GCS_BUCKET!,
+
       collections: {
-        media: {
-          // @ts-ignore
-          adapter,
-        },
+        media: true,
       },
-    }),
+
+      options: {
+        credentials: JSON.parse(Buffer.from(process.env.GCS_CREDENTIALS!, 'base64').toString()),
+      },
+    })
   ],
 })

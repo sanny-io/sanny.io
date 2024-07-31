@@ -1,5 +1,7 @@
 import Image from 'next/image'
 import { initializePayload } from '@/services/payload'
+import ExportedImage from 'next-image-export-optimizer'
+import { OptimizedImage } from '@/components/optimized-image'
 
 export async function Header() {
   const payload = await initializePayload()
@@ -59,8 +61,7 @@ export async function Header() {
         <div
           className='w-48 pb-8 border-b-4 border-primary md:w-72 md:border-l-4 md:border-b-0 md:pl-8 md:pb-0'
         >
-          <Image
-            unoptimized
+          <OptimizedImage
             priority
             src={header.image.url}
             width={header.image.width}

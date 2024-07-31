@@ -6,3 +6,6 @@ next-env.d.ts
 .pnpm-store
 .turbo
 .env
+apps/core/public/optimized-images
+apps/core/remoteImagesForOptimization
+apps/core/public/images/next-image-export-optimizer-hashes.json
