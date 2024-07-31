@@ -3,6 +3,16 @@ import type { GlobalConfig } from 'payload'
 export const Header: GlobalConfig = {
   slug: 'header',
 
+  // Bug in payload
+  access: {
+    read: ({ req }) => true,
+    create: ({ req }) => true,
+    delete: ({ req }) => true,
+    update: ({ req }) => true,
+    unlock: ({ req }) => true,
+    admin: ({ req }) => true,
+  },
+
   fields: [
     {
       type: 'text',

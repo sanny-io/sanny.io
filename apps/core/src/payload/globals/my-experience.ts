@@ -4,6 +4,16 @@ export const MyExperience: GlobalConfig = {
   slug: 'my-experience',
   label: 'Experience',
 
+  // Bug in payload
+  access: {
+    read: ({ req }) => true,
+    create: ({ req }) => true,
+    delete: ({ req }) => true,
+    update: ({ req }) => true,
+    unlock: ({ req }) => true,
+    admin: ({ req }) => true,
+  },
+
   fields: [
     {
       type: 'text',

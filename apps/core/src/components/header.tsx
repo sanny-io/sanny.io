@@ -45,6 +45,7 @@ export async function Header() {
                       title={social.tooltip}
                       aria-label={social.tooltip}
                       className='icon'
+                      target='_blank'
                     >
                       <div
                         dangerouslySetInnerHTML={{

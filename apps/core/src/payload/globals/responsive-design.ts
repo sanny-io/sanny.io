@@ -4,6 +4,16 @@ import type { GlobalConfig } from 'payload'
 export const ResponsiveDesign: GlobalConfig = {
   slug: 'responsive-design',
 
+  // Bug in payload
+  access: {
+    read: ({ req }) => true,
+    create: ({ req }) => true,
+    delete: ({ req }) => true,
+    update: ({ req }) => true,
+    unlock: ({ req }) => true,
+    admin: ({ req }) => true,
+  },
+
   fields: [
     {
       type: 'text',

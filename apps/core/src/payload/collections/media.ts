@@ -41,8 +41,9 @@ export const Media: CollectionConfig = {
     ]
   },
 
+  // Bug in payload
   access: {
-    read: () => true,
+    read: ({ req }) => true,
     create: ({ req }) => true,
     delete: ({ req }) => true,
     update: ({ req }) => true,
