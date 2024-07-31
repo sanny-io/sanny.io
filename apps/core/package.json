@@ -12,8 +12,8 @@
   },
   "dependencies": {
     "@google-cloud/storage": "7.12.0",
-    "@headlessui/react": "^2.1.2",
-    "@next/bundle-analyzer": "^14.2.5",
+    "@headlessui/react": "2.1.2",
+    "@next/bundle-analyzer": "14.2.5",
     "@payloadcms/db-mongodb": "3.0.0-beta.70",
     "@payloadcms/db-postgres": "3.0.0-beta.70",
     "@payloadcms/next": "3.0.0-beta.70",
@@ -24,14 +24,14 @@
     "dotenv": "16.4.5",
     "graphql": "16.8.2",
     "next": "15.0.0-canary.58",
-    "next-image-export-optimizer": "^1.14.1",
+    "next-image-export-optimizer": "1.14.1",
     "payload": "3.0.0-beta.70",
     "react": "19.0.0-rc-6230622a1a-20240610",
     "react-dom": "19.0.0-rc-6230622a1a-20240610",
     "resend": "3.5.0",
     "sharp": "0.32.6",
-    "slugify": "^1.6.6",
-    "usehooks-ts": "^3.1.0"
+    "slugify": "1.6.6",
+    "usehooks-ts": "3.1.0"
   },
   "devDependencies": {
     "@payloadcms/graphql": "3.0.0-beta.70",

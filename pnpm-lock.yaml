@@ -27,10 +27,10 @@ importers:
         specifier: 7.12.0
         version: 7.12.0
       '@headlessui/react':
-        specifier: ^2.1.2
+        specifier: 2.1.2
         version: 2.1.2(react-dom@19.0.0-rc-6230622a1a-20240610(react@19.0.0-rc-6230622a1a-20240610))(react@19.0.0-rc-6230622a1a-20240610)
       '@next/bundle-analyzer':
-        specifier: ^14.2.5
+        specifier: 14.2.5
         version: 14.2.5
       '@payloadcms/db-mongodb':
         specifier: 3.0.0-beta.70
@@ -63,7 +63,7 @@ importers:
         specifier: 15.0.0-canary.58
         version: 15.0.0-canary.58(react-dom@19.0.0-rc-6230622a1a-20240610(react@19.0.0-rc-6230622a1a-20240610))(react@19.0.0-rc-6230622a1a-20240610)(sass@1.77.4)
       next-image-export-optimizer:
-        specifier: ^1.14.1
+        specifier: 1.14.1
         version: 1.14.1(next@15.0.0-canary.58(react-dom@19.0.0-rc-6230622a1a-20240610(react@19.0.0-rc-6230622a1a-20240610))(react@19.0.0-rc-6230622a1a-20240610)(sass@1.77.4))(react@19.0.0-rc-6230622a1a-20240610)
       payload:
         specifier: 3.0.0-beta.70
@@ -81,10 +81,10 @@ importers:
         specifier: 0.32.6
         version: 0.32.6
       slugify:
-        specifier: ^1.6.6
+        specifier: 1.6.6
         version: 1.6.6
       usehooks-ts:
-        specifier: ^3.1.0
+        specifier: 3.1.0
         version: 3.1.0(react@19.0.0-rc-6230622a1a-20240610)
     devDependencies:
       '@payloadcms/graphql':

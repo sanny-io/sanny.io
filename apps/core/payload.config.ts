@@ -22,6 +22,7 @@ import { Navigation } from '@/payload/globals/navigation'
 import { ContactMe } from '@/payload/globals/contact-me'
 
 import { gcsStorage } from '@payloadcms/storage-gcs'
+import { PublishButtonForm } from '@/components/publish-button'
 
 const filename = fileURLToPath(import.meta.url)
 const dirname = path.dirname(filename)
@@ -29,6 +30,12 @@ const dirname = path.dirname(filename)
 export default buildConfig({
   admin: {
     user: Users.slug,
+
+    components: {
+      actions: [
+        PublishButtonForm,
+      ],
+    },
   },
   collections: [Users, Media, Svgs],
   globals: [Header, AboutMe, MyExperience, Agile, ResponsiveDesign, Projects, MyHistory, ContactMe, Navigation],
