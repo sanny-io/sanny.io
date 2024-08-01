@@ -80,21 +80,22 @@ const config = {
         },
       },
 
-      typography: {
+      typography: ({ theme }: any) => ({
         DEFAULT: {
           css: {
             color: 'white',
+            '--tw-prose-counters': theme('colors.secondary[DEFAULT]'),
 
             a: {
-              color: '#00a1f2',
+              color: theme('colors.secondary[DEFAULT]'),
 
               '&:hover': {
-                color: '#00a1f2',
+                color: theme('colors.secondary[DEFAULT]'),
               },
             },
           },
         },
-      },
+      }),
     },
   },
   plugins: [
