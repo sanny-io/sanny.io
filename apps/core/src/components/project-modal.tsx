@@ -45,7 +45,7 @@ export function ProjectModal({ project }: Props) {
 
           <DialogTitle
             as='h3'
-            className='inline-block mb-4 text-6xl font-semibold hover:text-blue-500'
+            className='inline-block mb-4 text-4xl md:text-5xl lg:text-6xl font-semibold hover:text-blue-500'
           >
             <a
               href={project!.liveUrl}
@@ -102,13 +102,15 @@ export function ProjectModal({ project }: Props) {
               href={project!.liveUrl}
               target='__blank'
               rel='noopener noreferrer'
+              className='w-full hidden md:block'
             >
               <OptimizedImage
                 src={project!.image.url}
                 width={project!.image.width}
                 height={project!.image.height}
-                className='object-cover w-full'
-                alt={`Preview of ${project.name}`} />
+                className='object-cover'
+                alt={`Preview of ${project.name}`}
+              />
             </a>
           </div>
         </DialogPanel>
